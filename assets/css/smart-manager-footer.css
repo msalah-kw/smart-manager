@@ -1,0 +1,34 @@
+#wpfooter {
+	display: block !important;
+	border-top: 1px solid #d4d4d4;
+}
+#wpfooter .sm-footer-left,
+#wpfooter .sm-footer-right {
+	font-family: monospace
+}
+#wpfooter .sm-footer-left-top {
+	font-weight: 600;
+}
+#wpfooter .sm-heart {
+	color: #e11d48;
+}
+#wpfooter .sm-brand {
+	color: #5254E4;
+}
+#wpfooter .sm-separator {
+	margin: 0 0.25rem;
+}
+#wpfooter .sm-footer-right {
+	float: right;
+	text-align: right;
+}
+#wpfooter .sm-footer-right a {
+	text-decoration: none;
+	outline: none;
+}
+#wpfooter .sm-footer-right a:hover {
+	text-decoration: underline;
+}
+#wpfooter .sm-star {
+	color: #eab308;
+}

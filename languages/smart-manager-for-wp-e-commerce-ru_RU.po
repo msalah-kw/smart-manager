@@ -1,0 +1,4579 @@
+# Copyright (C) 2025 StoreApps
+# This file is distributed under the GNU General Public License v2.0.
+#
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru-RU\n"
+"Language-Team: Russian\n"
+"Last-Translator: \n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2025-06-20 14:27+0000\n"
+"POT-Creation-Date: 2025-06-20T13:42:25+00:00\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"Project-Id-Version: Smart Manager - Advanced WooCommerce Bulk Edit & Inventory Management 8.65.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/smart-manager-for-wp-e-commerce\n"
+"X-Domain: smart-manager-for-wp-e-commerce\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.1; php-7.4.33\n"
+
+#. Plugin Name of the plugin
+msgid "Smart Manager - Advanced WooCommerce Bulk Edit & Inventory Management"
+msgstr "Smart Manager - расширенный WooCommerce массового редактирования и управления запасами"
+
+#. Plugin URI of the plugin
+msgid "https://www.storeapps.org/product/smart-manager/"
+msgstr "https://www.storeapps.org/product/smart-manager/"
+
+#. Description of the plugin
+msgid "<strong>Pro Version Installed</strong>. The #1 tool for WooCommerce inventory management, stock management, bulk edit, export, delete, duplicate...from one place using an Excel-like sheet editor."
+msgstr "<strong>Установлена версия Pro</strong>. Инструмент №1 для управления инвентарем WooCommerce, управления запасами, массового редактирования, экспорта, удаления, дублирования... из одного места с помощью Excel-подобного редактора листов."
+
+#. Author of the plugin
+msgid "StoreApps"
+msgstr "StoreApps"
+
+#. Author URI of the plugin
+msgid "https://www.storeapps.org/"
+msgstr "https://www.storeapps.org/"
+
+#: class-smart-manager.php:257
+msgctxt "product stock log dashboard name"
+msgid "Product Stock Log"
+msgstr "Журнал складских запасов продукции"
+
+#: class-smart-manager.php:269
+msgid "LifterLMS Orders"
+msgstr "Заказы LifterLMS"
+
+#: class-smart-manager.php:270
+msgid "LifterLMS Coupons"
+msgstr "Купоны LifterLMS"
+
+#: class-smart-manager.php:798
+msgid "<span class=\"sm_pricing_icon\"> 🔥 </span> Go Pro"
+msgstr "<span class=\"sm_pricing_icon\"> 🔥 </span> Go Pro"
+
+#: class-smart-manager.php:801
+msgid "Docs & Support"
+msgstr "Документы и поддержка"
+
+#: class-smart-manager.php:807
+msgid "StoreApps Plugins"
+msgstr "Плагины StoreApps"
+
+#. translators: %1$s: current user display name %2$s: HTML of Pro price discount
+#: class-smart-manager.php:1007
+msgid "Hey %1$s, grab your %2$s Halloween discount!"
+msgstr "Эй, %1$s, получи свою %2$s скидку на Хэллоуин!"
+
+#: class-smart-manager.php:1009
+#: class-smart-manager.php:1012
+msgid "25% off"
+msgstr "25% скидка"
+
+#. translators: %1$s: current user display name %2$s: HTML of Pro price discount
+#: class-smart-manager.php:1011
+msgid "Hey %1$s, you just unlocked %2$s on Smart Manager Pro!"
+msgstr "Эй, %1$s, вы только что разблокировали %2$s в Smart Manager Pro!"
+
+#. translators: %s: pricing page link
+#: class-smart-manager.php:1015
+msgid "%s to check Smart Manager Pro features/benefits and claim your discount."
+msgstr "%s, чтобы проверить возможности/преимущества Smart Manager Pro и получить скидку."
+
+#. translators: %s: pricing page link
+#: class-smart-manager.php:1015
+msgid "Click here"
+msgstr "Нажмите здесь"
+
+#: class-smart-manager.php:1338
+msgid "This functionality has been disabled. Please contact store administrator for enabling the same."
+msgstr "Эта функция была отключена. Пожалуйста, обратитесь к администратору магазина, чтобы включить ее."
+
+#: class-smart-manager.php:1342
+msgctxt "Column edit disable message"
+msgid "This column edit has been disabled. Please contact store administrator for enabling the same."
+msgstr "Редактирование этой колонки было отключено. Пожалуйста, обратитесь к администратору магазина, чтобы включить эту функцию."
+
+#: class-smart-manager.php:1376
+msgid "In the meanwhile, you can use Smart Manager. But before using actions like "
+msgstr "Тем временем вы можете использовать Smart Manager. Но прежде чем использовать такие действия, как "
+
+#: class-smart-manager.php:1376
+#: classes/class-smart-manager-admin-welcome.php:344
+#: classes/class-smart-manager-task.php:487
+msgid "Bulk Edit"
+msgstr "Массовое редактирование"
+
+#: class-smart-manager.php:1376
+msgid "Duplicate Records"
+msgstr "Дублирующие записи"
+
+#: class-smart-manager.php:1376
+#: classes/class-smart-manager-admin-welcome.php:329
+msgid "Delete Records"
+msgstr "Удалить записи"
+
+#: class-smart-manager.php:1376
+msgid "Undo Tasks"
+msgstr "Отмена заданий"
+
+#: class-smart-manager.php:1376
+msgid "Delete Tasks"
+msgstr "Удаление заданий"
+
+#: class-smart-manager.php:1376
+#: classes/class-smart-manager-admin-welcome.php:367
+msgid "Export CSV"
+msgstr "Экспорт CSV"
+
+#: class-smart-manager.php:1376
+msgid "you will have to wait for the current background process to finish."
+msgstr "вам придется подождать, пока завершится текущий фоновый процесс."
+
+#: class-smart-manager.php:1739
+msgid "PRO"
+msgstr "PRO"
+
+#: class-smart-manager.php:1739
+msgid "LITE"
+msgstr "LITE"
+
+#: class-smart-manager.php:1752
+msgid "An upgrade for Smart Manager Pro"
+msgstr "Обновление для Smart Manager Pro"
+
+#: class-smart-manager.php:1752
+msgid "is available."
+msgstr "доступен."
+
+#: class-smart-manager.php:1752
+msgid "Click to upgrade."
+msgstr "Нажмите, чтобы обновить."
+
+#: class-smart-manager.php:1856
+msgid "A required Smart Manager file is missing. Can't continue. "
+msgstr "Отсутствует необходимый файл Smart Manager. Невозможно продолжить. "
+
+#: class-smart-manager.php:1871
+msgid "Error:"
+msgstr "Ошибка:"
+
+#: class-smart-manager.php:1929
+msgid "Auto-updates are not available for this plugin."
+msgstr "Автообновление для этого плагина недоступно."
+
+#: class-smart-manager.php:1984
+#: class-smart-manager.php:1993
+msgctxt "WooCommerce post type label"
+msgid "WooCommerce - "
+msgstr "WooCommerce - "
+
+#: class-smart-manager.php:2019
+msgctxt "go pro link title"
+msgid "Go Pro"
+msgstr "Go Pro"
+
+#: class-smart-manager.php:2019
+msgctxt "go pro link"
+msgid "Go Pro"
+msgstr "Go Pro"
+
+#. translators: %1\$: 5-star link %2s: 5-star link
+#: class-smart-manager.php:2024
+msgid "Boost us with %1$s&#11088;&#11088;&#11088;&#11088;&#11088; &#128640;%2$s"
+msgstr "Поднимите нас на %1$s⭐⭐⭐⭐⭐ 🚀%2$s"
+
+#: class-smart-manager.php:2025
+msgctxt "5-star link title"
+msgid "5-star review"
+msgstr "5-звездочный обзор"
+
+#. translators: %1$s: user name, %2$s: saved man-hours
+#: class-smart-manager.php:2189
+msgid "Hey %1$s, you’ve just saved <strong>%2$s productive hours</strong> with Smart Manager! 🎉"
+msgstr "Эй, %1$s, вы только что сэкономили <strong>%2$s продуктивных часов</strong> с помощью Smart Manager! 🎉"
+
+#. translators: %1$s: discount percentage, %2$s: additional man-hours
+#: class-smart-manager.php:2197
+msgid "Upgrade to Smart Manager Pro to save <strong>additional %1$s hours</strong> (minimum) and unlock all features. %2$s"
+msgstr "Перейдите на Smart Manager Pro, чтобы сэкономить <strong>еще %1$s часов</strong> (минимум) и получить все возможности. %2$s"
+
+#: class-smart-manager.php:2199
+msgid "Get it at"
+msgstr "Получите его в"
+
+#: class-smart-manager.php:2199
+msgid "25% off!"
+msgstr "Скидка 25%!"
+
+#: class-smart-manager.php:2285
+msgctxt "admin notice title for sku generation feature"
+msgid "New Feature Alert:"
+msgstr "Новая функция:"
+
+#: class-smart-manager.php:2286
+msgctxt "admin notice description for sku generation feature"
+msgid "Automatically generate SKUs for WooCommerce products with blank SKUs during CSV import."
+msgstr "Автоматическое генерирование SKU для продуктов WooCommerce с пустыми SKU при импорте CSV."
+
+#: class-smart-manager.php:2287
+msgctxt "admin notice instructions for sku generation feature"
+msgid "Enable this by turning on the <strong>“Automatically generate SKUs for WooCommerce products with blank values during CSV import”</strong> setting in <strong>Settings > General Settings.</strong>"
+msgstr "Включите эту функцию, включив параметр <strong>\"Автоматически генерировать SKU для продуктов WooCommerce с пустыми значениями при импорте CSV\"</strong> в <strong>Настройки &gt; Общие настройки.</strong>"
+
+#. translators: %s: Plugin version number
+#: classes/class-smart-manager-admin-welcome.php:230
+msgid "Thank you for installing Smart Manager %s!"
+msgstr "Спасибо за установку Smart Manager %s!"
+
+#: classes/class-smart-manager-admin-welcome.php:233
+msgid "Glad to have you onboard. We hope Smart Manager adds to your desired success 🏆"
+msgstr "Рады видеть вас на борту. Мы надеемся, что Smart Manager поможет вам добиться желаемого успеха 🏆."
+
+#: classes/class-smart-manager-admin-welcome.php:237
+#: classes/class-smart-manager-admin-welcome.php:388
+msgid "Get started with Smart Manager"
+msgstr "Начните работу с Smart Manager"
+
+#: classes/class-smart-manager-admin-welcome.php:249
+msgid "Questions? Need Help?"
+msgstr "Вопросы? Нужна помощь?"
+
+#: classes/class-smart-manager-admin-welcome.php:253
+msgid "Settings"
+msgstr "Настройки"
+
+#: classes/class-smart-manager-admin-welcome.php:255
+msgid "Docs"
+msgstr "Docs"
+
+#: classes/class-smart-manager-admin-welcome.php:262
+msgid "Know Smart Manager"
+msgstr "Знать умного менеджера"
+
+#: classes/class-smart-manager-admin-welcome.php:265
+msgid "FAQ's"
+msgstr "Вопросы и ответы"
+
+#: classes/class-smart-manager-admin-welcome.php:281
+msgid "Smart Manager is a unique, revolutionary tool that gives you the power to <b>boost your productivity by 10x</b> in managing your <b>WooCommerce</b> store by using a <b>familiar, single page, spreadsheet like interface</b>. "
+msgstr "Smart Manager - это уникальный, революционный инструмент, который позволяет <b>в 10 раз повысить производительность труда</b> при управлении магазином <b>WooCommerce</b> с помощью <b>привычного одностраничного интерфейса, напоминающего электронную таблицу</b>. "
+
+#. translators: %s: HTML of Smart Manager about screen
+#: classes/class-smart-manager-admin-welcome.php:284
+msgid "Apart from WooCommerce post types like Products, Orders, Coupons, now you can manage %s. Be it Posts, Pages, Media, WordPress Users, etc. you can now manage everything using Smart Manager."
+msgstr "Помимо таких типов постов WooCommerce, как товары, заказы, купоны, теперь вы можете управлять %s. Будь то посты, страницы, медиа, пользователи WordPress и т.д., теперь вы можете управлять всем с помощью Smart Manager."
+
+#. translators: %s: HTML of Smart Manager about screen
+#: classes/class-smart-manager-admin-welcome.php:284
+msgid "any custom post type in WordPress"
+msgstr "любой пользовательский тип поста в WordPress"
+
+#: classes/class-smart-manager-admin-welcome.php:290
+msgid "Manage your entire store from a single screen"
+msgstr "Управляйте всем магазином с одного экрана"
+
+#: classes/class-smart-manager-admin-welcome.php:293
+msgid "Filter / Search Records"
+msgstr "Фильтр / Поиск записей"
+
+#. translators: %1$s: Simple search doc link %2$s: Advanced search doc link
+#: classes/class-smart-manager-admin-welcome.php:300
+msgid "Simply enter the keyword you wish to filter records in the “Simple Search” field at the top of the grid (%1$s). If you need to have a more specific search result, then you can switch to “%2$s“ and then search."
+msgstr "Просто введите ключевое слово, по которому вы хотите отфильтровать записи, в поле \"Простой поиск\" в верхней части сетки (%1$s). Если вам нужен более конкретный результат поиска, переключитесь на \"%2$s\", а затем выполните поиск."
+
+#: classes/class-smart-manager-admin-welcome.php:301
+#: classes/class-smart-manager-admin-welcome.php:314
+msgid "see how"
+msgstr "посмотреть, как"
+
+#: classes/class-smart-manager-admin-welcome.php:302
+msgid "Advanced Search"
+msgstr "Расширенный поиск"
+
+#: classes/class-smart-manager-admin-welcome.php:306
+msgid "Inline Editing"
+msgstr "Встраиваемое редактирование"
+
+#. translators: %s: Inline Editing doc link
+#: classes/class-smart-manager-admin-welcome.php:313
+msgid "You can quickly update your Products, Orders, Coupons and Posts from Smart Manager itself. This facilitates editing of multiple rows at a time instead of editing and saving each row separately, %s."
+msgstr "Вы можете быстро обновлять товары, заказы, купоны и сообщения из самого Smart Manager. Это облегчает редактирование нескольких строк одновременно вместо того, чтобы редактировать и сохранять каждую строку отдельно, %s."
+
+#: classes/class-smart-manager-admin-welcome.php:318
+msgid "Show/Hide & Sort Data Columns"
+msgstr "Показать/скрыть и отсортировать столбцы данных"
+
+#: classes/class-smart-manager-admin-welcome.php:323
+msgid "Show/hide multiple data columns of your WooCommerce store data as per your requirements. Sort them in ascending or descending order. Smart Manager also gives you persistent state management."
+msgstr "Показать / скрыть несколько столбцов данных вашего WooCommerce магазин данных в соответствии с вашими требованиями. Сортируйте их в порядке возрастания или убывания. Smart Manager также предоставляет вам постоянное управление состоянием."
+
+#. translators: %s: Delete Records doc link
+#: classes/class-smart-manager-admin-welcome.php:336
+msgid "You can simply select records you want to delete (check the header box if you want to delete all records) and click on the “Delete” icon. All the selected records will be deleted. You can even delete records by applying search filters. %s."
+msgstr "Вы можете просто выбрать записи, которые хотите удалить (установите флажок в заголовке, если хотите удалить все записи), и нажать на значок \"Удалить\". Все выбранные записи будут удалены. Можно даже удалять записи, применяя фильтры поиска. %s."
+
+#: classes/class-smart-manager-admin-welcome.php:337
+#: classes/class-smart-manager-admin-welcome.php:361
+msgid "See how"
+msgstr "Посмотрите, как"
+
+#. translators: %1$s: HTML for bulk edit %2$s: link to Smart Manager Pro product page
+#: classes/class-smart-manager-admin-welcome.php:348
+msgid "Bulk Edit - %1$s (only in %2$s)"
+msgstr "Массовое редактирование - %1$s (только в %2$s)"
+
+#: classes/class-smart-manager-admin-welcome.php:349
+msgid "Biggest Time Saver"
+msgstr "Самая большая экономия времени"
+
+#: classes/class-smart-manager-admin-welcome.php:350
+#: classes/class-smart-manager-admin-welcome.php:372
+#: classes/class-smart-manager-base.php:2199
+msgid "Pro"
+msgstr "Про"
+
+#. translators: %s: Bulk Edit doc link
+#: classes/class-smart-manager-admin-welcome.php:360
+msgid "You can change / update multiple fields of the entire store OR for selected items by selecting multiple records and then click on Bulk Edit. %s."
+msgstr "Вы можете изменить / обновить несколько полей во всем магазине или для выбранных товаров, выделив несколько записей и нажав на кнопку Bulk Edit. %s."
+
+#. translators: %s: Export CSV doc link
+#: classes/class-smart-manager-admin-welcome.php:371
+msgid "Export CSV (only in %s)"
+msgstr "Экспорт CSV (только в %s)"
+
+#. translators: %s: HTML of Export CSV
+#: classes/class-smart-manager-admin-welcome.php:382
+msgid "You can export all the records OR filtered records (%s) by simply clicking on the Export CSV button at the bottom right of the grid."
+msgstr "Вы можете экспортировать все записи ИЛИ отфильтрованные записи (%s), просто нажав на кнопку Export CSV в правом нижнем углу сетки."
+
+#: classes/class-smart-manager-admin-welcome.php:383
+msgid "using Simple Search” or Advanced Search"
+msgstr "Использование простого поиска\" или расширенного поиска"
+
+#: classes/class-smart-manager-admin-welcome.php:391
+msgid "View our other WooCommerce plugins"
+msgstr "Посмотреть другие наши плагины для WooCommerce"
+
+#: classes/class-smart-manager-admin-welcome.php:406
+msgid "FAQ / Common Problems"
+msgstr "Часто задаваемые вопросы / Общие проблемы"
+
+#: classes/class-smart-manager-admin-welcome.php:411
+msgid "Smart Manager is empty?"
+msgstr "Smart Manager пуст?"
+
+#. translators: %s: Changelog doc link
+#: classes/class-smart-manager-admin-welcome.php:414
+msgid "Make sure you are using %s of Smart Manager. If still the issue persist, temporarily de-activate all plugins except WooCommerce/WPeCommerce & Smart Manager. Re-check the issue, if the issue still persists, contact us. If the issue goes away, re-activate other plugins one-by-one & re-checking the fields, to find out which plugin is conflicting."
+msgstr "Убедитесь, что вы используете %s Smart Manager. Если проблема сохраняется, временно отключите все плагины, кроме WooCommerce/WPeCommerce и Smart Manager. Повторно проверьте проблему, если она все еще сохраняется, свяжитесь с нами. Если проблема исчезнет, повторно активируйте другие плагины один за другим и повторно проверьте поля, чтобы выяснить, какой плагин конфликтует."
+
+#: classes/class-smart-manager-admin-welcome.php:415
+#: classes/class-smart-manager-admin-welcome.php:457
+msgid "latest version"
+msgstr "последняя версия"
+
+#: classes/class-smart-manager-admin-welcome.php:418
+msgid "Smart Manager search functionality not working"
+msgstr "Функция поиска в Smart Manager не работает"
+
+#: classes/class-smart-manager-admin-welcome.php:419
+msgid "Request you to kindly de-activate and activate the Smart Manager plugin once and then have a recheck with the search functionality."
+msgstr "Просим вас деактивировать и активировать плагин Smart Manager один раз, а затем перепроверить функциональность поиска."
+
+#: classes/class-smart-manager-admin-welcome.php:422
+msgid "Updating variation parent price/sales price not working?"
+msgstr "Обновление родительской цены/продажной цены вариации не работает?"
+
+#: classes/class-smart-manager-admin-welcome.php:423
+msgid "Smart Manager is based on WooCommerce and WPeCommerce and the same e-commerce plugins sets the price/sales price of the variation parents automatically based on the price/sales price of its variations."
+msgstr "Smart Manager основан на WooCommerce и WPeCommerce, и эти же плагины электронной коммерции автоматически устанавливают цену/продажную цену вариации родителей на основе цены/продажной цены ее вариаций."
+
+#: classes/class-smart-manager-admin-welcome.php:426
+msgid "How to manage any custom field of any custom plugin using Smart Manager?"
+msgstr "Как управлять любым пользовательским полем любого пользовательского плагина с помощью Smart Manager?"
+
+#: classes/class-smart-manager-admin-welcome.php:427
+msgid "Smart Manager will allow you to manage custom field of any other plugin."
+msgstr "Smart Manager позволит вам управлять пользовательскими полями любого другого плагина."
+
+#: classes/class-smart-manager-admin-welcome.php:430
+msgid "How to add columns to Smart Manager dashboard?"
+msgstr "Как добавить столбцы в панель Smart Manager?"
+
+#. translators: %s: Show and Hide doc link
+#: classes/class-smart-manager-admin-welcome.php:433
+msgid "To show / hide columns in the Smart Manager, %s."
+msgstr "Чтобы показать / скрыть столбцы в Smart Manager, %s."
+
+#: classes/class-smart-manager-admin-welcome.php:434
+msgid "click here"
+msgstr "нажмите здесь"
+
+#: classes/class-smart-manager-admin-welcome.php:437
+msgid "Can I import using Smart Manager?"
+msgstr "Можно ли импортировать с помощью Smart Manager?"
+
+#: classes/class-smart-manager-admin-welcome.php:438
+msgid "You cannot import using Smart Manager. Use import functionality of WooCommerce."
+msgstr "Вы не можете импортировать с помощью Smart Manager. Используйте функцию импорта в WooCommerce."
+
+#: classes/class-smart-manager-admin-welcome.php:445
+msgid "I can't find a way to do X..."
+msgstr "Я не могу найти способ сделать X..."
+
+#. translators: %s: contact us link
+#: classes/class-smart-manager-admin-welcome.php:448
+msgid "Smart Manager is actively developed. If you can't find your favorite feature (or have a suggestion) %s. We'd love to hear from you."
+msgstr "Smart Manager активно развивается. Если вы не можете найти свою любимую функцию (или у вас есть предложение) %s. Мы будем рады услышать вас."
+
+#: classes/class-smart-manager-admin-welcome.php:449
+msgid "Submit your query"
+msgstr "Отправьте запрос"
+
+#: classes/class-smart-manager-admin-welcome.php:449
+msgid "contact us"
+msgstr "связаться с нами"
+
+#: classes/class-smart-manager-admin-welcome.php:453
+msgid "How do I upgrade a Lite version to a Pro version?"
+msgstr "Как обновить версию Lite до версии Pro?"
+
+#. translators: %s: Lite version to a Pro version doc link
+#: classes/class-smart-manager-admin-welcome.php:456
+msgid "Follow steps listed here: %s"
+msgstr "Выполните указанные здесь действия: %s"
+
+#: classes/class-smart-manager-base.php:330
+#: pro/classes/class-smart-manager-pro-product-import-csv.php:42
+#: pro/classes/class-smart-manager-pro-wc-membership-plan.php:97
+#: pro/classes/class-smart-manager-pro-wc-membership-plan.php:98
+msgid "Slug"
+msgstr "Слизняк"
+
+#: classes/class-smart-manager-base.php:817
+#: classes/class-smart-manager-base.php:818
+#: classes/class-smart-manager-base.php:819
+#: classes/class-smart-manager-shop-order.php:1781
+msgid "Trash"
+msgstr "Мусор"
+
+#. translators: %1$s: time saved in minutes/hours, %2$s: Pro upgrade link, %3$s: additional savings possible
+#: classes/class-smart-manager-base.php:2187
+msgid "You saved <strong>%1$s</strong>! Upgrade to %2$s to save more <strong>%3$s</strong> and unlock undo."
+msgstr "Вы сэкономили <strong>%1$s</strong>! Повысьте уровень до %2$s, чтобы сэкономить еще <strong>%3$s</strong> и разблокировать отмену."
+
+#. translators: %1$d: number of updated record %2$s: record update message
+#: classes/class-smart-manager-base.php:2213
+msgid "%1$d record%2$s updated successfully!"
+msgstr "%1$d записей%2$s успешно обновлены!"
+
+#. translators: %1$d: number of updated record %2$s: record update message
+#: classes/class-smart-manager-base.php:2221
+msgid "%1$d record%2$s updated successfully! %3$s"
+msgstr "%1$d запись %2$s успешно обновлена! %3$s"
+
+#. translators: %1$d: number of updated record %2$s: record update message
+#: classes/class-smart-manager-base.php:2268
+msgid "%1$d record%2$s deleted successfully!"
+msgstr "%1$d запись %2$s удалена успешно!"
+
+#. translators: %1$s: exports schedule success message
+#: classes/class-smart-manager-base.php:3338
+msgctxt "success notification"
+msgid "Export scheduled successfully. Check all your scheduled export actions <a target='_blank' href='%s'>here</a>."
+msgstr "Экспорт запланирован успешно. Проверьте все запланированные действия по экспорту <a target='_blank' href='%s'>здесь</a>."
+
+#: classes/class-smart-manager-base.php:3388
+msgctxt "export data model"
+msgid "Export CSV: no data found "
+msgstr "Экспорт CSV: данные не найдены "
+
+#: classes/class-smart-manager-base.php:3458
+msgctxt "export file data"
+msgid "Export CSV: no file data found"
+msgstr "Экспорт CSV: данные файла не найдены"
+
+#: classes/class-smart-manager-product-stock-log.php:115
+msgctxt "task id"
+msgid "Task ID"
+msgstr "Идентификатор задачи"
+
+#: classes/class-smart-manager-product-stock-log.php:116
+msgctxt "task type"
+msgid "Type"
+msgstr "Тип"
+
+#: classes/class-smart-manager-product-stock-log.php:117
+msgctxt "task status"
+msgid "Status"
+msgstr "Статус"
+
+#: classes/class-smart-manager-product-stock-log.php:118
+msgctxt "task completed date"
+msgid "Date"
+msgstr "Дата"
+
+#: classes/class-smart-manager-product-stock-log.php:119
+msgctxt "name and email address of the user who created the task"
+msgid "Author"
+msgstr "Автор"
+
+#: classes/class-smart-manager-product-stock-log.php:148
+msgctxt "product id"
+msgid "Product ID"
+msgstr "ID продукта"
+
+#: classes/class-smart-manager-product-stock-log.php:149
+msgctxt "old stock value"
+msgid "Old Value"
+msgstr "Старая ценность"
+
+#: classes/class-smart-manager-product-stock-log.php:150
+msgctxt "New stock value"
+msgid "New Value"
+msgstr "Новая ценность"
+
+#: classes/class-smart-manager-product-stock-log.php:153
+msgctxt "parent id"
+msgid "Parent ID"
+msgstr "Идентификатор родителя"
+
+#: classes/class-smart-manager-product-stock-log.php:157
+msgctxt "product SKU"
+msgid "SKU"
+msgstr "SKU"
+
+#: classes/class-smart-manager-product-stock-log.php:158
+msgctxt "product title"
+msgid "Product Title"
+msgstr "Название продукта"
+
+#: classes/class-smart-manager-product-stock-log.php:159
+msgctxt "product type"
+msgid "Product Type"
+msgstr "Тип продукта"
+
+#: classes/class-smart-manager-product-stock-log.php:206
+msgctxt "product stock log dashboard"
+msgid "Product Stock Log"
+msgstr "Журнал складских запасов продукции"
+
+#: classes/class-smart-manager-product.php:1568
+#: classes/class-smart-manager-product.php:1571
+msgid "Featured Image updated successfully"
+msgstr "Featured Image успешно обновлено"
+
+#: classes/class-smart-manager-product.php:1614
+msgctxt "Title for task"
+msgid "Edited Stock"
+msgstr "Отредактированный запас"
+
+#: classes/class-smart-manager-shop-coupon.php:115
+msgid "Coupon Code"
+msgstr "Код купона"
+
+#: classes/class-smart-manager-shop-coupon.php:117
+msgid "Description"
+msgstr "Описание"
+
+#: classes/class-smart-manager-shop-coupon.php:119
+msgid "Allowed Emails"
+msgstr "Разрешенные электронные письма"
+
+#: classes/class-smart-manager-shop-coupon.php:121
+msgid "Usage Limit Per Coupon"
+msgstr "Лимит использования одного купона"
+
+#: classes/class-smart-manager-shop-coupon.php:123
+msgid "Allow Free Shipping"
+msgstr "Разрешить бесплатную доставку"
+
+#: classes/class-smart-manager-shop-order.php:98
+msgctxt "order edit link"
+msgid "Edit"
+msgstr "Редактировать"
+
+#: classes/class-smart-manager-shop-order.php:232
+#: pro/classes/class-smart-manager-pro-shop-subscription.php:224
+msgid "Date"
+msgstr "Дата"
+
+#: classes/class-smart-manager-shop-order.php:234
+#: pro/classes/class-smart-manager-pro-shop-subscription.php:226
+msgid "Status"
+msgstr "Статус"
+
+#: classes/class-smart-manager-shop-order.php:236
+msgid "Customer provided note"
+msgstr "Примечание, предоставленное клиентом"
+
+#: classes/class-smart-manager-shop-order.php:499
+msgid "Qty"
+msgstr "Количество"
+
+#: classes/class-smart-manager-shop-order.php:499
+#: pro/templates/order-invoice.php:177
+msgid "Price"
+msgstr "Цена"
+
+#: classes/class-smart-manager-shop-order.php:502
+#: pro/classes/class-smart-manager-pro-product.php:107
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:369
+msgid "Cost of Good"
+msgstr "Стоимость товара"
+
+#. translators: %1$s: order note %2$s: author name %2$s: order note added date
+#: classes/class-smart-manager-shop-order.php:526
+msgctxt "order note"
+msgid "Note:  %1$s (Added by  %2$s on  %3$s)"
+msgstr "Примечание: %1$s (Добавлено %2$s на %3$s)"
+
+#: classes/class-smart-manager-shop-order.php:2030
+msgid "Address Billing Email"
+msgstr "Адрес электронной почты для выставления счетов"
+
+#: classes/class-smart-manager-task.php:125
+msgid "ID"
+msgstr "ID"
+
+#: classes/class-smart-manager-task.php:348
+msgctxt "task update params"
+msgid "No params found for updating task "
+msgstr "Не найдено параметров для обновления задачи "
+
+#: classes/class-smart-manager-task.php:480
+msgid "In Progress"
+msgstr "В процессе"
+
+#: classes/class-smart-manager-task.php:481
+msgid "Completed"
+msgstr "Завершено"
+
+#: classes/class-smart-manager-task.php:482
+msgid "Scheduled"
+msgstr "Запланировано"
+
+#: classes/class-smart-manager-task.php:486
+msgid "Inline"
+msgstr "Inline"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:65
+msgid "Quick Feedback for Smart Manager plugin"
+msgstr "Быстрые отзывы о плагине Smart Manager"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:66
+msgid "Take a moment to let us know why you are deactivating"
+msgstr "Уделите нам немного времени, чтобы сообщить о причинах отключения"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:67
+msgid "Submit & Deactivate"
+msgstr "Отправить и деактивировать"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:68
+msgid "Skip & Deactivate"
+msgstr "Пропустить и деактивировать"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:69
+msgid "Yes - Deactivate"
+msgstr "Да - деактивировать"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:70
+msgid "Submit a reason to deactivate"
+msgstr "Укажите причину деактивации"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:71
+msgid "Please select an option"
+msgstr "Пожалуйста, выберите вариант"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:100
+msgid "The plugin is not working / not compatible with another plugin."
+msgstr "Плагин не работает / не совместим с другим плагином."
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:102
+msgid "Kindly share what did not work for you / conflicting with which plugin so we can fix it..."
+msgstr "Пожалуйста, поделитесь, что именно у вас не работает / конфликтует с каким плагином, чтобы мы могли это исправить..."
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:106
+msgid "I only needed the plugin for a short period"
+msgstr "Плагин был нужен мне лишь на короткое время."
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:108
+msgid "What did you wanted to do in short period?"
+msgstr "Что вы хотели сделать за короткий период?"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:112
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr "Плагин отличный, но мне нужна определенная функция, которую вы не поддерживаете"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:114
+msgid "What specific feature you need?"
+msgstr "Какая именно функция вам нужна?"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:118
+msgid "I found another plugin for my needs"
+msgstr "Я нашел другой плагин для своих нужд"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:120
+msgid "What is that plugin name?"
+msgstr "Как называется этот плагин?"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:124
+msgid "It is a temporary deactivation. I am just debugging an issue."
+msgstr "Это временная деактивация. Я просто отлаживаю проблему."
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:130
+msgid "Other"
+msgstr "Другие"
+
+#: classes/deactivation-survey/class-sa-smart-manager-deactivation.php:132
+msgid "Please mention..."
+msgstr "Пожалуйста, упомяните..."
+
+#: classes/sa-includes/class-sa-sm-in-app-offer.php:126
+msgctxt "timezone date format"
+msgid "Y-m-d H:i:s"
+msgstr "Y-m-d H:i:s"
+
+#: classes/sa-includes/class-sa-sm-in-app-offer.php:228
+msgid "Dismiss"
+msgstr "Увольте"
+
+#: classes/sa-includes/class-sa-sm-in-app-offer.php:228
+msgid "Hide this"
+msgstr "Скрыть это"
+
+#: common-core/classes/class-sa-manager-base.php:299
+msgctxt "column name"
+msgid "Featured Image"
+msgstr "Изображение"
+
+#: common-core/classes/class-sa-manager-base.php:300
+msgctxt "column name key"
+msgid "Featured Image"
+msgstr "Изображение"
+
+#: common-core/classes/class-sa-manager-base.php:598
+msgctxt "edit link"
+msgid "Edit"
+msgstr "Редактировать"
+
+#: common-core/classes/class-sa-manager-base.php:613
+msgctxt "view link"
+msgid "View"
+msgstr "Посмотреть"
+
+#: common-core/classes/class-sa-manager-base.php:625
+msgctxt "dashboard display name"
+msgid "Product"
+msgstr "Продукт"
+
+#. translators: 1: Method name, 2: Class name.
+#: common-core/classes/class-sa-manager-controller.php:204
+msgctxt "Ajax request handler background progress"
+msgid "Method %1$s is not callable in class %2$s"
+msgstr "Метод %1$s не является вызываемым в классе %2$s"
+
+#. Translators: %1$s is the method name, %2$s is the class name.
+#: common-core/classes/class-sa-manager-controller.php:229
+msgctxt "Error message for non-callable method in Ajax request handler"
+msgid "Method %1$s is not callable in class %2$s."
+msgstr "Метод %1$s не является вызываемым в классе %2$s."
+
+#: common-core/classes/class-sa-manager-product.php:169
+msgctxt "shop and search results product visibility option"
+msgid "Shop and search results"
+msgstr "Магазин и результаты поиска"
+
+#: common-core/classes/class-sa-manager-product.php:170
+msgctxt "shop only product visibility option"
+msgid "Shop only"
+msgstr "Только в магазине"
+
+#: common-core/classes/class-sa-manager-product.php:171
+msgctxt "search results only product visibility option"
+msgid "Search results only"
+msgstr "Только результаты поиска"
+
+#: common-core/classes/class-sa-manager-product.php:172
+msgctxt "hidden product visibility option"
+msgid "Hidden"
+msgstr "Скрытый"
+
+#: common-core/classes/class-sa-manager-product.php:218
+#: common-core/classes/class-sa-manager-product.php:219
+msgctxt "Product category"
+msgid "Category"
+msgstr "Категория"
+
+#: common-core/classes/class-sa-manager-product.php:260
+#: common-core/classes/class-sa-manager-product.php:267
+msgctxt "taxable tax status"
+msgid "Taxable"
+msgstr "Налогооблагаемая"
+
+#: common-core/classes/class-sa-manager-product.php:261
+#: common-core/classes/class-sa-manager-product.php:271
+msgctxt "shipping only tax status"
+msgid "Shipping only"
+msgstr "Только доставка"
+
+#: common-core/classes/class-sa-manager-product.php:262
+#: common-core/classes/class-sa-manager-product.php:275
+msgctxt "none tax status"
+msgid "None"
+msgstr "Нет"
+
+#: common-core/classes/class-sa-manager-product.php:284
+msgctxt "in stock status"
+msgid "In stock"
+msgstr "В наличии"
+
+#: common-core/classes/class-sa-manager-product.php:285
+msgctxt "out of stock status"
+msgid "Out of stock"
+msgstr "Нет в наличии"
+
+#: common-core/classes/class-sa-manager-product.php:286
+msgctxt "on backorder status"
+msgid "On backorder"
+msgstr "В резервном заказе"
+
+#: common-core/classes/class-sa-manager-product.php:311
+msgctxt "standard tax status"
+msgid "Standard"
+msgstr "Стандарт"
+
+#: common-core/classes/class-sa-manager-product.php:312
+msgctxt "reduced rate tax status"
+msgid "Reduced Rate"
+msgstr "Сниженная ставка"
+
+#: common-core/classes/class-sa-manager-product.php:313
+msgctxt "zero rate tax status"
+msgid "Zero Rate"
+msgstr "Нулевая ставка"
+
+#: common-core/classes/class-sa-manager-product.php:332
+msgctxt "do not allow backorder status"
+msgid "Do Not Allow"
+msgstr "Не разрешать"
+
+#: common-core/classes/class-sa-manager-product.php:333
+msgctxt "allow but notify customer backorder status"
+msgid "Allow, but notify customer"
+msgstr "Разрешить, но уведомить клиента"
+
+#: common-core/classes/class-sa-manager-product.php:334
+msgctxt "allow backorder status"
+msgid "Allow"
+msgstr "Разрешить"
+
+#: common-core/classes/class-sa-manager-product.php:361
+#: common-core/classes/class-sa-manager-product.php:364
+msgctxt "no shipping class"
+msgid "No shipping class"
+msgstr "Нет класса доставки"
+
+#: common-core/classes/class-sa-manager-product.php:370
+msgctxt "SKU column name"
+msgid "SKU"
+msgstr "SKU"
+
+#: common-core/classes/class-sa-manager-product.php:371
+msgctxt "SKU column key"
+msgid "SKU"
+msgstr "SKU"
+
+#: common-core/classes/class-sa-manager-product.php:375
+msgctxt "post title column name"
+msgid "Name"
+msgstr "Имя"
+
+#: common-core/classes/class-sa-manager-product.php:376
+msgctxt "title column key"
+msgid "Name"
+msgstr "Имя"
+
+#: common-core/classes/class-sa-manager-product.php:378
+msgctxt "slug column name"
+msgid "Slug"
+msgstr "Слизняк"
+
+#: common-core/classes/class-sa-manager-product.php:379
+msgctxt "slug column key"
+msgid "Slug"
+msgstr "Слизняк"
+
+#: common-core/classes/class-sa-manager-product.php:381
+msgctxt "description column name"
+msgid "Description"
+msgstr "Описание"
+
+#: common-core/classes/class-sa-manager-product.php:382
+msgctxt "description column key"
+msgid "Description"
+msgstr "Описание"
+
+#: common-core/classes/class-sa-manager-product.php:384
+msgctxt "additional description column name"
+msgid "Additional Description"
+msgstr "Дополнительное описание"
+
+#: common-core/classes/class-sa-manager-product.php:385
+msgctxt "additional description column key"
+msgid "Additional Description"
+msgstr "Дополнительное описание"
+
+#: common-core/classes/class-sa-manager-product.php:393
+msgctxt "url column name"
+msgid "External Url"
+msgstr "Внешний URL"
+
+#: common-core/classes/class-sa-manager-product.php:394
+msgctxt "url column key"
+msgid "External Url"
+msgstr "Внешний URL"
+
+#: common-core/classes/class-sa-manager-product.php:429
+msgctxt "attributes column"
+msgid "Attributes"
+msgstr "Атрибуты"
+
+#: common-core/classes/class-sa-manager-product.php:462
+msgctxt "attributes column name"
+msgid "Attributes"
+msgstr "Атрибуты"
+
+#: common-core/classes/class-sa-manager-product.php:477
+msgctxt "custom attributes column name"
+msgid "Attributes: custom"
+msgstr "Атрибуты: пользовательские"
+
+#: common-core/classes/class-sa-manager-product.php:502
+msgctxt "catalog visibility column name"
+msgid "Catalog Visibility"
+msgstr "Видимость каталога"
+
+#: common-core/classes/class-sa-manager-product.php:521
+msgctxt "featured column name"
+msgid "Featured"
+msgstr "Featured"
+
+#: pro/classes/class-smart-manager-pro-access-privilege.php:205
+msgctxt "select group title"
+msgid "Default"
+msgstr "По умолчанию"
+
+#: pro/classes/class-smart-manager-pro-access-privilege.php:209
+msgctxt "select group title"
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: pro/classes/class-smart-manager-pro-access-privilege.php:217
+msgctxt "select group title"
+msgid "Other"
+msgstr "Другие"
+
+#: pro/classes/class-smart-manager-pro-access-privilege.php:275
+msgctxt "select group title"
+msgid "All Post Types"
+msgstr "Все типы сообщений"
+
+#: pro/classes/class-smart-manager-pro-access-privilege.php:285
+msgctxt "select group title"
+msgid "All Taxonomies"
+msgstr "Все таксономии"
+
+#: pro/classes/class-smart-manager-pro-access-privilege.php:301
+msgctxt "select group title"
+msgid "All saved views"
+msgstr "Все сохраненные виды"
+
+#: pro/classes/class-smart-manager-pro-acf-field-group.php:41
+#: pro/classes/class-smart-manager-pro-acf-field.php:41
+msgid "Label"
+msgstr "Этикетка"
+
+#: pro/classes/class-smart-manager-pro-acf-field-group.php:42
+#: pro/classes/class-smart-manager-pro-acf-field.php:42
+msgid "Name"
+msgstr "Имя"
+
+#: pro/classes/class-smart-manager-pro-acf-field-group.php:43
+#: pro/classes/class-smart-manager-pro-acf-field.php:43
+msgid "Config Options"
+msgstr "Параметры конфигурации"
+
+#: pro/classes/class-smart-manager-pro-acf-field-group.php:44
+#: pro/classes/class-smart-manager-pro-acf-field.php:44
+msgid "Key"
+msgstr "Ключ"
+
+#: pro/classes/class-smart-manager-pro-acf-field.php:45
+msgid "Group Id"
+msgstr "Идентификатор группы"
+
+#. translators: %s: process name
+#: pro/classes/class-smart-manager-pro-background-updater.php:99
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:879
+msgctxt "batch handler time exceed status"
+msgid "Time is exceeded for %s"
+msgstr "Время превышено для %s"
+
+#. translators: %s: process name
+#: pro/classes/class-smart-manager-pro-background-updater.php:103
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:883
+msgctxt "batch handler memory exceed status"
+msgid "Memory is exceeded for %s"
+msgstr "Память превышена для %s"
+
+#: pro/classes/class-smart-manager-pro-background-updater.php:196
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:666
+msgctxt "background process task params"
+msgid "Background process task params "
+msgstr "Параметры задачи фонового процесса "
+
+#: pro/classes/class-smart-manager-pro-base.php:103
+msgid "Site-wide default"
+msgstr "По умолчанию на всей территории"
+
+#: pro/classes/class-smart-manager-pro-base.php:104
+msgid "None"
+msgstr "Нет"
+
+#: pro/classes/class-smart-manager-pro-base.php:105
+#: pro/classes/class-smart-manager-pro-base.php:115
+msgid "No Image Index"
+msgstr "Индекс изображения отсутствует"
+
+#: pro/classes/class-smart-manager-pro-base.php:106
+#: pro/classes/class-smart-manager-pro-base.php:114
+msgid "No Archive"
+msgstr "Нет архива"
+
+#: pro/classes/class-smart-manager-pro-base.php:107
+#: pro/classes/class-smart-manager-pro-base.php:116
+msgid "No Snippet"
+msgstr "Нет сниппета"
+
+#: pro/classes/class-smart-manager-pro-base.php:111
+msgid "Index"
+msgstr "Индекс"
+
+#: pro/classes/class-smart-manager-pro-base.php:112
+msgid "No Index"
+msgstr "Нет индекса"
+
+#: pro/classes/class-smart-manager-pro-base.php:113
+msgid "No Follow"
+msgstr "Нет слежки"
+
+#: pro/classes/class-smart-manager-pro-base.php:172
+msgid "Yoast SEO Title"
+msgstr "Yoast SEO Title"
+
+#: pro/classes/class-smart-manager-pro-base.php:173
+msgid "Yoast Meta Description"
+msgstr "Yoast Meta Description"
+
+#: pro/classes/class-smart-manager-pro-base.php:174
+msgid "Yoast Meta Keywords"
+msgstr "Yoast Meta Keywords"
+
+#: pro/classes/class-smart-manager-pro-base.php:175
+msgid "Yoast Focus Keyphrase"
+msgstr "Yoast Focus Keyphrase"
+
+#: pro/classes/class-smart-manager-pro-base.php:178
+msgid "Yoast Readability Score"
+msgstr "Показатель читабельности Yoast"
+
+#: pro/classes/class-smart-manager-pro-base.php:179
+msgid "Yoast SEO Score"
+msgstr "Yoast SEO Score"
+
+#: pro/classes/class-smart-manager-pro-base.php:180
+msgid "Rank Math SEO Score"
+msgstr "Рейтинг математики SEO Score"
+
+#. translators: %1$s: dashboard title
+#: pro/classes/class-smart-manager-pro-base.php:211
+msgid "Allow search engines to show this %1$s in search results?"
+msgstr "Разрешить поисковым системам показывать этот %1$s в результатах поиска?"
+
+#: pro/classes/class-smart-manager-pro-base.php:212
+msgid "Default"
+msgstr "По умолчанию"
+
+#: pro/classes/class-smart-manager-pro-base.php:213
+#: pro/classes/class-smart-manager-pro-base.php:223
+msgid "Yes"
+msgstr "Да"
+
+#: pro/classes/class-smart-manager-pro-base.php:214
+#: pro/classes/class-smart-manager-pro-base.php:224
+msgid "No"
+msgstr "Нет"
+
+#. translators: %1$s: dashboard title
+#: pro/classes/class-smart-manager-pro-base.php:222
+msgid "Should search engines follow links on this %1$s?"
+msgstr "Должны ли поисковые системы переходить по ссылкам на этот %1$s?"
+
+#: pro/classes/class-smart-manager-pro-base.php:229
+msgid "Meta robots advanced"
+msgstr "Мета-роботы продвинутые"
+
+#: pro/classes/class-smart-manager-pro-base.php:234
+msgid "Robots Meta"
+msgstr "Robots Meta"
+
+#: pro/classes/class-smart-manager-pro-base.php:555
+msgctxt "process name"
+msgid "Duplicate Records"
+msgstr "Дублирующие записи"
+
+#: pro/classes/class-smart-manager-pro-base.php:684
+msgctxt "duplicate process"
+msgid "Duplicate process failed"
+msgstr "Дублирование процесса не удалось"
+
+#: pro/classes/class-smart-manager-pro-base.php:703
+msgctxt "process name"
+msgid "Move to trash"
+msgstr "Переместить в мусор"
+
+#: pro/classes/class-smart-manager-pro-base.php:707
+msgctxt "process name"
+msgid "Delete All Records"
+msgstr "Удалить все записи"
+
+#: pro/classes/class-smart-manager-pro-base.php:713
+msgctxt "process name"
+msgid "Delete "
+msgstr "Удалить "
+
+#: pro/classes/class-smart-manager-pro-base.php:765
+msgctxt "move to trash process"
+msgid "Move to trash failed"
+msgstr "Переместить в корзину не удалось"
+
+#: pro/classes/class-smart-manager-pro-base.php:1128
+msgctxt "delete permanently"
+msgid "Delete records permanently failed"
+msgstr "Не удалось удалить записи навсегда"
+
+#: pro/classes/class-smart-manager-pro-base.php:1242
+msgctxt "delete process"
+msgid "Delete process failed"
+msgstr "Процесс удаления завершился неудачей"
+
+#: pro/classes/class-smart-manager-pro-base.php:1755
+msgctxt "process scheduled export file data"
+msgid "Export CSV: Missing required CSV file data."
+msgstr "Экспорт CSV: отсутствуют необходимые данные файла CSV."
+
+#. translators: %s: Directory path
+#: pro/classes/class-smart-manager-pro-base.php:1762
+msgctxt "export file data"
+msgid "Export CSV: unable to create directory %s"
+msgstr "Экспорт CSV: не удалось создать каталог %s"
+
+#. translators: %s: File path
+#: pro/classes/class-smart-manager-pro-base.php:1771
+msgctxt "process scheduled export file data"
+msgid "Export CSV: unable to write file to %s"
+msgstr "Экспорт CSV: невозможно записать файл в %s"
+
+#: pro/classes/class-smart-manager-pro-base.php:1777
+msgctxt "process scheduled export file data"
+msgid "Export CSV: error in checking file type"
+msgstr "Экспорт CSV: ошибка при проверке типа файла"
+
+#. translators: %s: File path
+#: pro/classes/class-smart-manager-pro-base.php:1789
+msgctxt "process scheduled export file data"
+msgid "Export CSV: failed to insert attachment for file %s"
+msgstr "Экспорт CSV: не удалось вставить вложение для файла %s"
+
+#: pro/classes/class-smart-manager-pro-base.php:1797
+msgctxt "process scheduled export file data"
+msgid "Export CSV: error in getting csv url"
+msgstr "Экспорт CSV: ошибка при получении url csv"
+
+#. translators: 1: Site title, 2: Date
+#: pro/classes/class-smart-manager-pro-base.php:1804
+msgctxt "Email subject for scheduled export"
+msgid "Your Scheduled Orders Export from %1$s on %2$s Is Ready"
+msgstr "Экспорт запланированных заказов из %1$s на %2$s готов"
+
+#: pro/classes/class-smart-manager-pro-course.php:42
+msgid "Category"
+msgstr "Категория"
+
+#: pro/classes/class-smart-manager-pro-product.php:77
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:339
+msgid "Booking duration"
+msgstr "Продолжительность бронирования"
+
+#: pro/classes/class-smart-manager-pro-product.php:78
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:340
+msgid "Minimum duration"
+msgstr "Минимальная продолжительность"
+
+#: pro/classes/class-smart-manager-pro-product.php:79
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:341
+msgid "Maximum duration"
+msgstr "Максимальная продолжительность"
+
+#: pro/classes/class-smart-manager-pro-product.php:80
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:342
+msgid "Booking can be cancelled until"
+msgstr "Бронирование может быть отменено до"
+
+#: pro/classes/class-smart-manager-pro-product.php:81
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:343
+msgid "Min persons"
+msgstr "Минимум человек"
+
+#: pro/classes/class-smart-manager-pro-product.php:82
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:344
+msgid "Max persons"
+msgstr "Максимальное количество человек"
+
+#: pro/classes/class-smart-manager-pro-product.php:83
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:345
+msgid "Max bookings per block"
+msgstr "Максимальное количество бронирований в одном блоке"
+
+#: pro/classes/class-smart-manager-pro-product.php:84
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:346
+msgid "Minimum block bookable"
+msgstr "Минимальный забронированный блок"
+
+#: pro/classes/class-smart-manager-pro-product.php:85
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:347
+msgid "Maximum block bookable"
+msgstr "Максимальный бронируемый блок"
+
+#: pro/classes/class-smart-manager-pro-product.php:86
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:348
+msgid "Require a buffer period of"
+msgstr "Требуется буферный период"
+
+#: pro/classes/class-smart-manager-pro-product.php:88
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:350
+msgid "Minimum quantity"
+msgstr "Минимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:89
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:351
+msgid "Maximum quantity"
+msgstr "Максимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:90
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:352
+msgid "Group of..."
+msgstr "Группа..."
+
+#: pro/classes/class-smart-manager-pro-product.php:91
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:353
+msgid "Variation Minimum quantity"
+msgstr "Вариация Минимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:92
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:354
+msgid "Variation Maximum quantity"
+msgstr "Вариация Максимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:93
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:355
+msgid "Variation Group of..."
+msgstr "Вариативная группа из..."
+
+#: pro/classes/class-smart-manager-pro-product.php:95
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:357
+msgid "Minimum Quantity"
+msgstr "Минимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:96
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:358
+msgid "Maximum Quantity"
+msgstr "Максимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:97
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:359
+msgid "Variation Minimum Quantity"
+msgstr "Вариация Минимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:98
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:360
+msgid "Variation Maximum Quantity"
+msgstr "Изменение Максимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:100
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:362
+msgid "Min Quantity"
+msgstr "Мин. количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:101
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:363
+msgid "Max Quantity"
+msgstr "Максимальное количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:103
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:365
+msgid "Subscription Price"
+msgstr "Цена подписки"
+
+#: pro/classes/class-smart-manager-pro-product.php:104
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:366
+msgid "Sign-up Fee"
+msgstr "Регистрационный взнос"
+
+#: pro/classes/class-smart-manager-pro-product.php:105
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:367
+msgid "Free Trial"
+msgstr "Бесплатная пробная версия"
+
+#: pro/classes/class-smart-manager-pro-product.php:109
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:371
+msgid "Product Units"
+msgstr "Единицы измерения продукта"
+
+#: pro/classes/class-smart-manager-pro-product.php:110
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:372
+msgid "Unit Price Units"
+msgstr "Цена за единицу Единицы"
+
+#: pro/classes/class-smart-manager-pro-product.php:111
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:373
+msgid "Regular Unit Price"
+msgstr "Обычная цена за единицу"
+
+#: pro/classes/class-smart-manager-pro-product.php:112
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:374
+msgid "Sale Unit Price"
+msgstr "Цена единицы продажи"
+
+#: pro/classes/class-smart-manager-pro-product.php:119
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:387
+msgid "Enable Calendar Range Picker?"
+msgstr "Включить выбор диапазона календаря?"
+
+#: pro/classes/class-smart-manager-pro-product.php:120
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:388
+msgid "Requires confirmation?"
+msgstr "Требуется подтверждение?"
+
+#: pro/classes/class-smart-manager-pro-product.php:121
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:389
+msgid "Can be cancelled?"
+msgstr "Можно ли отменить?"
+
+#: pro/classes/class-smart-manager-pro-product.php:122
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:390
+msgid "Has persons"
+msgstr "Имеет людей"
+
+#: pro/classes/class-smart-manager-pro-product.php:123
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:391
+msgid "Has resources"
+msgstr "Имеет ресурсы"
+
+#: pro/classes/class-smart-manager-pro-product.php:124
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:392
+msgid "Multiply all costs by person count"
+msgstr "Умножьте все расходы на количество человек"
+
+#: pro/classes/class-smart-manager-pro-product.php:125
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:393
+msgid "Count persons as bookings"
+msgstr "Учет лиц при бронировании"
+
+#: pro/classes/class-smart-manager-pro-product.php:126
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:394
+msgid "Enable person types"
+msgstr "Включить типы людей"
+
+#: pro/classes/class-smart-manager-pro-product.php:127
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:395
+msgid "Restrict start and end days?"
+msgstr "Ограничить дни начала и окончания?"
+
+#: pro/classes/class-smart-manager-pro-product.php:128
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:396
+msgid "Adjacent Buffering?"
+msgstr "Прилегающие буферы?"
+
+#: pro/classes/class-smart-manager-pro-product.php:133
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:401
+msgid "Enable Min Max Quantity"
+msgstr "Включить Мин Макс Количество"
+
+#: pro/classes/class-smart-manager-pro-product.php:138
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:406
+msgid "Min/Max Rules"
+msgstr "Правила Min/Max"
+
+#: pro/classes/class-smart-manager-pro-product.php:139
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:407
+msgid "Allow Combination"
+msgstr "Разрешить комбинацию"
+
+#: pro/classes/class-smart-manager-pro-product.php:140
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:408
+msgid "Order rules: Do not count"
+msgstr "Правила заказа: Не считать"
+
+#: pro/classes/class-smart-manager-pro-product.php:141
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:409
+msgid "Order rules: Exclude"
+msgstr "Правила заказа: Исключить"
+
+#: pro/classes/class-smart-manager-pro-product.php:142
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:410
+msgid "Category group-of rules: Exclude"
+msgstr "Группа правил категории: Исключить"
+
+#: pro/classes/class-smart-manager-pro-product.php:143
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:411
+msgid "Variation Order rules: Do not count"
+msgstr "Правила заказа вариаций: Не считать"
+
+#: pro/classes/class-smart-manager-pro-product.php:144
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:412
+msgid "Variation Order rules: Exclude"
+msgstr "Правила заказа вариаций: Исключить"
+
+#: pro/classes/class-smart-manager-pro-product.php:145
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:413
+msgid "Variation Category group-of rules: Exclude"
+msgstr "Разновидность Категория группы правил: Исключить"
+
+#: pro/classes/class-smart-manager-pro-product.php:147
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:415
+msgid "Calculate unit prices automatically"
+msgstr "Автоматически рассчитывайте цены за единицу продукции"
+
+#: pro/classes/class-smart-manager-pro-product.php:151
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:419
+msgid "Month(s)"
+msgstr "Месяц(ы)"
+
+#: pro/classes/class-smart-manager-pro-product.php:152
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:420
+msgid "Day(s)"
+msgstr "День (дни)"
+
+#: pro/classes/class-smart-manager-pro-product.php:153
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:421
+msgid "Hour(s)"
+msgstr "Час(ы)"
+
+#: pro/classes/class-smart-manager-pro-product.php:154
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:422
+msgid "Minutes(s)"
+msgstr "Минуты(ы)"
+
+#: pro/classes/class-smart-manager-pro-product.php:186
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:455
+msgid "Booking Duration (Type)"
+msgstr "Продолжительность бронирования (тип)"
+
+#: pro/classes/class-smart-manager-pro-product.php:188
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:458
+msgid "Fixed blocks of"
+msgstr "Фиксированные блоки"
+
+#: pro/classes/class-smart-manager-pro-product.php:189
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:459
+msgid "Customer defined blocks of"
+msgstr "Определенные клиентом блоки"
+
+#: pro/classes/class-smart-manager-pro-product.php:194
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:465
+msgid "Booking Duration (Unit)"
+msgstr "Продолжительность бронирования (единица)"
+
+#: pro/classes/class-smart-manager-pro-product.php:199
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:470
+msgid "Booking can be cancelled until (Unit)"
+msgstr "Бронирование может быть отменено до (Единица измерения)"
+
+#: pro/classes/class-smart-manager-pro-product.php:204
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:475
+msgid "Minimum block bookable (Unit)"
+msgstr "Минимальный бронируемый блок (единица)"
+
+#: pro/classes/class-smart-manager-pro-product.php:209
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:480
+msgid "Maximum block bookable (Unit)"
+msgstr "Максимальный бронируемый блок (единица)"
+
+#: pro/classes/class-smart-manager-pro-product.php:214
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:485
+msgid "Calendar display mode"
+msgstr "Режим отображения календаря"
+
+#: pro/classes/class-smart-manager-pro-product.php:216
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:488
+msgid "Display calendar on click"
+msgstr "Отображение календаря при нажатии"
+
+#: pro/classes/class-smart-manager-pro-product.php:217
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:489
+msgid "Calendar always visible"
+msgstr "Календарь всегда на виду"
+
+#: pro/classes/class-smart-manager-pro-product.php:222
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:494
+msgid "Resources are..."
+msgstr "Ресурсы..."
+
+#: pro/classes/class-smart-manager-pro-product.php:224
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:497
+msgid "Customer selected"
+msgstr "Выбранный клиент"
+
+#: pro/classes/class-smart-manager-pro-product.php:225
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:498
+msgid "Automatically assigned"
+msgstr "Автоматически назначается"
+
+#: pro/classes/class-smart-manager-pro-product.php:230
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:503
+msgid "All dates are..."
+msgstr "Все даты..."
+
+#: pro/classes/class-smart-manager-pro-product.php:232
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:506
+msgid "available by default"
+msgstr "доступны по умолчанию"
+
+#: pro/classes/class-smart-manager-pro-product.php:233
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:507
+msgid "not-available by default"
+msgstr "по умолчанию недоступна"
+
+#: pro/classes/class-smart-manager-pro-product.php:238
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:512
+msgid "Check rules against..."
+msgstr "Проверьте правила на..."
+
+#: pro/classes/class-smart-manager-pro-product.php:240
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:515
+msgid "All blocks being booked"
+msgstr "Все блоки забронированы"
+
+#: pro/classes/class-smart-manager-pro-product.php:241
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:516
+msgid "The starting block only"
+msgstr "Только стартовый блок"
+
+#: pro/classes/class-smart-manager-pro-product.php:249
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:527
+msgid "Subscription Periods"
+msgstr "Периоды подписки"
+
+#: pro/classes/class-smart-manager-pro-product.php:255
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:533
+msgid "Billing Period"
+msgstr "Расчетный период"
+
+#: pro/classes/class-smart-manager-pro-product.php:260
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:539
+msgid "Expire After"
+msgstr "Истекает после"
+
+#: pro/classes/class-smart-manager-pro-product.php:263
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:542
+msgid "Never expire"
+msgstr "Срок годности не истек"
+
+#: pro/classes/class-smart-manager-pro-product.php:274
+#: pro/common-pro/classes/class-sa-manager-pro-product.php:553
+msgid "Subscription Trial Period"
+msgstr "Пробный период подписки"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:248
+msgid "Allowed user roles"
+msgstr "Разрешенные роли пользователей"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:250
+msgid "Shipping methods"
+msgstr "Способы доставки"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:252
+msgid "Payment Methods"
+msgstr "Способы оплаты"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:258
+msgid "Product Attributes"
+msgstr "Атрибуты продукта"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:261
+msgid "Exclude Attributes"
+msgstr "Исключить атрибуты"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:264
+msgid "Products"
+msgstr "Продукция"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:266
+msgid "Exclude products"
+msgstr "Исключить продукты"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:271
+msgid "Max discount"
+msgstr "Максимальная скидка"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:275
+msgid "Coupon Validity"
+msgstr "Срок действия купона"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:276
+msgid "Validity Suffix"
+msgstr "Суффикс достоверности"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:277
+msgid "Coupon Title Prefix"
+msgstr "Префикс названия купона"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:278
+msgid "Coupon Title Suffix"
+msgstr "Суффикс названия купона"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:279
+msgid "Display message"
+msgstr "Сообщение на дисплее"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:283
+msgid "Disable Email Restriction"
+msgstr "Отключить ограничение электронной почты"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:284
+msgid "Exclude sale items"
+msgstr "Исключить товары из распродажи"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:285
+msgid "Individual use only"
+msgstr "Только индивидуальное использование"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:286
+msgid "Email message?"
+msgstr "Сообщение электронной почты?"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:287
+msgid "Allow free shipping"
+msgstr "Разрешить бесплатную доставку"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:288
+msgid "Auto Generate Coupon"
+msgstr "Автогенерируемый купон"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:289
+msgid "Is Pick Price of Product"
+msgstr "Выбираем цену продукта"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:290
+msgid "Coupon Is Visible Storewide"
+msgstr "Купон можно увидеть во всем магазине"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:291
+msgid "For new user only?"
+msgstr "Только для новых пользователей?"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:326
+msgid "Allowed emails"
+msgstr "Разрешенные электронные письма"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:362
+msgid "Address to look in"
+msgstr "Адрес для поиска"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:363
+msgid "Billing"
+msgstr "Выставление счетов"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:364
+#: pro/templates/order-invoice.php:211
+msgid "Shipping"
+msgstr "Доставка"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:369
+msgid "Coupon expiry date"
+msgstr "Дата истечения срока действия купона"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:374
+msgid "Coupon expiry time"
+msgstr "Срок действия купона"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:381
+msgid "Product categories"
+msgstr "Категории продуктов"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:381
+msgid "Exclude categories"
+msgstr "Исключить категории"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:395
+msgid "Coupon shareable link"
+msgstr "Ссылка для обмена купонами"
+
+#: pro/classes/class-smart-manager-pro-shop-coupon.php:464
+msgid "Click to copy"
+msgstr "Нажмите, чтобы скопировать"
+
+#. translators: %s: list of item names
+#: pro/classes/class-smart-manager-pro-shop-order.php:860
+msgctxt "order note"
+msgid "Added line items: %s by Smart Manager"
+msgstr "Добавлены элементы строки: %s с помощью Smart Manager"
+
+#. translators: 1: item name, 2: stock adjustment from -> to
+#: pro/classes/class-smart-manager-pro-shop-order.php:884
+msgctxt "order note"
+msgid "Deleted \"%1$s\" and adjusted stock (%2$s) by Smart Manager"
+msgstr "Удаление \"%1$s\" и корректировка запасов (%2$s) с помощью Smart Manager"
+
+#. translators: %s: item name
+#: pro/classes/class-smart-manager-pro-shop-order.php:884
+msgctxt "order note"
+msgid "Deleted \"%s\" by Smart Manager"
+msgstr "Удаление \"%s\" с помощью Smart Manager"
+
+#. translators: %s: Coupon name
+#: pro/classes/class-smart-manager-pro-shop-order.php:982
+msgctxt "order note"
+msgid "Coupon applied: \"%s\", by Smart Manager"
+msgstr "Применен купон: \"%s\", от Smart Manager"
+
+#. translators: %s: Coupon name
+#: pro/classes/class-smart-manager-pro-shop-order.php:982
+msgctxt "order note"
+msgid "Coupon removed: \"%s\", by Smart Manager"
+msgstr "Купон удален: \"%s\", с помощью Smart Manager"
+
+#. translators: %s: shipping method
+#: pro/classes/class-smart-manager-pro-shop-order.php:1067
+msgctxt "order note"
+msgid "Shipping method: %s"
+msgstr "Способ доставки: %s"
+
+#. translators: %s: fee name
+#: pro/classes/class-smart-manager-pro-shop-order.php:1085
+msgctxt "order note"
+msgid "Fee: %s"
+msgstr "Плата: %s"
+
+#. translators: %1$s: list of item names %2$d: from order id
+#: pro/classes/class-smart-manager-pro-shop-order.php:1110
+msgctxt "order note"
+msgid "Copied items: %s from order #%d, by Smart Manager"
+msgstr "Скопировано товаров: %s из заказа #%d, с помощью Smart Manager"
+
+#. translators: 1: product name, 2: quantity
+#: pro/classes/class-smart-manager-pro-shop-order.php:1142
+msgctxt "order note"
+msgid "%1$s (×%2$d)"
+msgstr "%1$s (×%2$d)"
+
+#: pro/classes/class-smart-manager-pro-task.php:118
+msgctxt "process name"
+msgid "Undo Tasks"
+msgstr "Отмена заданий"
+
+#: pro/classes/class-smart-manager-pro-task.php:190
+msgctxt "undo process args"
+msgid "Undo process args "
+msgstr "Отмена ошибок процесса "
+
+#: pro/classes/class-smart-manager-pro-task.php:278
+msgctxt "process name"
+msgid "Delete Tasks"
+msgstr "Удаление заданий"
+
+#: pro/classes/class-smart-manager-pro-task.php:322
+msgctxt "delete tasks"
+msgid "No task ids found for deleting tasks"
+msgstr "Идентификаторы задач для удаления не найдены"
+
+#: pro/classes/class-smart-manager-pro-task.php:344
+msgctxt "delete task details"
+msgid "No task detail ids found for deleting task details"
+msgstr "Не найдены идентификаторы деталей задачи для удаления деталей задачи"
+
+#: pro/classes/class-smart-manager-pro-user.php:99
+msgctxt "AFWC Affiliate Tags field name"
+msgid "AFWC Affiliate Tags"
+msgstr "Теги AFWC Affiliate"
+
+#: pro/classes/class-smart-manager-pro-user.php:216
+msgid "Nickname"
+msgstr "Прозвище"
+
+#: pro/classes/class-smart-manager-pro-user.php:395
+msgctxt "AFWC Is Affiliate field name"
+msgid "AFWC Is Affiliate"
+msgstr "AFWC является филиалом"
+
+#: pro/classes/class-smart-manager-pro-user.php:396
+msgctxt "AFWC Referral URL ID field name"
+msgid "AFWC Referral URL ID"
+msgstr "Идентификатор URL реферала AFWC"
+
+#: pro/classes/class-smart-manager-pro-user.php:397
+msgctxt "AFWC PayPal Email field name"
+msgid "AFWC PayPal Email"
+msgstr "Электронная почта AFWC PayPal"
+
+#: pro/classes/class-smart-manager-pro-user.php:398
+msgctxt "AFWC Parent Chain field name"
+msgid "AFWC Parent Chain"
+msgstr "Родительская цепочка AFWC"
+
+#: pro/classes/class-smart-manager-pro-user.php:399
+msgctxt "AFWC Lifetime Customers field name"
+msgid "AFWC Lifetime Customers"
+msgstr "Пожизненные клиенты AFWC"
+
+#: pro/classes/class-smart-manager-pro-user.php:400
+msgctxt "AFWC Affiliate Form Description field name"
+msgid "AFWC Affiliate Form Description"
+msgstr "Описание формы партнерства AFWC"
+
+#: pro/classes/class-smart-manager-pro-user.php:401
+msgctxt "AFWC Affiliate Form Contact field name"
+msgid "AFWC Affiliate Form Contact"
+msgstr "Контактная форма для партнеров AFWC"
+
+#: pro/classes/class-smart-manager-pro-user.php:402
+msgctxt "AFWC Affiliate Skype Handle field name"
+msgid "AFWC Affiliate Skype Handle"
+msgstr "Skype-ручка партнера AFWC"
+
+#: pro/classes/class-smart-manager-pro-user.php:404
+msgctxt "AFWC Additional Form Fields field name"
+msgid "AFWC Additional Form Fields"
+msgstr "Дополнительные поля формы AFWC"
+
+#: pro/classes/class-smart-manager-pro-user.php:1435
+msgid "Email cannot be empty"
+msgstr "Электронная почта не может быть пустой"
+
+#: pro/classes/class-smart-manager-pro-user.php:1441
+msgid "Email already exists. Please enter another email."
+msgstr "Электронная почта уже существует. Пожалуйста, введите другой адрес электронной почты."
+
+#: pro/classes/class-smart-manager-pro-views.php:119
+msgctxt "create view response message"
+msgid "Required params missing."
+msgstr "Отсутствуют необходимые параметры."
+
+#: pro/classes/class-smart-manager-pro-views.php:126
+msgctxt "create view response message"
+msgid "Saved action with this name already exists"
+msgstr "Сохраненное действие с таким именем уже существует"
+
+#: pro/classes/class-smart-manager-pro-views.php:134
+msgctxt "create view response message"
+msgid "View already exists. Please try another name"
+msgstr "Вид уже существует. Пожалуйста, попробуйте другое имя"
+
+#: pro/classes/class-smart-manager-pro-views.php:353
+msgctxt "update view response message"
+msgid "Required params missing."
+msgstr "Отсутствуют необходимые параметры."
+
+#: pro/classes/class-smart-manager-pro-views.php:431
+msgctxt "delete view response message"
+msgid "Required params missing."
+msgstr "Отсутствуют необходимые параметры."
+
+#: pro/classes/class-smart-manager-pro-views.php:480
+msgctxt "get saved bulk edit response message"
+msgid "Required params missing."
+msgstr "Отсутствуют необходимые параметры."
+
+#: pro/classes/class-smart-manager-pro-wc-booking.php:172
+msgid "Booked Product"
+msgstr "Забронированный продукт"
+
+#: pro/classes/class-smart-manager-pro-wc-user-membership.php:168
+#: pro/classes/class-smart-manager-pro-wc-user-membership.php:169
+msgid "Member since"
+msgstr "Участник с"
+
+#: pro/classes/class-smart-manager-pro-wc-user-membership.php:173
+#: pro/classes/class-smart-manager-pro-wc-user-membership.php:174
+msgid "Expires"
+msgstr "Срок действия:"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:305
+msgctxt "background process notice"
+msgid "Every 5 Seconds"
+msgstr "Каждые 5 секунд"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:396
+msgctxt "batch handler params"
+msgid "Batch handler params "
+msgstr "Параметры пакетного обработчика "
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:397
+msgctxt "batch handler update ids"
+msgid "Batch handler update ids "
+msgstr "Идентификаторы обновления пакетных обработчиков "
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:503
+msgctxt "entire store"
+msgid "All"
+msgstr "Все"
+
+#. translators: 1. Error title 2. The bulk process
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:515
+msgid "%1$s: The %2$s process has stopped. Please review the dashboard to check the status."
+msgstr "%1$s: Процесс %2$s остановлен. Пожалуйста, просмотрите приборную панель, чтобы проверить состояние."
+
+#. translators: 1. Error title 2. The bulk process
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:515
+msgid "Error"
+msgstr "Ошибка"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:523
+msgid "Important"
+msgstr "Важно"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:524
+msgid "request is running"
+msgstr "запрос выполняется"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:525
+msgid "in the background. You will be notified on"
+msgstr "на заднем плане. Вы получите уведомление о"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:525
+msgid "when it is completed."
+msgstr "когда она будет завершена."
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:530
+msgid "Progress"
+msgstr "Прогресс"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:531
+msgid "--:--:--"
+msgstr "--:--:--"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:532
+msgid "Stop"
+msgstr "Остановить"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:537
+msgid "NOTE"
+msgstr "ПРИМЕЧАНИЕ"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:545
+msgid "for"
+msgstr "для"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:545
+msgid "completed successfully"
+msgstr "успешно завершён"
+
+#. translators: %s: process name
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:557
+msgid "Are you sure you want to stop the %s process? Click OK to stop."
+msgstr "Вы уверены, что хотите остановить процесс %s? Нажмите OK, чтобы остановить процесс."
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:714
+msgctxt "fatal error for callback"
+msgid "Transactional email triggered fatal error for callback "
+msgstr "Транзакционное письмо вызвало фатальную ошибку для обратного вызова "
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:760
+msgctxt "percentage progress"
+msgid "% completed"
+msgstr "% выполненных"
+
+#: pro/common-pro/classes/class-sa-manager-pro-background-updater.php:783
+msgid "% Completed"
+msgstr "% Выполнено"
+
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:221
+msgctxt "process name"
+msgid "Bulk edit / Batch update"
+msgstr "Массовое редактирование / пакетное обновление"
+
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:281
+msgctxt "process name"
+msgid "Bulk Edit"
+msgstr "Массовое редактирование"
+
+#. translators: %s process name
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:750
+msgctxt "update status"
+msgid "%s failed"
+msgstr "%s не удалось"
+
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:807
+msgctxt "batch process"
+msgid "No batch process params found"
+msgstr "Не найдены параметры пакетного процесса"
+
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:820
+msgctxt "background process notification"
+msgid "records"
+msgstr "записи"
+
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:820
+msgctxt "background process notification"
+msgid "record"
+msgstr "запись"
+
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:821
+msgctxt "background process notification"
+msgid "entire store"
+msgstr "весь магазин"
+
+#. translators: %1$1s: site title %2$2s: background process parameter name
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:824
+msgctxt "background process title"
+msgid "[%1$1s] %2$2s process completed!"
+msgstr "[%1$1s] %2$2s процесс завершен!"
+
+#: pro/common-pro/classes/class-sa-manager-pro-base.php:1581
+msgctxt "bulk update process"
+msgid "Bulk update posts batch failed"
+msgstr "Пакетное обновление сообщений не удалось"
+
+#: pro/templates/emails/bulk-edit.php:7
+msgid "Duplicated"
+msgstr "Дублированный"
+
+#: pro/templates/emails/bulk-edit.php:7
+msgid "Updated"
+msgstr "Обновленный"
+
+#: pro/templates/emails/bulk-edit.php:9
+#: pro/templates/emails/scheduled-export.php:17
+msgctxt "scheduled export email user display name"
+msgid "there"
+msgstr "там"
+
+#. translators: %s: user display name
+#: pro/templates/emails/bulk-edit.php:38
+msgctxt "user name in bulk edit email content"
+msgid "Hi %s,"
+msgstr "Привет %s,"
+
+#: pro/templates/emails/bulk-edit.php:39
+msgid "Smart Manager has successfully completed"
+msgstr "Smart Manager успешно завершил"
+
+#: pro/templates/emails/bulk-edit.php:42
+msgid "Below are the lists of updates done:"
+msgstr "Ниже приведены списки выполненных обновлений:"
+
+#: pro/templates/emails/bulk-edit.php:45
+msgid "Field"
+msgstr "Поле"
+
+#: pro/templates/emails/bulk-edit.php:46
+msgid "Action"
+msgstr "Действие"
+
+#: pro/templates/emails/bulk-edit.php:47
+msgid "Value"
+msgstr "Значение"
+
+#: pro/templates/emails/bulk-edit.php:48
+msgid "Records Updated"
+msgstr "Обновление записей"
+
+#: pro/templates/emails/bulk-edit.php:65
+msgid "If you like"
+msgstr "Если вам нравится"
+
+#: pro/templates/emails/bulk-edit.php:65
+msgid "Smart Manager"
+msgstr "Умный менеджер"
+
+#: pro/templates/emails/bulk-edit.php:65
+msgid ", please leave us a"
+msgstr "Пожалуйста, оставьте нам сообщение"
+
+#: pro/templates/emails/bulk-edit.php:65
+msgid "rating. A huge thank you from StoreApps in advance!"
+msgstr "рейтинг. Заранее огромное спасибо от StoreApps!"
+
+#. translators: %s: date
+#: pro/templates/emails/scheduled-export.php:13
+msgctxt "Email heading for scheduled export"
+msgid "Orders Export for %s"
+msgstr "Экспорт заказов для %s"
+
+#. translators: %s: user display name
+#: pro/templates/emails/scheduled-export.php:62
+msgctxt "scheduled export email content"
+msgid "Hi %s,"
+msgstr "Привет %s,"
+
+#. translators: 1: Site title, 2: Date
+#: pro/templates/emails/scheduled-export.php:64
+msgctxt "scheduled export email message"
+msgid "Smart Manager has successfully completed your scheduled orders export for <strong>%1$s</strong>  on <strong>%2$s</strong>."
+msgstr "Smart Manager успешно завершил запланированный экспорт заказов для <strong>%1$s</strong> на <strong>%2$s</strong>."
+
+#: pro/templates/emails/scheduled-export.php:65
+msgctxt "scheduled export email content"
+msgid "You can download your CSV file using the link below:"
+msgstr "Вы можете загрузить свой CSV-файл по ссылке ниже:"
+
+#: pro/templates/emails/scheduled-export.php:68
+msgctxt "scheduled export email content"
+msgid "Download CSV File"
+msgstr "Загрузить файл CSV"
+
+#. translators: %s: contact us link
+#: pro/templates/emails/scheduled-export.php:72
+msgctxt "scheduled export email content"
+msgid "If you have any questions or need help, feel free to reach out to our <a href=\"%s\">support team</a>."
+msgstr "Если у вас возникли вопросы или вам нужна помощь, обращайтесь в нашу <a href=\"%s\">службу поддержки</a>."
+
+#: pro/templates/emails/scheduled-export.php:73
+msgctxt "scheduled export email content"
+msgid "Best regards,"
+msgstr "С наилучшими пожеланиями,"
+
+#: pro/templates/emails/scheduled-export.php:74
+msgctxt "scheduled export email content"
+msgid "The Smart Manager Team"
+msgstr "Команда Smart Manager"
+
+#: pro/templates/emails/scheduled-export.php:77
+msgctxt "scheduled export email content"
+msgid "If you like"
+msgstr "Если вам нравится"
+
+#: pro/templates/emails/scheduled-export.php:77
+msgctxt "scheduled export email content"
+msgid "Smart Manager"
+msgstr "Умный менеджер"
+
+#: pro/templates/emails/scheduled-export.php:77
+msgctxt "scheduled export email content"
+msgid ", please leave us a"
+msgstr "Пожалуйста, оставьте нам сообщение"
+
+#: pro/templates/emails/scheduled-export.php:77
+msgctxt "scheduled export email content"
+msgid "rating. A huge thank you from StoreApps in advance!"
+msgstr "рейтинг. Заранее огромное спасибо от StoreApps!"
+
+#: pro/templates/order-invoice.php:158
+msgid "Billing Address"
+msgstr "Адрес для выставления счетов"
+
+#: pro/templates/order-invoice.php:165
+msgid "Shipping Address"
+msgstr "Адрес доставки"
+
+#: pro/templates/order-invoice.php:172
+msgid "Email id"
+msgstr "Email id"
+
+#: pro/templates/order-invoice.php:173
+msgid "Tel"
+msgstr "Тел."
+
+#: pro/templates/order-invoice.php:176
+msgid "Product"
+msgstr "Продукт"
+
+#: pro/templates/order-invoice.php:176
+msgid "SKU"
+msgstr "SKU"
+
+#: pro/templates/order-invoice.php:177
+msgid "Quantity"
+msgstr "Количество"
+
+#: pro/templates/order-invoice.php:209
+msgid "Order Notes"
+msgstr "Примечания к заказу"
+
+#: pro/templates/order-invoice.php:215
+msgid "Order Discount"
+msgstr "Заказать Скидка"
+
+#: pro/templates/order-invoice.php:222
+msgid "Tax"
+msgstr "Налог"
+
+#: pro/templates/order-invoice.php:223
+msgid "Total"
+msgstr "Всего"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:21
+msgctxt "advanced search notice for custom views"
+msgid "Conditions cannot be edited when using Custom Views"
+msgstr "Условия не могут быть отредактированы при использовании пользовательских представлений"
+
+#. translators: %1$d: Advanced search rule count %2$s: search conditions
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:68
+msgctxt "advanced search conditions"
+msgid "%1$d condition%2$s"
+msgstr "%1$d состояние%2$s"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:68
+msgctxt "advanced search conditions"
+msgid "s"
+msgstr "s"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:86
+msgctxt "side pannel - modal title"
+msgid "Advanced Search"
+msgstr "Расширенный поиск"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:116
+msgctxt "advanced search button title"
+msgid "Search [ENTER]"
+msgstr "Поиск [ENTER]"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:118
+msgctxt "advanced search button"
+msgid "Search"
+msgstr "Поиск"
+
+#. translators: %s: pricing page link
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:127
+msgctxt "notification"
+msgid "Saved Searches available (Only in %s)"
+msgstr "Доступны сохраненные поиски (только в %s)"
+
+#: assets/js/admin.js:1
+#: assets/js/smart-manager.js:2514
+#: assets/js/smart-manager.js:2542
+#: assets/js/smart-manager.js:2658
+#: src/views/AdvancedSearchDialog.js:127
+msgctxt "notification"
+msgid "Pro"
+msgstr "Про"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:152
+msgctxt "advanced search save button title"
+msgid "Save"
+msgstr "Сохранить"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:154
+msgctxt "advanced search save button"
+msgid "Save"
+msgstr "Сохранить"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:185
+msgctxt "advanced search button"
+msgid "Clear"
+msgstr "Очистить"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:201
+msgctxt "advanced search close button title"
+msgid "Close [ESC]"
+msgstr "Закрыть [ESC]"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:220
+msgctxt "advanced search content"
+msgid "When"
+msgstr "Когда"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:221
+msgctxt "advanced search option"
+msgid "at least one"
+msgstr "по крайней мере один"
+
+#: assets/js/admin.js:1
+#: src/views/AdvancedSearchDialog.js:222
+msgctxt "advanced search content"
+msgid "condition groups pass"
+msgstr "группы условий проходят"
+
+#: assets/js/admin.js:1
+#: src/views/ColumnManagerDialog.js:44
+msgctxt "side panel - modal title"
+msgid "Column Manager - Show/Hide Columns"
+msgstr "Менеджер столбцов - показать/скрыть столбцы"
+
+#: assets/js/admin.js:1
+#: src/views/ColumnManagerDialog.js:60
+msgctxt "column manager button title"
+msgid "Update [ENTER]"
+msgstr "Обновление [ENTER]"
+
+#: assets/js/admin.js:1
+#: src/views/ColumnManagerDialog.js:62
+msgctxt "column manager button"
+msgid "Update"
+msgstr "Обновление"
+
+#: assets/js/admin.js:1
+#: src/views/ColumnManagerDialog.js:75
+msgctxt "column manager close button title"
+msgid "Close [ESC]"
+msgstr "Закрыть [ESC]"
+
+#: assets/js/admin.js:1
+#: src/views/SettingsDialog.js:45
+msgctxt "setting label"
+msgid "Automatically generate SKUs for WooCommerce products with blank values during CSV import"
+msgstr "Автоматическое создание SKU для продуктов WooCommerce с пустыми значениями при импорте CSV"
+
+#: assets/js/admin.js:1
+#: src/views/SettingsDialog.js:132
+msgctxt "delete button for image type settings"
+msgid "Remove image"
+msgstr "Удалить изображение"
+
+#: assets/js/admin.js:1
+#: src/views/SettingsDialog.js:164
+msgctxt "side pannel - modal title"
+msgid "Settings"
+msgstr "Настройки"
+
+#: assets/js/admin.js:1
+#: src/views/SettingsDialog.js:183
+msgctxt "settings button title"
+msgid "Save [ENTER]"
+msgstr "Сохранить [ENTER]"
+
+#: assets/js/admin.js:1
+#: src/views/SettingsDialog.js:185
+msgctxt "settings button"
+msgid "Save"
+msgstr "Сохранить"
+
+#: assets/js/admin.js:1
+#: src/views/SettingsDialog.js:198
+msgctxt "settings close button title"
+msgid "Close [ESC]"
+msgstr "Закрыть [ESC]"
+
+#: assets/js/admin.js:1
+msgctxt "banner heading"
+msgid "Limited Period Offer"
+msgstr "Ограниченное предложение"
+
+#: assets/js/admin.js:1
+msgctxt "banner content"
+msgid "Get 50% off on Smart Manager Pro"
+msgstr "Получите скидку 50% на Smart Manager Pro"
+
+#: assets/js/admin.js:1
+msgctxt "banner content"
+msgid "Get 60% off on 3-year and 25% off on annual plans on Smart Manager Pro"
+msgstr "Получите скидку 60% на 3-летние и 25% на годовые планы Smart Manager Pro"
+
+#: assets/js/admin.js:1
+msgctxt "banner content"
+msgid "Upgrade now and take your productivity to the next level!"
+msgstr "Обновитесь прямо сейчас и поднимите свою производительность на новый уровень!"
+
+#: assets/js/admin.js:1
+msgctxt "User message introduction for saved production hours"
+msgid "production hours"
+msgstr "часы работы"
+
+#: assets/js/admin.js:1
+msgctxt "User message conclusion for saved production hours"
+msgid "with Smart Manager! 🎉"
+msgstr "с помощью Smart Manager! 🎉"
+
+#: assets/js/admin.js:1
+msgctxt "Discount message introduction"
+msgid "Claim your "
+msgstr "Заявите о своем "
+
+#: assets/js/admin.js:1
+msgctxt "Discount message introduction"
+msgid "60% off on 3-year and 25% off on annual plans"
+msgstr "Скидка 60% на 3-летние и 25% на годовые планы"
+
+#: assets/js/admin.js:1
+msgctxt "Discount message middle part"
+msgid "to save additional "
+msgstr "чтобы сэкономить дополнительные "
+
+#: assets/js/admin.js:1
+msgctxt "Discount message middle part"
+msgid "hours"
+msgstr "часы"
+
+#: assets/js/admin.js:1
+msgctxt "Discount message conclusion"
+msgid "and unlock even more features!"
+msgstr "и откройте еще больше возможностей!"
+
+#: assets/js/admin.js:1
+msgctxt "pricing table badge"
+msgid "Popular"
+msgstr "Популярные"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license type"
+msgid "1 site (1 year)"
+msgstr "1 сайт (1 год)"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license price"
+msgid "$199"
+msgstr "$199"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license discounted price"
+msgid "$99"
+msgstr "$99"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license discounted price"
+msgid "$149"
+msgstr "$149"
+
+#: assets/js/admin.js:1
+msgctxt "pricing table cta text"
+msgid "Buy Now →"
+msgstr "Купить сейчас →"
+
+#: assets/js/admin.js:1
+msgctxt "pricing table badge"
+msgid "Best Seller"
+msgstr "Лучший продавец"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license type"
+msgid "5 sites (Annual)"
+msgstr "5 участков (ежегодно)"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license price"
+msgid "$249"
+msgstr "$249"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license discounted price"
+msgid "$125"
+msgstr "$125"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license discounted price"
+msgid "$187"
+msgstr "$187"
+
+#: assets/js/admin.js:1
+msgctxt "pricing table badge"
+msgid "Trending"
+msgstr "Trending"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license type"
+msgid "1 site (3 years)"
+msgstr "1 сайт (3 года)"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license price"
+msgid "$599"
+msgstr "$599"
+
+#: assets/js/admin.js:1
+msgctxt "pricing license discounted price"
+msgid "$249"
+msgstr "$249"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial heading"
+msgid "I would happily pay five times for this product!"
+msgstr "Я бы с радостью заплатил за этот продукт пять раз!"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content alt text"
+msgid "Premium Top Rated WooCommerce Plugin"
+msgstr "Премиум Top Rated WooCommerce Plugin"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content"
+msgid "What really sold me on Smart Manager Pro was Bulk Edit. My assistant does not have to do any complex math now (earlier, I always feared she would make mistakes)! With Smart Manager, she has more free time at hand, so I asked her to set up auto responder emails. The response was phenomenal. Repeat sales were up by 19.5%."
+msgstr "Что действительно помогло мне приобрести Smart Manager Pro, так это функция Bulk Edit. Теперь моей помощнице не нужно делать сложные математические вычисления (раньше я всегда боялся, что она будет делать ошибки)! Благодаря Smart Manager у нее появилось больше свободного времени, и я попросил ее настроить автоматическую рассылку писем. Отклик был феноменальным. Повторные продажи выросли на 19,5 %."
+
+#: assets/js/admin.js:1
+msgctxt "testimonial customer name alt text"
+msgid "Jeff"
+msgstr "Джефф"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial customer name"
+msgid "Jeff Smith"
+msgstr "Джефф Смит"
+
+#: assets/js/admin.js:1
+msgctxt "pro features heading"
+msgid "Smart Manager Pro: Packed with Tons of Powerful Features"
+msgstr "Smart Manager Pro: Тонны мощных функций"
+
+#: assets/js/admin.js:1
+msgctxt "pro features content"
+msgid "Upgrade now to enjoy advanced capabilities, enhanced features, improved performance, and premium support on demand."
+msgstr "Обновитесь сейчас, чтобы насладиться расширенными возможностями, улучшенными функциями, повышенной производительностью и первоклассной поддержкой по требованию."
+
+#: assets/js/admin.js:1
+msgctxt "comparison table heading"
+msgid "FEATURES"
+msgstr "ОСОБЕННОСТИ"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table heading"
+msgid "LITE (FREE)"
+msgstr "ЛАЙТ (БЕСПЛАТНО)"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table heading"
+msgid "PRO"
+msgstr "PRO"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Supported Post Types"
+msgstr "Поддерживаемые типы постов"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "WordPress Posts, WooCommerce Products, Product Variations, Orders, Coupons"
+msgstr "WordPress Posts, WooCommerce Products, Product Variations, Orders, Coupons"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Everything in Lite + WordPress Pages, Media, Users, SEO plugins, WooCommerce Subscriptions, Bookings, Memberships, Product Add-ons, Brands..."
+msgstr "Все в Lite + WordPress Pages, Media, Users, SEO плагины, WooCommerce Subscriptions, Bookings, Memberships, Product Add-ons, Brands..."
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "all custom post types and their custom fields"
+msgstr "все пользовательские типы постов и их пользовательские поля"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Inline (Direct) editing"
+msgstr "Встроенное (прямое) редактирование"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Upto three records without saving"
+msgstr "До трех записей без сохранения"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Unlimited"
+msgstr "Неограниченное количество"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Add or Delete Records"
+msgstr "Добавление или удаление записей"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Import products CSV"
+msgstr "Импорт продуктов CSV"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Columns (Show / Hide / Sort)"
+msgstr "Столбцы (показать / скрыть / отсортировать)"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "WooCommerce Product Stock Log (Product History)"
+msgstr "WooCommerce журнал запасов продукта (история продукта)"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Simple Search"
+msgstr "Простой поиск"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Advanced Search Using “AND” Filter"
+msgstr "Расширенный поиск с использованием фильтра \"И\""
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Advanced Search Using “OR” Filter"
+msgstr "Расширенный поиск с использованием фильтра \"ИЛИ\""
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Saved Searches"
+msgstr "Сохраненные поиски"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Bulk Edit / Batch Update"
+msgstr "Массовое редактирование / пакетное обновление"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Set to, Append, Prepend, Increase / Decrease by %, Increase / Decrease by number, Set datetime to, Set date to, Set time to, Upload images and many more..."
+msgstr "Установить в, Добавить, Предоставить, Увеличить / Уменьшить на %, Увеличить / Уменьшить на число, Установить дату в, Установить дату в, Установить время в, Загружать изображения и многое другое..."
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Undo Inline & Bulk Edits"
+msgstr "Отмена последовательного и массового редактирования"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Schedule Bulk Edits"
+msgstr "Планирование массового редактирования"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Saved Bulk Edits"
+msgstr "Сохраненные массовые правки"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Export All / Selected / Filtered Records As CSV"
+msgstr "Экспорт всех / выбранных / отфильтрованных записей в формате CSV"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Only WooCommerce Products Stock Columns"
+msgstr "Только WooCommerce продукты колонки акций"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "All Columns"
+msgstr "Все колонки"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Scheduled CSV Exports for WooCommerce Orders"
+msgstr "Запланированный экспорт CSV для заказов WooCommerce"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Duplicate Single / Multiple Records"
+msgstr "Дублирование одной / нескольких записей"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Duplicate All Records In A Single Click"
+msgstr "Дублирование всех записей одним щелчком мыши"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Create Column Sets / Custom Views"
+msgstr "Создание наборов столбцов / пользовательских представлений"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Print PDF Invoices"
+msgstr "Печать счетов-фактур в формате PDF"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Print Packing Slips For WooCommerce Orders In Bulk"
+msgstr "Печать упаковочных листов для массовых заказов WooCommerce"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Manage WordPress User Roles"
+msgstr "Управление ролями пользователей WordPress"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "User-role / user based dashboard restrictions\t"
+msgstr "Ограничения приборной панели на основе ролей и пользователей"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "View Customer Lifetime Value (LTV)"
+msgstr "Просмотр пожизненной стоимости клиента (LTV)"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Manage Custom Taxonomies"
+msgstr "Управление пользовательскими таксономиями"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Rename Column Headers"
+msgstr "Переименование заголовков столбцов"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Support"
+msgstr "Поддержка"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "WordPress Forum"
+msgstr "Форум WordPress"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Email, Phone, Video Calls"
+msgstr "Электронная почта, телефон, видеозвонки"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Pricing"
+msgstr "Ценообразование"
+
+#: assets/js/admin.js:1
+msgctxt "comparison table features data"
+msgid "Buy Smart Manager Pro →"
+msgstr "Купить Smart Manager Pro →"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial heading"
+msgid "\"This is a life-saver!\""
+msgstr "\"Это спасение жизни!\""
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content"
+msgid "The plugin has saved me HOURS (maybe even days) of work! It"
+msgstr "Этот плагин сэкономил мне часы (а может, и дни) работы! Это"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content"
+msgid "makes tedious tasks really simple and quick"
+msgstr "делает утомительные задачи очень простыми и быстрыми"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content"
+msgid "The support team is fantastic too. Totally worth purchasing the premium version."
+msgstr "Служба поддержки тоже фантастическая. Стоит приобрести премиум-версию."
+
+#: assets/js/admin.js:1
+msgctxt "testimonial customer name alt text"
+msgid "The BBCream Girl"
+msgstr "Девушка из BBCream"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial customer name"
+msgid "The BBCream Girl"
+msgstr "Девушка из BBCream"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial heading"
+msgid "\"A whole afternoon’s work in seconds\""
+msgstr "\"Целый день работы за несколько секунд\"."
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content"
+msgid "We recommend Smart Manager Pro to everyone who is looking for an"
+msgstr "Мы рекомендуем Smart Manager Pro всем, кто ищет"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content"
+msgid "extremely multi-functional store manager"
+msgstr "чрезвычайно многофункциональный управляющий магазином"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content"
+msgid "The plugin is absolutely worth it. Never again without Smart Manager."
+msgstr "Плагин абсолютно того стоит. Никогда больше без Smart Manager."
+
+#: assets/js/admin.js:1
+msgctxt "testimonial customer name alt text"
+msgid "Acrom"
+msgstr "Acrom"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial customer name"
+msgid "Acrom"
+msgstr "Acrom"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial heading"
+msgid "\"20 or 30 times quicker store management\""
+msgstr "\"Управление магазином в 20 или 30 раз быстрее\"."
+
+#: assets/js/admin.js:1
+msgctxt "testimonial content"
+msgid "I've got over 200 products and dreaded managing them one by one. Smart Manager Pro plugin lets me do this so much quicker, probably 20 or 30 times quicker. It is an absolutely invaluable tool."
+msgstr "У меня более 200 товаров, и мне ужасно надоело управлять ими по одному. Плагин Smart Manager Pro позволяет мне делать это намного быстрее, возможно, в 20 или 30 раз быстрее. Это абсолютно бесценный инструмент."
+
+#: assets/js/admin.js:1
+msgctxt "testimonial customer name alt text"
+msgid "Brian Batcher"
+msgstr "Брайан Батчер"
+
+#: assets/js/admin.js:1
+msgctxt "testimonial customer name"
+msgid "Brian Batcher"
+msgstr "Брайан Батчер"
+
+#: assets/js/admin.js:1
+msgctxt "section content"
+msgid "Get your precious time back"
+msgstr "Верните себе драгоценное время"
+
+#: assets/js/admin.js:1
+msgctxt "section heading"
+msgid "60 hours of work = 6 minutes with Smart Manager Pro"
+msgstr "60 часов работы = 6 минут с Smart Manager Pro"
+
+#: assets/js/admin.js:1
+msgctxt "section content"
+msgid "Stop opening each product to edit price, stock, category, description, and other data."
+msgstr "Откройте каждый товар, чтобы отредактировать цену, запас, категорию, описание и другие данные."
+
+#: assets/js/admin.js:1
+msgctxt "section content"
+msgid "Switch to Smart Manager Pro and spend your time wisely."
+msgstr "Перейдите на Smart Manager Pro и тратьте свое время с умом."
+
+#: assets/js/admin.js:1
+msgctxt "section content"
+msgid "Say goodbye to frustration, stress, and calculation errors that keep piling up."
+msgstr "Попрощайтесь с разочарованием, стрессом и ошибками в расчетах, которые постоянно накапливаются."
+
+#: assets/js/admin.js:1
+msgctxt "time spent using traditional way section heading"
+msgid "Mundane store tasks without using Smart Manager"
+msgstr "Рутинные задачи магазина без использования Smart Manager"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using traditional way section content"
+msgid "Add one new product or edit details → 3 mins"
+msgstr "Добавьте один новый продукт или отредактируйте детали → 3 минуты"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using traditional way section content"
+msgid "Open and edit 1000s of products one-by-one → 3 hours – 30 hours"
+msgstr "Открывайте и редактируйте 1000 продуктов по одному → 3 часа - 30 часов"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using traditional way section content"
+msgid "Search any record to make edits → 3 mins"
+msgstr "Поиск любой записи для внесения правок → 3 мин."
+
+#: assets/js/admin.js:1
+msgctxt "time spent using traditional way section content"
+msgid "Create 1000s of duplicates → 3 hours – 30 hours"
+msgstr "Создание 1000 дубликатов → 3 часа - 30 часов"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using traditional way section content"
+msgid "Search and delete products → 3 mins"
+msgstr "Поиск и удаление продуктов → 3 минуты"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using traditional way section content"
+msgid "Total ≈ 6 hours – 60 hours"
+msgstr "Всего ≈ 6 часов - 60 часов"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section heading"
+msgid "Using Smart Manager"
+msgstr "Использование Smart Manager"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "30 seconds (Inline edit)"
+msgstr "30 секунд (последовательное редактирование)"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "2 mins (Bulk edit)"
+msgstr "2 минуты (объемное редактирование)"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "1 min (Search & Edit)"
+msgstr "1 мин (поиск и редактирование)"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "2 mins (Duplicate)"
+msgstr "2 минуты (дубликат)"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "1 min (Search & Delete)"
+msgstr "1 мин (поиск и удаление)"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "≈ 6 minutes"
+msgstr "≈ 6 минут"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "And it's not just products –"
+msgstr "И речь идет не только о продуктах."
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "save time in editing orders, coupons, blog posts, users, WordPress post types, WordPress taxonomies and more."
+msgstr "экономить время на редактировании заказов, купонов, записей в блогах, пользователей, типов записей WordPress, таксономий WordPress и многого другого."
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "Experience a 10x productivity boost and massive time-savings with Smart Manager Pro!"
+msgstr "Повысьте производительность в 10 раз и сэкономьте массу времени с помощью Smart Manager Pro!"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "Reclaim precious time."
+msgstr "Верните себе драгоценное время."
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "to nurture your business and cherish moments with loved ones. If you're ready for a life with"
+msgstr "чтобы развивать свой бизнес и лелеять моменты общения с близкими. Если вы готовы к жизни с"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid "more freedom and fulfillment"
+msgstr "больше свободы и самореализации"
+
+#: assets/js/admin.js:1
+msgctxt "time spent using smart manager section content"
+msgid ", Smart Manager is your solution."
+msgstr "Smart Manager - это ваше решение."
+
+#: assets/js/admin.js:1
+msgctxt "pricing page cta"
+msgid "Select a Plan Now →"
+msgstr "Выберите план сейчас →"
+
+#: assets/js/admin.js:1
+msgctxt "footer heading"
+msgid "Still hesitant? Buy with confidence – you’re in good hands"
+msgstr "Все еще сомневаетесь? Покупайте с уверенностью - вы в надежных руках"
+
+#: assets/js/admin.js:1
+msgctxt "footer content"
+msgid "You’re buying from the best!"
+msgstr "Вы покупаете у лучших!"
+
+#: assets/js/admin.js:1
+msgctxt "footer content"
+msgid "Rest assured that you will be well taken care of when you buy from StoreApps."
+msgstr "Будьте уверены, что о вас хорошо позаботятся, когда вы покупаете в StoreApps."
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "Top selling plugins for marketing and store management"
+msgstr "Самые продаваемые плагины для маркетинга и управления магазином"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "Official WooCommerce"
+msgstr "Официальная WooCommerce"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "and GoDaddy partner"
+msgstr "и партнер GoDaddy"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "Founded in 2011, one of the early Woo third party developers"
+msgstr "Основанная в 2011 году, одна из первых сторонних разработчиков Woo."
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "40k+ customers"
+msgstr "40k+ клиентов"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "300k+ users, millions of downloads"
+msgstr "300 тысяч пользователей, миллионы загрузок"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "Consistent 5 star review ratings"
+msgstr "Постоянные 5-звездочные рейтинги отзывов"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "WordPress"
+msgstr "WordPress"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "community contributor"
+msgstr "участник сообщества"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps benefits list"
+msgid "sponsor, speaker."
+msgstr "спонсор, спикер."
+
+#: assets/js/admin.js:1
+msgctxt "footer content - trust badge alt text"
+msgid "Guaranteed Safe Checkout"
+msgstr "Гарантированная безопасная проверка"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - trust badge alt text"
+msgid "Friendly support from top quality developers"
+msgstr "Дружеская поддержка от высококлассных разработчиков"
+
+#: assets/js/admin.js:1
+msgctxt "footer content"
+msgid "Our plugins are easy to use. We also have ample documentation. But whenever you need further assistance, you will get support from the same people who develop these plugins! We make sure you succeed!"
+msgstr "Наши плагины просты в использовании. У нас также есть обширная документация. Но если вам понадобится дополнительная помощь, вы получите поддержку от тех же людей, которые разрабатывают эти плагины! Мы заботимся о том, чтобы вы добились успеха!"
+
+#: assets/js/admin.js:1
+msgctxt "footer content - storeapps team image alt text"
+msgid "StoreApps team is on your side"
+msgstr "Команда StoreApps на вашей стороне"
+
+#: assets/js/admin.js:1
+#: src/views/PrivilegeSettingsDialog.js:71
+msgctxt "access privilege settings side pannel - modal title"
+msgid "Privilege Settings"
+msgstr "Настройки привилегий"
+
+#: assets/js/admin.js:1
+#: src/views/PrivilegeSettingsDialog.js:131
+msgctxt "access privilege settings description"
+msgid "Manage dashboards access for user roles and users"
+msgstr "Управление доступом к приборным панелям для пользовательских ролей и пользователей"
+
+#: assets/js/admin.js:1
+#: src/views/PrivilegeSettingsDialog.js:134
+msgctxt "access privilege settings description"
+msgid "Note: The privilege setting for a user email will always take precedence over a user role"
+msgstr "Примечание: Настройка привилегий для электронной почты пользователя всегда будет иметь приоритет над ролью пользователя."
+
+#: assets/js/smart-manager-product.js:115
+msgctxt "tooltip"
+msgid "Import CSV"
+msgstr "Импорт CSV"
+
+#: assets/js/smart-manager-product.js:119
+msgctxt "button"
+msgid "Import CSV"
+msgstr "Импорт CSV"
+
+#: assets/js/smart-manager-product.js:141
+msgctxt "checkbox for displaying WooCommerce product variations"
+msgid "Show Variations"
+msgstr "Показать варианты"
+
+#: assets/js/smart-manager-product.js:170
+msgctxt "export button"
+msgid "Selected Records - Stock Columns"
+msgstr "Выбранные записи - Колонки запасов"
+
+#: assets/js/smart-manager-product.js:171
+msgctxt "export button"
+msgid "Selected Records - Visible Columns"
+msgstr "Выбранные записи - видимые столбцы"
+
+#: assets/js/smart-manager-product.js:172
+#: assets/js/smart-manager-product.js:179
+msgctxt "export button"
+msgid "Entire Store - Stock Columns"
+msgstr "Весь магазин - колонки запасов"
+
+#: assets/js/smart-manager-product.js:173
+#: assets/js/smart-manager-product.js:182
+msgctxt "export button"
+msgid "Entire Store - Visible Columns"
+msgstr "Весь магазин - видимые столбцы"
+
+#: assets/js/smart-manager-product.js:179
+msgctxt "export button"
+msgid "All Items In Search Results - Stock Columns"
+msgstr "Все элементы в результатах поиска - колонки акций"
+
+#: assets/js/smart-manager-product.js:182
+msgctxt "export button"
+msgid "All Items In Search Results - Visible Columns"
+msgstr "Все элементы в результатах поиска - видимые столбцы"
+
+#: assets/js/smart-manager-product.js:197
+msgctxt "product import csv modal content"
+msgid "<strong>Note:</strong> Auto-generation of SKUs is enabled. Products with blank SKUs in your CSV will have SKUs automatically assigned during import.<br><br> To disable this, uncheck the <strong>“Automatically generate SKUs for WooCommerce products with blank values during CSV import”</strong>, setting under <strong>Settings > General Settings</strong>, then re-try the import."
+msgstr "<strong>Примечание:</strong> Автоматическая генерация SKU включена. Продуктам с пустыми значениями SKU в CSV будут автоматически присвоены SKU во время импорта.<br><br> Чтобы отключить эту функцию, снимите флажок <strong>\"Автоматически генерировать SKU для продуктов WooCommerce с пустыми значениями во время импорта CSV\"</strong> в разделе <strong>Настройки &gt; Общие настройки</strong>, а затем повторите попытку импорта."
+
+#: assets/js/smart-manager-product.js:203
+#: assets/js/smart-manager.js:2330
+#: assets/js/smart-manager.js:2527
+#: assets/js/smart-manager.js:2562
+#: assets/js/smart-manager.js:4324
+#: pro/assets/js/smart-manager.js:1230
+#: pro/assets/js/smart-manager.js:1863
+msgctxt "modal title"
+msgid "Attention!"
+msgstr "Внимание!"
+
+#: assets/js/smart-manager-product.js:309
+msgctxt "WooCommerce product attributes list"
+msgid "Custom product attribute"
+msgstr "Пользовательский атрибут продукта"
+
+#: assets/js/smart-manager-product.js:367
+#: assets/js/smart-manager-product.js:478
+msgctxt "visibility option for WooCommerce product attributes"
+msgid "Visible on the product page"
+msgstr "Видно на странице товара"
+
+#: assets/js/smart-manager-product.js:368
+#: assets/js/smart-manager-product.js:479
+msgctxt "use for variations option for WooCommerce product attributes"
+msgid "Used for variations"
+msgstr "Используется для вариаций"
+
+#: assets/js/smart-manager-product.js:369
+#: assets/js/smart-manager-product.js:480
+msgctxt "position checkbox for WooCommerce product attributes"
+msgid "Position:"
+msgstr "Должность:"
+
+#: assets/js/smart-manager-product.js:375
+#: assets/js/smart-manager-product.js:391
+#: assets/js/smart-manager-product.js:486
+#: assets/js/smart-manager-product.js:502
+msgctxt "placeholder"
+msgid "Pipe (|) separate terms"
+msgstr "Трубка (|) разделяет термины"
+
+#: assets/js/smart-manager-product.js:377
+#: assets/js/smart-manager-product.js:488
+msgctxt "placeholder"
+msgid "Select terms"
+msgstr "Выберите термины"
+
+#: assets/js/smart-manager-product.js:385
+#: assets/js/smart-manager-product.js:496
+msgctxt "button for selecting WooCommerce product attribute"
+msgid "Select all"
+msgstr "Выбрать все"
+
+#: assets/js/smart-manager-product.js:386
+#: assets/js/smart-manager-product.js:497
+msgctxt "button for selecting WooCommerce product attribute"
+msgid "Select none"
+msgstr "Выберите нет"
+
+#: assets/js/smart-manager-product.js:390
+#: assets/js/smart-manager-product.js:501
+msgctxt "placeholder"
+msgid "Name"
+msgstr "Имя"
+
+#: assets/js/smart-manager-product.js:411
+msgctxt "add attribute button for WooCommerce products"
+msgid "Add"
+msgstr "Добавить"
+
+#: assets/js/smart-manager-product.js:440
+msgctxt "modal title"
+msgid "Attribute"
+msgstr "Атрибут"
+
+#: assets/js/smart-manager-product.js:445
+#: assets/js/smart-manager.js:1830
+#: assets/js/smart-manager.js:1870
+#: assets/js/smart-manager.js:1924
+#: pro/assets/js/smart-manager.js:1125
+#: pro/common-pro/assets/js/base.js:61
+msgctxt "button"
+msgid "Ok"
+msgstr "Хорошо"
+
+#: assets/js/smart-manager.js:94
+msgctxt "select options - operator for 'text' data type fields"
+msgid "starts with"
+msgstr "начинается с"
+
+#: assets/js/smart-manager.js:95
+msgctxt "select options - operator for 'text' data type fields"
+msgid "ends with"
+msgstr "заканчивается"
+
+#: assets/js/smart-manager.js:96
+msgctxt "select options - operator for 'text' data type fields"
+msgid "any of"
+msgstr "любой из"
+
+#: assets/js/smart-manager.js:97
+msgctxt "select options - operator for 'text' data type fields"
+msgid "not starts with"
+msgstr "не начинается с"
+
+#: assets/js/smart-manager.js:98
+msgctxt "select options - operator for 'text' data type fields"
+msgid "not ends with"
+msgstr "не заканчивается"
+
+#: assets/js/smart-manager.js:99
+msgctxt "select options - operator for 'text' data type fields"
+msgid "not any of"
+msgstr "ни один из"
+
+#. translators: %s: dashboard display name
+#: assets/js/smart-manager.js:194
+msgctxt "bottom bar button"
+msgid "Load More %s"
+msgstr "Загрузить больше %s"
+
+#. translators: %1$s: dashboard display name %2$s: success message %3$s: pricing page link
+#: assets/js/smart-manager.js:287
+#: assets/js/smart-manager.js:2121
+msgctxt "modal content"
+msgid "For managing %1$s, %2$s %3$s version"
+msgstr "Для управления %1$s, %2$s %3$s версия"
+
+#: assets/js/smart-manager.js:287
+#: assets/js/smart-manager.js:2121
+#: assets/js/smart-manager.js:2426
+#: assets/js/smart-manager.js:2666
+#: assets/js/smart-manager.js:2722
+#: assets/js/smart-manager.js:2734
+#: assets/js/smart-manager.js:2743
+#: assets/js/smart-manager.js:3203
+msgctxt "modal content"
+msgid "Pro"
+msgstr "Про"
+
+#: assets/js/smart-manager.js:540
+msgctxt "search type"
+msgid "Advanced"
+msgstr "Расширенный"
+
+#: assets/js/smart-manager.js:540
+msgctxt "search type"
+msgid "Simple"
+msgstr "Простой"
+
+#: assets/js/smart-manager.js:542
+msgctxt "placeholder"
+msgid "Type to search..."
+msgstr "Введите для поиска..."
+
+#: assets/js/smart-manager.js:543
+msgctxt "tooltip"
+msgid "Click to add/edit condition"
+msgstr "Нажмите, чтобы добавить/изменить условие"
+
+#. translators: %1$d: Advanced search rule count %2$s: search conditions
+#: assets/js/smart-manager.js:546
+#: assets/js/smart-manager.js:887
+msgctxt "search conditions"
+msgid "%1$d condition%2$s"
+msgstr "%1$d состояние%2$s"
+
+#: assets/js/smart-manager.js:546
+#: assets/js/smart-manager.js:887
+msgctxt "search conditions"
+msgid "s"
+msgstr "s"
+
+#: assets/js/smart-manager.js:564
+msgctxt "dashboard option groups"
+msgid "Common post types"
+msgstr "Распространенные типы постов"
+
+#: assets/js/smart-manager.js:574
+msgctxt "dashboard option groups"
+msgid "Common taxonomies"
+msgstr "Общие таксономии"
+
+#: assets/js/smart-manager.js:584
+msgctxt "dashboard option groups"
+msgid "Recently used views"
+msgstr "Недавно использованные виды"
+
+#: assets/js/smart-manager.js:594
+msgctxt "dashboard option groups"
+msgid "Other post types"
+msgstr "Другие типы постов"
+
+#: assets/js/smart-manager.js:604
+msgctxt "dashboard option groups"
+msgid "Other taxonomies"
+msgstr "Другие таксономии"
+
+#: assets/js/smart-manager.js:620
+msgctxt "dashboard option groups"
+msgid "Other saved views"
+msgstr "Другие сохраненные виды"
+
+#: assets/js/smart-manager.js:630
+msgctxt "saved searches option groups"
+msgid "Saved searches"
+msgstr "Сохраненные поиски"
+
+#: assets/js/smart-manager.js:641
+msgctxt "button for creating new bulk edit"
+msgid "New"
+msgstr "Новый"
+
+#: assets/js/smart-manager.js:644
+msgctxt "manage button for scheduled bulk edit actions"
+msgid "Manage Scheduled edits"
+msgstr "Управление запланированными правками"
+
+#: assets/js/smart-manager.js:652
+msgctxt "dashboard option groups"
+msgid "All post types"
+msgstr "Все типы сообщений"
+
+#: assets/js/smart-manager.js:662
+msgctxt "dashboard option groups"
+msgid "All taxonomies"
+msgstr "Все таксономии"
+
+#. translators: %s: search type
+#: assets/js/smart-manager.js:679
+msgctxt "tooltip"
+msgid "Switch to %s"
+msgstr "Переключитесь на %s"
+
+#. translators: %s: search type
+#: assets/js/smart-manager.js:681
+msgctxt "search type"
+msgid "%s Search"
+msgstr "%s Поиск"
+
+#: assets/js/smart-manager.js:702
+msgctxt "tooltip"
+msgid "Docs"
+msgstr "Docs"
+
+#: assets/js/smart-manager.js:714
+msgctxt "tooltip"
+msgid "General settings"
+msgstr "Общие настройки"
+
+#: assets/js/smart-manager.js:714
+msgctxt "settings button"
+msgid "General settings"
+msgstr "Общие настройки"
+
+#: assets/js/smart-manager.js:715
+msgctxt "tooltip"
+msgid "Access Privilege settings"
+msgstr "Настройки привилегий доступа"
+
+#: assets/js/smart-manager.js:715
+msgctxt "access privilege settings button"
+msgid "Access Privilege Settings"
+msgstr "Настройки привилегий доступа"
+
+#: assets/js/smart-manager.js:722
+msgctxt "tooltip"
+msgid "Bulk Edit"
+msgstr "Массовое редактирование"
+
+#: assets/js/smart-manager.js:726
+msgctxt "button"
+msgid "Bulk Edit"
+msgstr "Массовое редактирование"
+
+#: assets/js/smart-manager.js:730
+msgctxt "tooltip"
+msgid "Save"
+msgstr "Сохранить"
+
+#: assets/js/smart-manager.js:734
+msgctxt "button"
+msgid "Save"
+msgstr "Сохранить"
+
+#: assets/js/smart-manager.js:736
+msgctxt "tooltip"
+msgid "Add Row"
+msgstr "Добавить строку"
+
+#: assets/js/smart-manager.js:740
+msgctxt "button"
+msgid "Add Row"
+msgstr "Добавить строку"
+
+#: assets/js/smart-manager.js:746
+msgctxt "tooltip"
+msgid "Duplicate"
+msgstr "Дубликат"
+
+#: assets/js/smart-manager.js:746
+msgctxt "button"
+msgid "Duplicate"
+msgstr "Дубликат"
+
+#: assets/js/smart-manager.js:748
+msgctxt "duplicate button"
+msgid "Selected Records"
+msgstr "Избранные записи"
+
+#: assets/js/smart-manager.js:749
+#: assets/js/smart-manager.js:970
+msgctxt "duplicate button"
+msgid "Entire Store"
+msgstr "Весь магазин"
+
+#: assets/js/smart-manager.js:756
+#: pro/assets/js/smart-manager.js:1073
+msgctxt "tooltip"
+msgid "Delete"
+msgstr "Удалить"
+
+#: assets/js/smart-manager.js:756
+#: pro/assets/js/smart-manager.js:1073
+msgctxt "button"
+msgid "Delete"
+msgstr "Удалить"
+
+#: assets/js/smart-manager.js:758
+msgctxt "delete button"
+msgid "Move to Trash"
+msgstr "Переместить в корзину"
+
+#: assets/js/smart-manager.js:759
+msgctxt "delete button"
+msgid "Delete Permanently"
+msgstr "Удалить навсегда"
+
+#: assets/js/smart-manager.js:768
+msgctxt "tooltip"
+msgid "Custom Views"
+msgstr "Пользовательские виды"
+
+#: assets/js/smart-manager.js:768
+msgctxt "button"
+msgid "Custom Views"
+msgstr "Пользовательские виды"
+
+#: assets/js/smart-manager.js:770
+msgctxt "custom view button"
+msgid "Create"
+msgstr "Создать"
+
+#: assets/js/smart-manager.js:771
+msgctxt "custom view button"
+msgid "Update"
+msgstr "Обновление"
+
+#: assets/js/smart-manager.js:772
+msgctxt "custom view button"
+msgid "Delete"
+msgstr "Удалить"
+
+#: assets/js/smart-manager.js:779
+msgctxt "button"
+msgid "Export CSV"
+msgstr "Экспорт CSV"
+
+#: assets/js/smart-manager.js:785
+msgctxt "tooltip"
+msgid "Print Invoice"
+msgstr "Печать счета-фактуры"
+
+#: assets/js/smart-manager.js:789
+msgctxt "button"
+msgid "Print Invoice"
+msgstr "Печать счета-фактуры"
+
+#: assets/js/smart-manager.js:793
+msgctxt "tooltip"
+msgid "Show / Hide Columns"
+msgstr "Показать / скрыть столбцы"
+
+#: assets/js/smart-manager.js:797
+msgctxt "button"
+msgid "Columns"
+msgstr "Колонны"
+
+#: assets/js/smart-manager.js:799
+msgctxt "checkbox for displaying current dashboard tasks"
+msgid "Show Tasks"
+msgstr "Показать задачи"
+
+#: assets/js/smart-manager.js:807
+msgctxt "tooltip"
+msgid "Load more records"
+msgstr "Загрузить больше записей"
+
+#: assets/js/smart-manager.js:967
+msgctxt "export button"
+msgid "All Items In Search Results"
+msgstr "Все элементы в результатах поиска"
+
+#: assets/js/smart-manager.js:967
+#: assets/js/smart-manager.js:3384
+msgctxt "export button"
+msgid "Entire Store"
+msgstr "Весь магазин"
+
+#: assets/js/smart-manager.js:970
+msgctxt "duplicate button"
+msgid "All Items In Search Results"
+msgstr "Все элементы в результатах поиска"
+
+#. translators: %s: dashboard display name
+#: assets/js/smart-manager.js:1035
+#: assets/js/smart-manager.js:1066
+msgctxt "bottom bar status"
+msgid "No %s Found"
+msgstr "Не найдено %s"
+
+#. translators: %1$d: number of display records %2$s: dashboard display name
+#: assets/js/smart-manager.js:1044
+msgctxt "bottom bar status"
+msgid "%1$d %2$s loaded"
+msgstr "%1$d %2$s загружено"
+
+#. translators: %1$d: number of total records %2$d: number of display records %3$s: dashboard display name
+#: assets/js/smart-manager.js:1064
+msgctxt "bottom bar status"
+msgid "%1$d of %2$d %3$s loaded"
+msgstr "%1$d из %2$d %3$s загружены"
+
+#: assets/js/smart-manager.js:1152
+msgctxt "button"
+msgid "OK"
+msgstr "OK"
+
+#: assets/js/smart-manager.js:1329
+msgctxt "tooltip"
+msgid "Remove gallery image"
+msgstr "Удалить изображение из галереи"
+
+#: assets/js/smart-manager.js:1784
+#: assets/js/smart-manager.js:2282
+#: assets/js/smart-manager.js:4111
+msgctxt "process name"
+msgid "Inline Edit"
+msgstr "Редактирование в линию"
+
+#: assets/js/smart-manager.js:2184
+msgctxt "search switch notice for custom views"
+msgid "Cannot switch search when using Custom Views"
+msgstr "Невозможно переключить поиск при использовании пользовательских представлений"
+
+#: assets/js/smart-manager.js:2228
+msgctxt "simple search notice for custom views"
+msgid "Search string cannot be edited when using Custom Views"
+msgstr "Строка поиска не может быть отредактирована при использовании пользовательских представлений"
+
+#: assets/js/smart-manager.js:2245
+msgctxt "notification"
+msgid "Please edit a record"
+msgstr "Пожалуйста, отредактируйте запись"
+
+#: assets/js/smart-manager.js:2253
+msgctxt "notification"
+msgid "Please enter user email"
+msgstr "Введите адрес электронной почты пользователя"
+
+#: assets/js/smart-manager.js:2253
+msgctxt "notification"
+msgid "Enable"
+msgstr "Включить"
+
+#: assets/js/smart-manager.js:2253
+msgctxt "notification"
+msgid "User Email"
+msgstr "Электронная почта пользователя"
+
+#: assets/js/smart-manager.js:2253
+msgctxt "notification"
+msgid "column if not enabled using"
+msgstr "столбец, если он не включен с помощью"
+
+#: assets/js/smart-manager.js:2253
+msgctxt "notification"
+msgid "column show/hide functionality"
+msgstr "Функции отображения/скрытия колонок"
+
+#: assets/js/smart-manager.js:2304
+msgctxt "notification"
+msgid "To permanently delete records"
+msgstr "Чтобы навсегда удалить записи"
+
+#: assets/js/smart-manager.js:2304
+#: assets/js/smart-manager.js:2324
+msgctxt "notification"
+msgid "upgrade to Pro"
+msgstr "обновление до Pro"
+
+#: assets/js/smart-manager.js:2318
+#: assets/js/smart-manager.js:2564
+msgctxt "notification"
+msgid "Please select a record"
+msgstr "Пожалуйста, выберите запись"
+
+#: assets/js/smart-manager.js:2324
+msgctxt "notification"
+msgid "To delete more than"
+msgstr "Чтобы удалить более"
+
+#: assets/js/smart-manager.js:2324
+msgctxt "notification"
+msgid "records at a time"
+msgstr "записи за один раз"
+
+#: assets/js/smart-manager.js:2334
+msgctxt "modal content"
+msgid "permanently delete"
+msgstr "окончательно удалить"
+
+#: assets/js/smart-manager.js:2334
+msgctxt "modal content"
+msgid "trash"
+msgstr "мусор"
+
+#. translators: %s: action name
+#: assets/js/smart-manager.js:2342
+msgctxt "modal content"
+msgid "Are you sure you want to %s"
+msgstr "Вы уверены, что хотите %s"
+
+#: assets/js/smart-manager.js:2342
+msgctxt "modal content"
+msgid "the selected"
+msgstr "выбранный"
+
+#: assets/js/smart-manager.js:2342
+msgctxt "modal content"
+msgid "records"
+msgstr "записи"
+
+#: assets/js/smart-manager.js:2342
+msgctxt "modal content"
+msgid "record"
+msgstr "запись"
+
+#. translators: %1$s: action name %2$s: dashboard display name
+#: assets/js/smart-manager.js:2345
+msgctxt "modal content"
+msgid "Are you sure you want to %1$s the %2$s?"
+msgstr "Вы уверены, что хотите %1$s %2$s?"
+
+#: assets/js/smart-manager.js:2345
+msgctxt "modal content"
+msgid "all"
+msgstr "все"
+
+#. translators: %s: action name
+#: assets/js/smart-manager.js:2350
+msgctxt "modal content"
+msgid "Are you sure you want to %s?"
+msgstr "Вы уверены, что хотите %s?"
+
+#: assets/js/smart-manager.js:2350
+msgctxt "modal content"
+msgid "all items in search results"
+msgstr "все элементы в результатах поиска"
+
+#: assets/js/smart-manager.js:2371
+msgctxt "modal content"
+msgid "Note: Looking to"
+msgstr "Примечание: Ищем"
+
+#: assets/js/smart-manager.js:2371
+msgctxt "modal content"
+msgid "delete all"
+msgstr "удалить всё"
+
+#: assets/js/smart-manager.js:2371
+msgctxt "modal content"
+msgid "the records?"
+msgstr "записи?"
+
+#: assets/js/smart-manager.js:2371
+msgctxt "modal content"
+msgid "Upgrade to Pro"
+msgstr "Обновление до Pro"
+
+#. translators: %s: pricing page link
+#: assets/js/smart-manager.js:2426
+#: assets/js/smart-manager.js:2666
+#: assets/js/smart-manager.js:2722
+#: assets/js/smart-manager.js:2734
+#: assets/js/smart-manager.js:2743
+#: assets/js/smart-manager.js:3203
+msgctxt "modal content"
+msgid "This feature is available only in the %s version"
+msgstr "Эта функция доступна только в версии %s"
+
+#: assets/js/smart-manager.js:2453
+msgctxt "notification"
+msgid "For editing more records upgrade to Pro"
+msgstr "Для редактирования большего количества записей перейдите на версию Pro"
+
+#. translators: %s: dashboard display name
+#: assets/js/smart-manager.js:2464
+msgctxt "modal title"
+msgid "Add %s(s)"
+msgstr "Добавить %s(s)"
+
+#. translators: %s: dashboard display name
+#: assets/js/smart-manager.js:2467
+msgctxt "modal content"
+msgid "Enter how many new %s(s) to create!"
+msgstr "Введите, сколько новых %s(ов) нужно создать!"
+
+#: assets/js/smart-manager.js:2470
+#: pro/assets/js/smart-manager.js:1917
+msgctxt "button"
+msgid "Create"
+msgstr "Создать"
+
+#: assets/js/smart-manager.js:2479
+#: pro/assets/js/smart-manager.js:1150
+#: pro/assets/js/smart-manager.js:1944
+#: pro/common-pro/assets/js/base.js:82
+msgctxt "button"
+msgid "Cancel"
+msgstr "Отмена"
+
+#. translators: %s: pricing page link
+#: assets/js/smart-manager.js:2514
+#: assets/js/smart-manager.js:2542
+msgctxt "notification"
+msgid "Custom Views available (Only in %s)"
+msgstr "Доступны пользовательские виды (только в %s)"
+
+#: assets/js/smart-manager.js:2528
+msgctxt "modal content"
+msgid "This will"
+msgstr "Это позволит"
+
+#: assets/js/smart-manager.js:2528
+#: pro/assets/js/smart-manager.js:1239
+#: pro/assets/js/smart-manager.js:1864
+msgctxt "modal content"
+msgid "delete"
+msgstr "удалить"
+
+#: assets/js/smart-manager.js:2528
+msgctxt "modal content"
+msgid "the current view. Are you sure you want to continue?"
+msgstr "текущий вид. Вы уверены, что хотите продолжить?"
+
+#: assets/js/smart-manager.js:2533
+msgctxt "notification"
+msgid "View deleted successfully!"
+msgstr "Просмотр успешно удален!"
+
+#: assets/js/smart-manager.js:2586
+msgctxt "notification"
+msgid "Comming soon"
+msgstr "Скоро будет"
+
+#: assets/js/smart-manager.js:2591
+msgctxt "modal content"
+msgid "This will duplicate only the records in posts, postmeta and related taxonomies."
+msgstr "При этом будут продублированы только записи в постах, постметах и связанных с ними таксономиях."
+
+#: assets/js/smart-manager.js:2592
+msgctxt "modal content"
+msgid "Are you sure you want to duplicate the "
+msgstr "Вы уверены, что хотите продублировать "
+
+#. translators: %s: Bulk Edit doc link
+#: assets/js/smart-manager.js:2625
+msgctxt "modal description"
+msgid "You can change/update multiple fields of the entire store OR for selected items using the Bulk Edit feature. Refer to this doc on %s or watch the video below."
+msgstr "Вы можете изменить/обновить несколько полей во всем магазине или для выбранных товаров с помощью функции массового редактирования. Обратитесь к этому документу по %s или посмотрите видео ниже."
+
+#: assets/js/smart-manager.js:2625
+msgctxt "modal description"
+msgid "how to do bulk edit"
+msgstr "как сделать массовое редактирование"
+
+#: assets/js/smart-manager.js:2626
+msgctxt "modal title"
+msgid "Biggest Time Saver"
+msgstr "Самая большая экономия времени"
+
+#. translators: %s: pricing page link
+#: assets/js/smart-manager.js:2628
+msgctxt "modal title"
+msgid "(Only in %s)"
+msgstr "(Только в %s)"
+
+#: assets/js/smart-manager.js:2628
+msgctxt "modal title"
+msgid "Pro"
+msgstr "Про"
+
+#: assets/js/smart-manager.js:2630
+msgctxt "modal title"
+msgid "Export CSV of "
+msgstr "Экспорт CSV из "
+
+#: assets/js/smart-manager.js:2631
+msgctxt "modal description"
+msgid "You can export selected/all records OR filtered records (using Simple Search or Advanced Search) by simply clicking on the Export CSV button at the bottom right of the grid."
+msgstr "Вы можете экспортировать выбранные/все записи ИЛИ отфильтрованные записи (с помощью простого или расширенного поиска), просто нажав на кнопку Export CSV в правом нижнем углу сетки."
+
+#: assets/js/smart-manager.js:2645
+msgctxt "button"
+msgid "Upgrade Now"
+msgstr "Обновить сейчас"
+
+#. translators: %s: pricing page link
+#: assets/js/smart-manager.js:2658
+msgctxt "notification"
+msgid "Duplicate Records (Only in %s)"
+msgstr "Дублирование записей (только в %s)"
+
+#: assets/js/smart-manager.js:2841
+msgctxt "columns settings description"
+msgid "Drag the enabled columns to the right to disable them and vise-versa. Drag the columns top or bottom to rearrange their position in the grid."
+msgstr "Перетащите включенные столбцы вправо, чтобы отключить их, и наоборот. Перетащите столбцы вверх или вниз, чтобы изменить их положение в сетке."
+
+#. translators: %s: reset columns link
+#: assets/js/smart-manager.js:2845
+msgctxt "columns settings description"
+msgid "Click %s to reset the Columns order to default."
+msgstr "Нажмите %s, чтобы вернуть порядок столбцов к стандартному."
+
+#: assets/js/smart-manager.js:2845
+msgctxt "columns settings description"
+msgid "here"
+msgstr "здесь"
+
+#: assets/js/smart-manager.js:2849
+msgctxt "columns settings searchbox heading"
+msgid "Enabled"
+msgstr "Включено"
+
+#: assets/js/smart-manager.js:2850
+msgctxt "placeholder"
+msgid "Search For Enabled Columns..."
+msgstr "Поиск включенных столбцов..."
+
+#: assets/js/smart-manager.js:2856
+msgctxt "columns settings searchbox heading"
+msgid "Disabled"
+msgstr "Инвалид"
+
+#: assets/js/smart-manager.js:2857
+msgctxt "placeholder"
+msgid "Search For Disabled Columns..."
+msgstr "Поиск отключенных колонн..."
+
+#: assets/js/smart-manager.js:3187
+msgctxt "notification"
+msgid "You have entered incorrect data in the highlighted cells."
+msgstr "Вы ввели неверные данные в выделенные ячейки."
+
+#: assets/js/smart-manager.js:3200
+msgctxt "modal title"
+msgid "Note"
+msgstr "Примечание"
+
+#: assets/js/smart-manager.js:3213
+msgctxt "modal title"
+msgid "Warning"
+msgstr "Внимание"
+
+#: assets/js/smart-manager.js:3214
+msgctxt "modal content"
+msgid "Are you sure?"
+msgstr "Вы уверены?"
+
+#: assets/js/smart-manager.js:3218
+#: assets/js/smart-manager.js:4329
+msgctxt "button"
+msgid "Yes"
+msgstr "Да"
+
+#: assets/js/smart-manager.js:3231
+#: assets/js/smart-manager.js:4346
+msgctxt "button"
+msgid "No"
+msgstr "Нет"
+
+#: assets/js/smart-manager.js:3369
+msgctxt "notification"
+msgid "Settings saved successfully!"
+msgstr "Настройки успешно сохранены!"
+
+#: assets/js/smart-manager.js:3383
+msgctxt "export button"
+msgid "Selected Records"
+msgstr "Избранные записи"
+
+#: assets/js/smart-manager.js:3386
+msgctxt "schedule export button"
+msgid "Schedule Export"
+msgstr "Экспорт расписания"
+
+#: assets/js/smart-manager.js:3387
+msgctxt "manage scheduled exports button"
+msgid "Manage Scheduled Exports"
+msgstr "Управление запланированным экспортом"
+
+#: assets/js/smart-manager.js:4037
+msgctxt "bottom bar display name for tasks"
+msgid "Tasks"
+msgstr "Задачи"
+
+#: assets/js/smart-manager.js:4046
+msgctxt "gallery modal title"
+msgid "Gallery Images"
+msgstr "Галерея изображений"
+
+#: assets/js/smart-manager.js:4050
+msgctxt "button"
+msgid "Add"
+msgstr "Добавить"
+
+#: assets/js/smart-manager.js:4056
+msgctxt "button"
+msgid "Add images to product gallery"
+msgstr "Добавьте изображения в галерею товаров"
+
+#: assets/js/smart-manager.js:4057
+msgctxt "button"
+msgid "Add to gallery"
+msgstr "Добавить в галерею"
+
+#: assets/js/smart-manager.js:4157
+msgctxt "tooltip"
+msgid "(Click to sort)"
+msgstr "(Нажмите, чтобы отсортировать)"
+
+#: assets/js/smart-manager.js:4261
+msgctxt "modal content"
+msgid "Are you sure you want to export the "
+msgstr "Вы уверены, что хотите экспортировать "
+
+#: assets/js/smart-manager.js:4326
+msgctxt "modal content"
+msgid "You have unsaved changes. Are you sure you want to continue?"
+msgstr "У вас есть несохраненные изменения. Вы уверены, что хотите продолжить?"
+
+#: common-core/assets/js/core-base.js:34
+msgctxt "select options - operator for 'dropdown' data type fields"
+msgid "is"
+msgstr "это"
+
+#: common-core/assets/js/core-base.js:35
+msgctxt "select options - operator for 'dropdown' data type fields"
+msgid "is not"
+msgstr "не"
+
+#: common-core/assets/js/core-base.js:38
+msgctxt "select options - operator for 'text' data type fields"
+msgid "is"
+msgstr "это"
+
+#: common-core/assets/js/core-base.js:39
+msgctxt "select options - operator for 'text' data type fields"
+msgid "contains"
+msgstr "содержит"
+
+#: common-core/assets/js/core-base.js:40
+msgctxt "select options - operator for 'text' data type fields"
+msgid "is not"
+msgstr "не"
+
+#: common-core/assets/js/core-base.js:41
+msgctxt "select options - operator for 'text' data type fields"
+msgid "not contains"
+msgstr "не содержит"
+
+#: common-core/assets/js/core-base.js:301
+msgctxt "progressbar modal title"
+msgid "Please Wait"
+msgstr "Пожалуйста, подождите"
+
+#: common-core/assets/js/core-base.js:302
+msgctxt "progressbar modal content"
+msgid "Initializing..."
+msgstr "Инициализация..."
+
+#: common-core/assets/js/core-base.js:302
+msgctxt "progressbar modal content"
+msgid "Continue in background"
+msgstr "Продолжение на заднем плане"
+
+#: pro/assets/js/smart-manager-product.js:14
+msgctxt "bulk edit default action for WooCommerce product attribute"
+msgid "Select Attribute"
+msgstr "Выберите атрибут"
+
+#: pro/assets/js/smart-manager-product.js:23
+msgctxt "bulk edit default action for WooCommerce product category"
+msgid "Select Action"
+msgstr "Выберите действие"
+
+#: pro/assets/js/smart-manager-product.js:24
+msgctxt "bulk edit option for WooCommerce product category"
+msgid "set to"
+msgstr "установленный на"
+
+#: pro/assets/js/smart-manager-product.js:25
+msgctxt "bulk edit option for WooCommerce product category"
+msgid "add to"
+msgstr "добавить к"
+
+#: pro/assets/js/smart-manager-product.js:26
+msgctxt "bulk edit option for WooCommerce product category"
+msgid "remove from"
+msgstr "удалять из"
+
+#: pro/assets/js/smart-manager-product.js:87
+msgctxt "radio - bulk edit"
+msgid "All"
+msgstr "Все"
+
+#: pro/assets/js/smart-manager-product.js:96
+msgctxt "placeholder"
+msgid "Enter Attribute name..."
+msgstr "Введите имя атрибута..."
+
+#: pro/assets/js/smart-manager-product.js:97
+msgctxt "placeholder"
+msgid "Enter values..."
+msgstr "Введите значения..."
+
+#: pro/assets/js/smart-manager-product.js:97
+msgctxt "tooltip"
+msgid "For more than one values, use pipe (|) as delimiter"
+msgstr "Для нескольких значений используйте разделитель в виде трубы (|)."
+
+#: pro/assets/js/smart-manager-shop-order.js:6
+msgctxt "Bulk Edit option for WooCommerce order line items"
+msgid "Line items"
+msgstr "Линейные позиции"
+
+#: pro/assets/js/smart-manager-shop-order.js:12
+msgctxt "Bulk Edit option for WooCommerce order line items"
+msgid "add coupon"
+msgstr "добавить купон"
+
+#: pro/assets/js/smart-manager-shop-order.js:13
+msgctxt "Bulk Edit option for WooCommerce order line items"
+msgid "remove coupon"
+msgstr "удалить купон"
+
+#: pro/assets/js/smart-manager-shop-order.js:14
+msgctxt "Bulk Edit option for WooCommerce order line items"
+msgid "copy coupon from"
+msgstr "скопируйте купон из"
+
+#: pro/assets/js/smart-manager-shop-order.js:15
+msgctxt "Bulk Edit option for WooCommerce order line items"
+msgid "add product"
+msgstr "добавить продукт"
+
+#: pro/assets/js/smart-manager-shop-order.js:16
+msgctxt "Bulk Edit option for WooCommerce order line items"
+msgid "remove product"
+msgstr "удалить продукт"
+
+#: pro/assets/js/smart-manager-shop-order.js:17
+msgctxt "Bulk Edit option for WooCommerce order line items"
+msgid "copy product from"
+msgstr "копировать продукт из"
+
+#: pro/assets/js/smart-manager-shop-order.js:18
+msgctxt "Bulk Edit option for WooCommerce order line items"
+msgid "copy from"
+msgstr "копия из"
+
+#: pro/assets/js/smart-manager-shop-order.js:27
+msgctxt "Bulk Edit option for WooCommerce shop order - order notes"
+msgid "add to"
+msgstr "добавить к"
+
+#: pro/assets/js/smart-manager-shop-order.js:27
+msgctxt "Bulk Edit option for WooCommerce shop order - order notes"
+msgid "remove from"
+msgstr "удалять из"
+
+#: pro/assets/js/smart-manager.js:274
+msgctxt "progressbar modal title"
+msgid "Duplicate Records"
+msgstr "Дублирующие записи"
+
+#: pro/assets/js/smart-manager.js:407
+msgctxt "modal title"
+msgid "Custom Views"
+msgstr "Пользовательские виды"
+
+#: pro/assets/js/smart-manager.js:410
+msgctxt "modal content"
+msgid "Create a custom view to save selected columns from a dashboard. Use it for saved searches, giving specific columns access to other users, etc."
+msgstr "Создайте пользовательское представление для сохранения выбранных столбцов из приборной панели. Используйте его для сохраненных поисков, предоставления доступа к определенным столбцам другим пользователям и т. д."
+
+#: pro/assets/js/smart-manager.js:411
+msgctxt "placeholder"
+msgid "Give a name to this view"
+msgstr "Дайте имя этому виду"
+
+#: pro/assets/js/smart-manager.js:416
+msgctxt "checkbox for custom view access"
+msgid "Public"
+msgstr "Общественность"
+
+#: pro/assets/js/smart-manager.js:418
+msgctxt "description"
+msgid "Marking this view public will make it available to all users with access to Smart Manager."
+msgstr "Если отметить это представление как общедоступное, оно станет доступно всем пользователям, имеющим доступ к Smart Manager."
+
+#: pro/assets/js/smart-manager.js:425
+msgctxt "checkbox to save dashboard along with save columns"
+msgid "Save dashboard along with save columns"
+msgstr "Сохранение приборной панели вместе с сохранением колонок"
+
+#: pro/assets/js/smart-manager.js:433
+msgctxt "checkbox to save advanced search conditions"
+msgid "Save Advanced Search conditions"
+msgstr "Сохранить условия расширенного поиска"
+
+#: pro/assets/js/smart-manager.js:461
+msgctxt "notifiacation"
+msgid "You must select at least one option before saving"
+msgstr "Перед сохранением необходимо выбрать хотя бы один вариант"
+
+#: pro/assets/js/smart-manager.js:616
+#: pro/assets/js/smart-manager.js:620
+#: pro/assets/js/smart-manager.js:706
+#: pro/assets/js/smart-manager.js:819
+#: pro/assets/js/smart-manager.js:841
+#: pro/assets/js/smart-manager.js:860
+msgctxt "placeholder"
+msgid "Enter a value..."
+msgstr "Введите значение..."
+
+#: pro/assets/js/smart-manager.js:631
+msgctxt "bulk edit option"
+msgid "All Items In Search Results"
+msgstr "Все элементы в результатах поиска"
+
+#: pro/assets/js/smart-manager.js:631
+msgctxt "bulk edit option"
+msgid "All Items In Store"
+msgstr "Все товары в магазине"
+
+#: pro/assets/js/smart-manager.js:634
+msgctxt "bulk edit option"
+msgid "Selected Items"
+msgstr "Избранные предметы"
+
+#: pro/assets/js/smart-manager.js:637
+msgctxt "bulk edit field"
+msgid "Select Field"
+msgstr "Выберите поле"
+
+#: pro/assets/js/smart-manager.js:653
+msgctxt "bulk edit default action"
+msgid "Select Action"
+msgstr "Выберите действие"
+
+#: pro/assets/js/smart-manager.js:654
+#: pro/assets/js/smart-manager.js:790
+#: pro/assets/js/smart-manager.js:1640
+msgctxt "bulk edit action"
+msgid "set to"
+msgstr "установленный на"
+
+#: pro/assets/js/smart-manager.js:726
+msgctxt "button"
+msgid "Update"
+msgstr "Обновление"
+
+#: pro/assets/js/smart-manager.js:731
+msgctxt "button"
+msgid "Reset"
+msgstr "Сброс"
+
+#: pro/assets/js/smart-manager.js:736
+msgctxt "modal title"
+msgid "Bulk Edit"
+msgstr "Массовое редактирование"
+
+#. translators: %s: dashboard display name
+#: pro/assets/js/smart-manager.js:888
+msgctxt "placeholder"
+msgid "Select %s"
+msgstr "Выберите %s"
+
+#: pro/assets/js/smart-manager.js:924
+msgctxt "placeholder"
+msgid "Search for..."
+msgstr "Поиск..."
+
+#: pro/assets/js/smart-manager.js:925
+msgctxt "placeholder"
+msgid "Replace with..."
+msgstr "Замените на..."
+
+#: pro/assets/js/smart-manager.js:1063
+msgctxt "tooltip"
+msgid "Undo"
+msgstr "Отменить"
+
+#: pro/assets/js/smart-manager.js:1063
+msgctxt "button"
+msgid "Undo"
+msgstr "Отменить"
+
+#: pro/assets/js/smart-manager.js:1065
+msgctxt "undo button"
+msgid "Selected Tasks"
+msgstr "Выбранные задачи"
+
+#: pro/assets/js/smart-manager.js:1066
+msgctxt "undo button"
+msgid "All Tasks"
+msgstr "Все задания"
+
+#: pro/assets/js/smart-manager.js:1075
+msgctxt "delete tasks button"
+msgid "Selected Tasks"
+msgstr "Выбранные задачи"
+
+#: pro/assets/js/smart-manager.js:1076
+msgctxt "delete tasks button"
+msgid "All Tasks"
+msgstr "Все задания"
+
+#. translators: %s: Task process content
+#: pro/assets/js/smart-manager.js:1101
+msgctxt "process title"
+msgid "Edited %s"
+msgstr "Отредактировано %s"
+
+#: pro/assets/js/smart-manager.js:1102
+msgctxt "modal title"
+msgid "Task Title"
+msgstr "Название задачи"
+
+#: pro/assets/js/smart-manager.js:1103
+msgctxt "title placeholder"
+msgid "Enter desired title here..."
+msgstr "Введите желаемое название..."
+
+#. translators: %s: Undo modal description
+#: pro/assets/js/smart-manager.js:1106
+msgctxt "modal description"
+msgid "Name the task for easier reference and future actions, especially for %s option. A pre-filled title has been suggested based on your changes."
+msgstr "Назовите задачу, чтобы было удобнее обращаться к ней и выполнять будущие действия, особенно для варианта %s. Предварительно заполненное название было предложено на основе ваших изменений."
+
+#: pro/assets/js/smart-manager.js:1106
+msgctxt "modal description"
+msgid "Undo"
+msgstr "Отменить"
+
+#: pro/assets/js/smart-manager.js:1115
+#: pro/common-pro/assets/js/base.js:56
+msgctxt "modal title"
+msgid "Schedule Bulk Edit"
+msgstr "Массовое редактирование расписания"
+
+#: pro/assets/js/smart-manager.js:1116
+msgctxt "modal title"
+msgid "Title"
+msgstr "Название"
+
+#: pro/assets/js/smart-manager.js:1133
+#: pro/common-pro/assets/js/base.js:69
+msgctxt "notification"
+msgid "Please select your desired date & time for scheduling an action."
+msgstr "Пожалуйста, выберите желаемую дату и время для планирования акции."
+
+#: pro/assets/js/smart-manager.js:1185
+msgctxt "progressbar modal title"
+msgid "Delete Records"
+msgstr "Удалить записи"
+
+#: pro/assets/js/smart-manager.js:1190
+msgctxt "progressbar modal title"
+msgid "Undo Tasks"
+msgstr "Отмена заданий"
+
+#: pro/assets/js/smart-manager.js:1194
+msgctxt "progressbar modal title"
+msgid "Delete Tasks"
+msgstr "Удаление заданий"
+
+#: pro/assets/js/smart-manager.js:1219
+msgctxt "notification"
+msgid "Please select a task"
+msgstr "Пожалуйста, выберите задание"
+
+#: pro/assets/js/smart-manager.js:1308
+msgctxt "access privilege settings notification"
+msgid "Privilege settings saved successfully!"
+msgstr "Настройки привилегий успешно сохранены!"
+
+#: pro/assets/js/smart-manager.js:1377
+msgctxt "saved search dashboards list modal title"
+msgid "Select Dashboard"
+msgstr "Выберите приборную панель"
+
+#: pro/assets/js/smart-manager.js:1399
+msgctxt "dashboard display test"
+msgid "Choose a dashboard where you want to apply this saved search."
+msgstr "Выберите приборную панель, к которой вы хотите применить сохраненный поиск."
+
+#: pro/assets/js/smart-manager.js:1447
+msgctxt "label"
+msgid "Start Time"
+msgstr "Время начала"
+
+#: pro/assets/js/smart-manager.js:1448
+msgctxt "placeholder"
+msgid "Select future date"
+msgstr "Выберите будущую дату"
+
+#: pro/assets/js/smart-manager.js:1452
+msgctxt "label"
+msgid "Export Interval"
+msgstr "Интервал экспорта"
+
+#: pro/assets/js/smart-manager.js:1454
+msgctxt "placeholder"
+msgid "Interval"
+msgstr "Интервал"
+
+#: pro/assets/js/smart-manager.js:1456
+msgctxt "interval unit"
+msgid "Days"
+msgstr "Дни"
+
+#: pro/assets/js/smart-manager.js:1462
+msgctxt "label"
+msgid "Email"
+msgstr "Электронная почта"
+
+#: pro/assets/js/smart-manager.js:1463
+msgctxt "placeholder"
+msgid "Enter email for CSV link"
+msgstr "Введите адрес электронной почты для получения ссылки на CSV"
+
+#: pro/assets/js/smart-manager.js:1468
+msgctxt "label"
+msgid "Order Statuses"
+msgstr "Статусы заказов"
+
+#: pro/assets/js/smart-manager.js:1479
+msgctxt "modal description"
+msgid "Notes:"
+msgstr "Примечания:"
+
+#: pro/assets/js/smart-manager.js:1482
+#: pro/common-pro/assets/js/base.js:53
+msgctxt "modal description"
+msgid "Scheduled actions follow timezone of your site. Avoid overlaps to prevent delays."
+msgstr "Запланированные действия соответствуют часовому поясу вашего сайта. Избегайте накладок, чтобы избежать задержек."
+
+#: pro/assets/js/smart-manager.js:1485
+msgctxt "modal description"
+msgid "If the CSV export link is unavailable, the file can be accessed directly from the"
+msgstr "Если ссылка на экспорт в формате CSV недоступна, файл можно получить непосредственно из раздела"
+
+#: pro/assets/js/smart-manager.js:1506
+msgctxt "placeholder"
+msgid "Leave blank to include all order statuses."
+msgstr "Оставьте пустым, чтобы включить все статусы заказов."
+
+#: pro/assets/js/smart-manager.js:1531
+msgctxt "validation message"
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста, введите действительный адрес электронной почты."
+
+#: pro/assets/js/smart-manager.js:1538
+msgctxt "validation message"
+msgid "Please select a start time."
+msgstr "Пожалуйста, выберите время начала."
+
+#: pro/assets/js/smart-manager.js:1541
+msgctxt "validation message"
+msgid "Start time must be at least 2 hours from now."
+msgstr "Время начала должно быть не менее чем через 2 часа."
+
+#: pro/assets/js/smart-manager.js:1548
+msgctxt "validation message"
+msgid "Please select an export interval."
+msgstr "Пожалуйста, выберите интервал экспорта."
+
+#: pro/assets/js/smart-manager.js:1584
+msgctxt "error message"
+msgid "Error in scheduling export, please try again later"
+msgstr "Ошибка при планировании экспорта, повторите попытку позже"
+
+#: pro/assets/js/smart-manager.js:1622
+#: pro/common-pro/assets/js/base.js:5
+msgctxt "bulk edit action - 'date' fields"
+msgid "increase by"
+msgstr "увеличиваться на"
+
+#: pro/assets/js/smart-manager.js:1622
+#: pro/common-pro/assets/js/base.js:5
+msgctxt "bulk edit action - 'date' fields"
+msgid "decrease by"
+msgstr "уменьшиться на"
+
+#: pro/assets/js/smart-manager.js:1625
+msgctxt "bulk edit action - 'number' fields"
+msgid "increase by %"
+msgstr "увеличение на %"
+
+#: pro/assets/js/smart-manager.js:1625
+msgctxt "bulk edit action - 'number' fields"
+msgid "decrease by %"
+msgstr "снижение на %"
+
+#: pro/assets/js/smart-manager.js:1625
+msgctxt "bulk edit action - 'number' fields"
+msgid "increase by number"
+msgstr "увеличиваться по количеству"
+
+#: pro/assets/js/smart-manager.js:1625
+msgctxt "bulk edit action - 'number' fields"
+msgid "decrease by number"
+msgstr "уменьшаться по количеству"
+
+#: pro/assets/js/smart-manager.js:1628
+msgctxt "bulk edit action - 'datetime' fields"
+msgid "set datetime to"
+msgstr "установите время даты на"
+
+#: pro/assets/js/smart-manager.js:1628
+msgctxt "bulk edit action - 'datetime' fields"
+msgid "set date to"
+msgstr "установить дату"
+
+#: pro/assets/js/smart-manager.js:1628
+msgctxt "bulk edit action - 'datetime' fields"
+msgid "set time to"
+msgstr "установить время"
+
+#: pro/assets/js/smart-manager.js:1629
+msgctxt "bulk edit action - 'date' fields"
+msgid "set date to"
+msgstr "установить дату"
+
+#: pro/assets/js/smart-manager.js:1630
+msgctxt "bulk edit action - 'time' fields"
+msgid "set time to"
+msgstr "установить время"
+
+#: pro/assets/js/smart-manager.js:1632
+msgctxt "bulk edit action - 'multiselect list' fields"
+msgid "add to"
+msgstr "добавить к"
+
+#: pro/assets/js/smart-manager.js:1632
+msgctxt "bulk edit action - 'multiselect list' fields"
+msgid "remove from"
+msgstr "удалять из"
+
+#: pro/assets/js/smart-manager.js:1634
+msgctxt "bulk edit action - 'text' fields"
+msgid "prepend"
+msgstr "добавить"
+
+#: pro/assets/js/smart-manager.js:1634
+msgctxt "bulk edit action - 'text' fields"
+msgid "append"
+msgstr "добавить"
+
+#: pro/assets/js/smart-manager.js:1634
+msgctxt "bulk edit action - 'text' fields"
+msgid "search & replace"
+msgstr "поиск и замена"
+
+#: pro/assets/js/smart-manager.js:1641
+msgctxt "bulk edit action"
+msgid "copy from"
+msgstr "копия из"
+
+#: pro/assets/js/smart-manager.js:1641
+msgctxt "bulk edit action"
+msgid "copy from field"
+msgstr "копия с поля"
+
+#: pro/assets/js/smart-manager.js:1864
+msgctxt "modal content"
+msgid "Do you really want to"
+msgstr "Вы действительно хотите"
+
+#: pro/assets/js/smart-manager.js:1887
+msgctxt "saved bulk edit error msg"
+msgid "Name cannot be empty."
+msgstr "Имя не может быть пустым."
+
+#. translators: %s: schedule actions modal description
+#: pro/common-pro/assets/js/base.js:42
+msgctxt "modal description"
+msgid "Schedule actions at your convenient date and time."
+msgstr "Планируйте действия на удобную для вас дату и время."
+
+#: pro/common-pro/assets/js/base.js:42
+msgctxt "modal description"
+msgid "Schedule Actions"
+msgstr "Действия по расписанию"
+
+#: pro/common-pro/assets/js/base.js:43
+msgctxt "modal title"
+msgid "Schedule For"
+msgstr "Расписание для"
+
+#: pro/common-pro/assets/js/base.js:53
+msgctxt "modal description"
+msgid "Note: "
+msgstr "Примечание: "
+
+#: pro/common-pro/assets/js/bulk-edit.js:24
+msgctxt "progressbar modal title"
+msgid "Bulk Edit"
+msgstr "Массовое редактирование"
+
+#: pro/common-pro/assets/js/product.js:33
+msgctxt "Bulk Edit option for WooCommerce product attribute"
+msgid "copy from"
+msgstr "копия из"
+
+#: pro/common-pro/assets/js/product.js:44
+msgctxt "bulk edit option for WooCommerce product regular price"
+msgid "set to sale price"
+msgstr "установить цену продажи"
+
+#: pro/common-pro/assets/js/product.js:48
+msgctxt "bulk edit option for WooCommerce product sale price"
+msgid "set to regular price"
+msgstr "установить обычную цену"
+
+#: pro/common-pro/assets/js/product.js:49
+msgctxt "bulk edit option for WooCommerce product sale price"
+msgid "set to regular price and decrease by %"
+msgstr "установите обычную цену и уменьшите ее на %"
+
+#: pro/common-pro/assets/js/product.js:53
+msgctxt "bulk edit option for WooCommerce product sale price"
+msgid "set to regular price and decrease by number"
+msgstr "установите обычную цену и уменьшите ее на количество"
