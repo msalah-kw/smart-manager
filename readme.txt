@@ -18,6 +18,11 @@ WooCommerce Advanced Bulk Edit products, orders, & posts in an Excel-like sheet 
 
 Add products, update prices, edit SKUs, change order statuses, manage coupons, edit blog posts - perform hundreds of store operations from one place, instantly.
 
+**New in this build**
+
+* Bulk update variation pricing and inventory in one action — select the variable parent and Smart Manager propagates the change to every child variation automatically.
+* Operate in a privacy-first mode out of the box. Smart Manager blocks outbound HTTP requests (ads, update checks, telemetry) unless you explicitly opt in via the new `sm_security_mode_enabled` filter (legacy `smart_manager_allow_external_requests` continues to disable the guard). All outbound calls now route through `sm_remote_get()`, `sm_remote_post()` or `sm_remote_request()` helpers so you can audit connectivity.
+
 [Smart Manager](https://www.storeapps.org/product/smart-manager/?utm_source=wprepo&utm_medium=web&utm_campaign=smwp_readme) helps you stay in control and scale with ease — whether you manage 100,000+ products or just a small shop.
 
 > 🧑 ***An Essential Plugin for WooCommerce – Smart Manager Exceeds All Expectations!**
@@ -285,6 +290,13 @@ Feel free to [contact us](https://www.storeapps.org/support/contact-us/?utm_sour
 
 == Frequently Asked Questions ==
 
+= How do I verify Smart Manager's offline/security mode? =
+
+1. Ensure the `sm_security_mode` option is set to `1` (default) or hook `sm_security_mode_enabled` to return `true`.
+2. Trigger a Smart Manager action that would normally call StoreApps servers (for example, open the licence or deactivation survey screen). Each request will receive a `WP_Error` with the code `sm_offline_mode` and no external traffic leaves your store.
+3. Flip security mode off temporarily by returning `false` from `sm_security_mode_enabled` and repeat the action. Because all outbound calls go through `sm_remote_get()`, `sm_remote_post()` or `sm_remote_request()`, only Smart Manager traffic is tagged and allowed.
+4. Switch security mode back on when you are done testing to keep the dashboard offline.
+
 = Can I export data in CSV? =
 
 Yes, you can but export feature is available in [Pro](https://www.storeapps.org/product/smart-manager/?utm_source=wprepo&utm_medium=web&utm_campaign=smwp_readme) version.
@@ -318,6 +330,8 @@ Open Smart Manager Products dashboard, select required products, click on Bulk E
 * Fix: Database warning displayed when viewing Task Dashboards (Pro)
 * Fix: Advanced Search not applying multiple "OR" conditions correctly (Pro)
 * Update: POT file
+* Enhancement: Bulk edit actions that touch price or stock now cascade changes from variable parents to every variation automatically.
+* Enhancement: External HTTP calls from Smart Manager are blocked by default; use the `sm_security_mode_enabled` filter (or the legacy `smart_manager_allow_external_requests` hook) to opt in when required and the `sm_remote_*` wrappers to mark plugin-owned requests.
 
 = 8.72.0 (09.10.2025) =
 * New: WordPress 6.8.3 compatible

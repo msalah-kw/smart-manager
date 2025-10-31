@@ -2,6 +2,146 @@
 
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'sm_security_mode_enabled' ) ) {
+        /**
+         * Determine whether Smart Manager's offline / security mode is enabled.
+         *
+         * This mode blocks outbound connectivity initiated by the plugin while keeping the rest of WordPress untouched.
+         *
+         * @return bool
+         */
+        function sm_security_mode_enabled() {
+                $option_value = get_option( 'sm_security_mode', '1' );
+                $enabled      = (bool) apply_filters( 'sm_security_mode_enabled', (bool) $option_value );
+
+                $legacy_default = defined( 'SMART_MANAGER_ALLOW_EXTERNAL_REQUESTS' ) ? (bool) SMART_MANAGER_ALLOW_EXTERNAL_REQUESTS : false;
+                $legacy_allowed = (bool) apply_filters( 'smart_manager_allow_external_requests', $legacy_default );
+
+                if ( $legacy_allowed ) {
+                        return false;
+                }
+
+                return $enabled;
+        }
+}
+
+if ( ! function_exists( 'sm_is_external_connectivity_allowed' ) ) {
+        /**
+         * Backwards compatible helper indicating whether Smart Manager may reach external services.
+         *
+         * @return bool
+         */
+        function sm_is_external_connectivity_allowed() {
+                return ! sm_security_mode_enabled();
+        }
+}
+
+if ( ! function_exists( 'sm_tag_remote_args' ) ) {
+        /**
+         * Attach Smart Manager specific markers to outbound HTTP arguments.
+         *
+         * @param array $args Request arguments.
+         *
+         * @return array
+         */
+        function sm_tag_remote_args( $args ) {
+                if ( ! is_array( $args ) ) {
+                        $args = array();
+                }
+
+                $args['smart_manager_request'] = true;
+
+                if ( empty( $args['headers'] ) || ! is_array( $args['headers'] ) ) {
+                        $args['headers'] = array();
+                }
+
+                $args['headers']['X-Smart-Manager'] = '1';
+
+                return $args;
+        }
+}
+
+if ( ! function_exists( 'sm_remote_get' ) ) {
+        /**
+         * Wrapper for wp_remote_get() tagged for Smart Manager security filtering.
+         *
+         * @param string $url  Target URL.
+         * @param array  $args Request arguments.
+         *
+         * @return array|WP_Error
+         */
+        function sm_remote_get( $url, $args = array() ) {
+                return wp_remote_get( $url, sm_tag_remote_args( $args ) );
+        }
+}
+
+if ( ! function_exists( 'sm_remote_post' ) ) {
+        /**
+         * Wrapper for wp_remote_post() tagged for Smart Manager security filtering.
+         *
+         * @param string $url  Target URL.
+         * @param array  $args Request arguments.
+         *
+         * @return array|WP_Error
+         */
+        function sm_remote_post( $url, $args = array() ) {
+                return wp_remote_post( $url, sm_tag_remote_args( $args ) );
+        }
+}
+
+if ( ! function_exists( 'sm_remote_request' ) ) {
+        /**
+         * Wrapper for wp_remote_request() tagged for Smart Manager security filtering.
+         *
+         * @param string $url  Target URL.
+         * @param array  $args Request arguments.
+         *
+         * @return array|WP_Error
+         */
+        function sm_remote_request( $url, $args = array() ) {
+                return wp_remote_request( $url, sm_tag_remote_args( $args ) );
+        }
+}
+
+if ( ! function_exists( 'sm_preempt_tagged_requests' ) ) {
+        /**
+         * Block tagged Smart Manager HTTP requests when security mode is enabled.
+         *
+         * @param false|array|WP_Error $preempt Whether to preempt the HTTP response.
+         * @param array                $args    HTTP request arguments.
+         * @param string               $url     Requested URL.
+         *
+         * @return false|WP_Error
+         */
+        function sm_preempt_tagged_requests( $preempt, $args, $url ) {
+                if ( ! sm_security_mode_enabled() ) {
+                        return $preempt;
+                }
+
+                $headers  = isset( $args['headers'] ) && is_array( $args['headers'] ) ? $args['headers'] : array();
+                $is_tagged = ( ! empty( $args['smart_manager_request'] ) ) || ( ! empty( $headers['X-Smart-Manager'] ) );
+
+                if ( ! $is_tagged ) {
+                        return $preempt;
+                }
+
+                $deny_hosts = apply_filters( 'sm_deny_hosts', array( 'storeapps.org', 'youtube.com', 'youtu.be' ) );
+                $host       = wp_parse_url( $url, PHP_URL_HOST );
+
+                if ( ! empty( $host ) && ! empty( $deny_hosts ) ) {
+                        $normalized_hosts = array_map( 'strtolower', $deny_hosts );
+
+                        if ( in_array( strtolower( $host ), $normalized_hosts, true ) ) {
+                                return new WP_Error( 'sm_offline_mode', __( 'Smart Manager offline mode: blocked host.', 'smart-manager-for-wp-e-commerce' ) );
+                        }
+                }
+
+                return new WP_Error( 'sm_offline_mode', __( 'Smart Manager offline mode: outbound requests are disabled.', 'smart-manager-for-wp-e-commerce' ) );
+        }
+}
+
+add_filter( 'pre_http_request', 'sm_preempt_tagged_requests', 10, 3 );
+
 class Smart_Manager {
 
 	static $text_domain, $prefix, $sku, $plugin_file, $sm_is_woo44, $sm_is_woo40, $sm_is_woo39, $sm_is_woo36, $sm_is_woo30, $sm_is_woo22, $sm_is_woo21, $sm_is_woo79, $sm_is_wc_hpos_tables_exists = false, $sm_is_woo92;
@@ -708,18 +848,25 @@ class Smart_Manager {
 	}
 
 	//function to show the upgrade to Pro link only for Pro to Lite
-	public function show_upgrade_to_pro() {
+        public function show_upgrade_to_pro() {
 
-		if( !( !empty( $_GET['page'] ) && ( 'smart-manager' === $_GET['page'] || 'smart-manager-woo' === $_GET['page'] || 'smart-manager-wpsc' === $_GET['page'] ) ) ) {
-			return;
-		}
+                if( !( !empty( $_GET['page'] ) && ( 'smart-manager' === $_GET['page'] || 'smart-manager-woo' === $_GET['page'] || 'smart-manager-wpsc' === $_GET['page'] ) ) ) {
+                        return;
+                }
 
-		$sm_license_key = get_site_option( SM_PREFIX.'_license_key' );
+                if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                        if ( ! defined( 'SMPROTOLITE' ) ) {
+                                define( 'SMPROTOLITE', false );
+                        }
+                        return;
+                }
 
-		if ( !empty($sm_license_key) ) {
-			$storeapps_validation_url = 'https://www.storeapps.org/?wc-api=validate_serial_key&serial=' . urlencode( $sm_license_key ) . '&is_download=true&sku=' . SM_SKU . '&uuid=' . admin_url();
+                $sm_license_key = get_site_option( SM_PREFIX.'_license_key' );
+
+                if ( !empty($sm_license_key) ) {
+                        $storeapps_validation_url = 'https://www.storeapps.org/?wc-api=validate_serial_key&serial=' . urlencode( $sm_license_key ) . '&is_download=true&sku=' . SM_SKU . '&uuid=' . admin_url();
 			$resp_type = array ('headers' => array ('content-type' => 'application/text' ) );
-			$response_info = wp_remote_post( $storeapps_validation_url, $resp_type ); //return WP_Error on response failure
+                    $response_info = sm_remote_post( $storeapps_validation_url, $resp_type ); //return WP_Error on response failure
 
 			if (is_array( $response_info )) {
 				$response_code = wp_remote_retrieve_response_code( $response_info );
@@ -741,13 +888,17 @@ class Smart_Manager {
 		}
 	}
 
-	public function pro_activated() {
-		$is_check = get_option( SM_PREFIX . '_check_update', 'no' );
-		if ( $is_check === 'no' ) {
-		  $response = wp_remote_get( 'https://www.storeapps.org/wp-admin/admin-ajax.php?action=check_update&plugin='.SM_SKU );
-		  update_option( SM_PREFIX . '_check_update', 'yes', 'no' );
-		}
-	}
+        public function pro_activated() {
+                $is_check = get_option( SM_PREFIX . '_check_update', 'no' );
+                if ( $is_check === 'no' ) {
+                        if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                                update_option( SM_PREFIX . '_check_update', 'yes', 'no' );
+                                return;
+                        }
+                        $response = sm_remote_get( 'https://www.storeapps.org/wp-admin/admin-ajax.php?action=check_update&plugin=' . SM_SKU );
+                        update_option( SM_PREFIX . '_check_update', 'yes', 'no' );
+                }
+        }
 
 	function get_free_menu_position($start, $increment = 0.0001) {
 		foreach ($GLOBALS['menu'] as $key => $menu) {
@@ -1410,8 +1561,9 @@ class Smart_Manager {
 							'subscriptionsAcceptManualRenewals' => ( get_option( 'woocommerce_subscriptions_accept_manual_renewals', 'no' ) === 'yes' ) ? true : false,
 							'subscriptionsExist' => ( class_exists( 'WC_Subscriptions' ) && function_exists( 'wcs_do_subscriptions_exist' ) ) ? wcs_do_subscriptions_exist() : false,
 							'isStripeGatewayActive' => sm_is_stripe_gateway_active(),
-							'is_ai_integration_enabled' => self::is_ai_integration_enabled()
-						);
+                                                        'is_ai_integration_enabled' => self::is_ai_integration_enabled(),
+                                                        'securityModeEnabled' => sm_security_mode_enabled()
+                                                );
 
 		$active_plugins = (array) get_option( 'active_plugins', array() );
 
@@ -1719,14 +1871,29 @@ class Smart_Manager {
 
 				<?php
 
-			} else if ( SMPRO === false && get_option('sm_dismiss_admin_notice') == '1') { ?>
-					<div id="message" class="updated fade" style="display:block !important;">
-						<p> <?php
-								printf( ('<b>' . __( 'Important:', SM_TEXT_DOMAIN ) . '</b> ' . __( 'Upgrade to Pro to get features like \'<i>Manage any Custom Post Type</i>\' , \'<i>Bulk Edit</i>\' , \'<i>Export CSV </i>\' , \'<i>Duplicate Products</i>\' &amp; many more...', SM_TEXT_DOMAIN ) . " " . '<br /><a href="%1s" target=_storeapps>' . " " .__( 'Learn more about Pro version', SM_TEXT_DOMAIN ) . '</a> ' . __( 'or take a', SM_TEXT_DOMAIN ) . " " . '<a href="%2s" target=_livedemo>' . " " . __( 'Live Demo', SM_TEXT_DOMAIN ) . '</a>'), 'https://www.storeapps.org/product/smart-manager', 'http://demo.storeapps.org/?demo=sm-woo' );
-							?>
-						</p>
-					</div>
-				<?php
+                        } else if ( SMPRO === false && get_option('sm_dismiss_admin_notice') == '1') { ?>
+                                        <div id="message" class="updated fade" style="display:block !important;">
+                                                <?php
+                                                $offline_mode_active = function_exists( 'sm_security_mode_enabled' ) && sm_security_mode_enabled();
+                                                ?>
+                                                <p>
+                                                        <strong><?php esc_html_e( 'Important:', SM_TEXT_DOMAIN ); ?></strong>
+                                                        <?php esc_html_e( 'Smart Manager Pro unlocks advanced bulk actions, scheduling, and automation features.', SM_TEXT_DOMAIN ); ?>
+                                                </p>
+                                                <?php if ( $offline_mode_active ) : ?>
+                                                        <p class="sm-offline-help"><?php esc_html_e( 'Offline mode is active, so external upgrade information is hidden. Temporarily disable offline mode if you need to review Smart Manager Pro.', SM_TEXT_DOMAIN ); ?></p>
+                                                <?php else : ?>
+                                                        <p>
+                                                                <a class="button button-primary" href="<?php echo esc_url( 'https://www.storeapps.org/product/smart-manager' ); ?>" target="_blank" rel="noopener noreferrer">
+                                                                        <?php esc_html_e( 'View Smart Manager Pro', SM_TEXT_DOMAIN ); ?>
+                                                                </a>
+                                                                <a class="button button-secondary" href="<?php echo esc_url( 'https://demo.storeapps.org/?demo=sm-woo' ); ?>" target="_blank" rel="noopener noreferrer">
+                                                                        <?php esc_html_e( 'Open live demo', SM_TEXT_DOMAIN ); ?>
+                                                                </a>
+                                                        </p>
+                                                <?php endif; ?>
+                                        </div>
+                                <?php
 			}
 	}
 
@@ -1888,34 +2055,31 @@ class Smart_Manager {
 			include_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
 		if ( is_admin() && ! empty( $_GET['page'] ) && ( 'smart-manager-woo' === $_GET['page'] || 'smart-manager-wpsc' === $_GET['page'] || ( !empty( $_GET['sm_old'] ) && ( 'woo' === $_GET['sm_old'] || 'wpsc' === $_GET['sm_old'] ) && 'smart-manager' === $_GET['page'] ) || 'smart-manager' === $_GET['page'] || 'smart-manager-settings' === $_GET['page'] || 'smart-manager-pricing' === $_GET['page'] || 'sm-storeapps-plugins' === $_GET['page'] ) ) {
-			ob_start();
-			?>
-			<span class="sm-footer-right">
-				<span class="sm-footer-right-top">
-					<?php
-					printf(
-						/* translators: 1: open the anchor tag for plugin review link 2: five star symbol 3: close the anchor tag for plugin review link */
-						esc_html_x( 'If you like it, please give us %1$s %2$s rating%3$s.', 'text for plugin review in footer', 'smart-manager-for-wp-e-commerce' ),
-						'<a target="_blank" href="https://wordpress.org/support/plugin/smart-manager-for-wp-e-commerce/reviews/?filter=5#new-post">',
-						'<span class="sm-star">&starf;&starf;&starf;&starf;&starf;</span>',
-						'</a>'
-					);
-					?>
-				</span>
-				<br />
-				<span class="sm-footer-right-bottom">
-					<?php
-					printf(
-						/* translators: 1: open the anchor tag for plugin feature request link 2: close the anchor tag for plugin feature request link */
-						esc_html_x( 'Do you have a feature request? Tell us %1$shere%2$s.', 'text for plugin feature request in footer', 'smart-manager-for-wp-e-commerce' ),
-						'<a target="_blank" href="https://www.storeapps.org/support/contact-us/?utm_source=sm&utm_medium=in_app_footer&utm_campaign=feature_request">',
-						'</a>'
-					);
-					?>
-				</span>
-			</span>
-			<?php
-			return ob_get_clean();
+                        $offline_mode_active = function_exists( 'sm_security_mode_enabled' ) && sm_security_mode_enabled();
+
+                        ob_start();
+                        ?>
+                        <span class="sm-footer-right">
+                                <?php if ( $offline_mode_active ) : ?>
+                                        <span class="sm-footer-right-top sm-offline-help"><?php esc_html_e( 'Offline mode is active. External review and feature request links are hidden to keep your store self-contained.', SM_TEXT_DOMAIN ); ?></span>
+                                <?php else : ?>
+                                        <span class="sm-footer-right-top">
+                                                <?php esc_html_e( 'Enjoying Smart Manager?', SM_TEXT_DOMAIN ); ?>
+                                                <a class="button button-secondary" href="<?php echo esc_url( 'https://wordpress.org/support/plugin/smart-manager-for-wp-e-commerce/reviews/?filter=5#new-post' ); ?>" target="_blank" rel="noopener noreferrer">
+                                                        <?php esc_html_e( 'Leave a review', SM_TEXT_DOMAIN ); ?>
+                                                </a>
+                                        </span>
+                                        <br />
+                                        <span class="sm-footer-right-bottom">
+                                                <?php esc_html_e( 'Need to share a feature request?', SM_TEXT_DOMAIN ); ?>
+                                                <a class="button button-secondary" href="<?php echo esc_url( 'https://www.storeapps.org/support/contact-us/?utm_source=sm&utm_medium=in_app_footer&utm_campaign=feature_request' ); ?>" target="_blank" rel="noopener noreferrer">
+                                                        <?php esc_html_e( 'Contact support', SM_TEXT_DOMAIN ); ?>
+                                                </a>
+                                        </span>
+                                <?php endif; ?>
+                        </span>
+                        <?php
+                        return ob_get_clean();
 		}
 		return $sm_version_text;
 	}

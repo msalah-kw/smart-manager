@@ -1225,12 +1225,12 @@ if ( ! class_exists( 'Smart_Manager_Pro_User' ) ) {
 		    				$items [$index]['custom_last_order_total'] = '-';
 		    				$items [$index]['custom_orders_count'] = '-';
 		    				$items [$index]['custom_orders_total'] = '-';	
-	    				} else {
-	    					$items [$index]['custom_last_order_date'] = '<a href="https://www.storeapps.org/product/smart-manager/" target = \'_blank\' style=\'color:#0073aa !important;\'> Pro only </a>';
-		    				$items [$index]['custom_last_order_total'] = '<a href="https://www.storeapps.org/product/smart-manager/" target = \'_blank\' style=\'color:#0073aa !important;\'> Pro only </a>';
-		    				$items [$index]['custom_orders_count'] =  '<a href="https://www.storeapps.org/product/smart-manager/" target = \'_blank\' style=\'color:#0073aa !important;\'> Pro only </a>';
-		    				$items [$index]['custom_orders_total'] =  '<a href="https://www.storeapps.org/product/smart-manager/" target = \'_blank\' style=\'color:#0073aa !important;\'> Pro only </a>';
-	    				}
+                                        } else {
+                                                $items[$index]['custom_last_order_date']  = esc_html__( 'Pro only', 'smart-manager-for-wp-e-commerce' );
+                                                $items[$index]['custom_last_order_total'] = esc_html__( 'Pro only', 'smart-manager-for-wp-e-commerce' );
+                                                $items[$index]['custom_orders_count']     = esc_html__( 'Pro only', 'smart-manager-for-wp-e-commerce' );
+                                                $items[$index]['custom_orders_total']     = esc_html__( 'Pro only', 'smart-manager-for-wp-e-commerce' );
+                                        }
 	    				
 	    				$cap_key = $wpdb->prefix.'capabilities';
 

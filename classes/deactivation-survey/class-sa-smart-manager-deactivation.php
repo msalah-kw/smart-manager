@@ -184,23 +184,28 @@ if ( ! class_exists( 'SA_Smart_Manager_Deactivation' ) ) {
 				exit();
 			}
 
-			$method = 'POST';
-			$qs = http_build_query( $plugin_data );
-			$options = array(
-				'timeout' => 45,
-				'method' => $method
-			);
-			if ( $method == 'POST' ) {
-				$options['body'] = $qs;
-			} else {
-				if ( strpos( $api_url, '?' ) !== false ) {
-					$api_url .= '&'.$qs;
-				} else {
-					$api_url .= '?'.$qs;
-				}
-			}
+                        if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                                echo 1;
+                                exit();
+                        }
 
-			$response = wp_remote_request( $api_url, $options );
+                        $method = 'POST';
+                        $qs = http_build_query( $plugin_data );
+                        $options = array(
+                                'timeout' => 45,
+                                'method' => $method
+                        );
+                        if ( $method == 'POST' ) {
+                                $options['body'] = $qs;
+                        } else {
+                                if ( strpos( $api_url, '?' ) !== false ) {
+                                        $api_url .= '&'.$qs;
+                                } else {
+                                        $api_url .= '?'.$qs;
+                                }
+                        }
+
+                        $response = sm_remote_request( $api_url, $options );
 
 			if ( wp_remote_retrieve_response_code( $response ) == 200 ) {
 				$data = json_decode( $response['body'], true );

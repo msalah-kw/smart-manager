@@ -35,7 +35,8 @@ if ( ! class_exists( 'Smart_Manager_Pro_Product' ) ) {
 			add_filter( 'sm_beta_background_entire_store_ids_select', array( __CLASS__, 'background_entire_store_ids_select' ), 10, 2 );
 			add_filter( 'sm_beta_background_entire_store_ids_from', array( __CLASS__, 'background_entire_store_ids_from' ), 10, 2 );
 			add_filter( 'sm_beta_background_entire_store_ids_where', array( __CLASS__, 'background_entire_store_ids_where' ), 10, 2 );
-			add_filter( 'sa_manager_batch_update_selection_data', array( __CLASS__, 'process_batch_update_selection_data' ), 10, 2 );
+                        add_filter( 'sa_manager_batch_update_selection_data', array( __CLASS__, 'expand_variation_ids_for_bulk_price_stock' ), 5, 2 );
+                        add_filter( 'sa_manager_batch_update_selection_data', array( __CLASS__, 'process_batch_update_selection_data' ), 10, 2 );
 			add_filter( 'sa_sm_search_results_selected_ids', array( __CLASS__, 'get_product_types_of_search_result_ids' ), 10, 2 );
 			add_filter( 'sa_sm_use_get_results_in_select_entire_store_ids_query', function( $use, $args ) {
 				// Call the callback function and return true/false based on its result
@@ -1176,7 +1177,72 @@ if ( ! class_exists( 'Smart_Manager_Pro_Product' ) ) {
 		 * @param array $args    Array of request parameters for the batch update operation.
 		 * @return void
 		 */
-		public static function process_batch_update_selection_data( $selected_data = array(), $args = array() ) {
+                public static function expand_variation_ids_for_bulk_price_stock( $selected_data = array(), $args = array() ) {
+                        if ( empty( $selected_data ) || ! is_array( $selected_data ) || empty( $selected_data['selected_ids'] ) ) {
+                                return $selected_data;
+                        }
+                        if ( empty( $args ) || ! is_array( $args ) || empty( $args['batchUpdateActions'] ) ) {
+                                return $selected_data;
+                        }
+
+                        $batch_actions = json_decode( stripslashes( $args['batchUpdateActions'] ), true );
+                        if ( empty( $batch_actions ) || ! is_array( $batch_actions ) ) {
+                                return $selected_data;
+                        }
+
+                        $price_stock_keys = array( '_regular_price', '_sale_price', '_price', '_stock', '_stock_status', '_manage_stock', '_backorders' );
+                        $requires_expansion = false;
+                        foreach ( $batch_actions as $batch_action ) {
+                                if ( empty( $batch_action['type'] ) || ! is_string( $batch_action['type'] ) ) {
+                                        continue;
+                                }
+                                foreach ( $price_stock_keys as $key ) {
+                                        if ( false !== strpos( $batch_action['type'], $key ) ) {
+                                                $requires_expansion = true;
+                                                break 2;
+                                        }
+                                }
+                        }
+
+                        if ( empty( $requires_expansion ) ) {
+                                return $selected_data;
+                        }
+
+                        $selected_ids = $selected_data['selected_ids'];
+                        if ( isset( $selected_ids[0] ) && is_array( $selected_ids[0] ) ) {
+                                $selected_ids = array_column( $selected_ids, 'product_id' );
+                        }
+                        $selected_ids = array_filter( array_map( 'absint', (array) $selected_ids ) );
+                        if ( empty( $selected_ids ) ) {
+                                return $selected_data;
+                        }
+
+                        global $wpdb;
+                        $variation_ids = array();
+                        foreach ( array_chunk( $selected_ids, 500 ) as $id_chunk ) {
+                                $id_chunk = array_filter( array_map( 'absint', $id_chunk ) );
+                                if ( empty( $id_chunk ) ) {
+                                        continue;
+                                }
+                                $ids_sql = implode( ',', $id_chunk );
+                                $results = $wpdb->get_col( // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+                                        "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'product_variation' AND post_parent IN ( $ids_sql )"
+                                );
+                                if ( empty( $results ) ) {
+                                        continue;
+                                }
+                                $variation_ids = array_merge( $variation_ids, array_map( 'absint', $results ) );
+                        }
+
+                        if ( ! empty( $variation_ids ) ) {
+                                $selected_ids = array_merge( $selected_ids, $variation_ids );
+                        }
+
+                        $selected_data['selected_ids'] = array_values( array_unique( $selected_ids ) );
+                        return $selected_data;
+                }
+
+                public static function process_batch_update_selection_data( $selected_data = array(), $args = array() ) {
 			if( ( empty( $selected_data ) ) || ( ! is_array( $selected_data ) ) || ( empty( $selected_data['selected_ids'] ) ) || ( empty( $args ) ) || ( ! is_array( $args ) ) || ( empty( Smart_Manager_Pro_Product::batch_update_params_has_suscription_update_flag( $args ) ) ) || ( empty( $selected_data['entire_store'] ) ) ) {
 				return $selected_data;
 			}
