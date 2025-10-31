@@ -157,18 +157,26 @@ if ( ! class_exists( 'Smart_Manager_Pro_AI_Connector' ) ) {
 		 * @return void
 		 */
 		public function get_query_params_from_ai() {
-			try {
-				// Sanity check for prompt.
-				if ( empty( $_POST['prompt'] ) ) {
-					wp_send_json(
-						array(
-							'ACK'     => 'Failure',
-							'msg' => _x( 'Prompt is empty', 'AI Connector Error', 'smart-manager-for-wp-e-commerce' ),
-						)
-					);
-				}
-				//Validate AI integration settings.
-				$ai_integration_settings = Smart_Manager_Settings::get('ai_integration_settings');
+                        try {
+                                // Sanity check for prompt.
+                                if ( empty( $_POST['prompt'] ) ) {
+                                        wp_send_json(
+                                                array(
+                                                        'ACK'     => 'Failure',
+                                                        'msg' => _x( 'Prompt is empty', 'AI Connector Error', 'smart-manager-for-wp-e-commerce' ),
+                                                )
+                                        );
+                                }
+                                if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                                        wp_send_json(
+                                                array(
+                                                        'ACK' => 'Failure',
+                                                        'msg' => _x( 'External AI requests are disabled for this site.', 'AI Connector Error', 'smart-manager-for-wp-e-commerce' ),
+                                                )
+                                        );
+                                }
+                                //Validate AI integration settings.
+                                $ai_integration_settings = Smart_Manager_Settings::get('ai_integration_settings');
 				$selected_ai_model = ( ( is_array( $ai_integration_settings ) ) && ( ! empty( $ai_integration_settings['selectedModel'] ) ) ) ? $ai_integration_settings['selectedModel'] : '';
 				if ( empty( $selected_ai_model ) ) {
 					wp_send_json(
@@ -314,10 +322,13 @@ if ( ! class_exists( 'Smart_Manager_Pro_AI_Connector' ) ) {
 		 * @return void|True True if data logged successfully else void. 
 		 */
 		public function log_ai_response_data( $body = array(), $access_token = '', $endpoint_url = '' ) {
-			// Validate required parameters: body, access_token, endpoint_url.
-			if ( empty( $body ) || ! is_array( $body ) || empty( $access_token ) || empty( $endpoint_url ) ) {
-				sa_manager_log('error', 'AI Connector: log_ai_response_data called with invalid parameters. Params: ' . print_r( array(
-					'body' => $body,
+                        if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                                return;
+                        }
+                        // Validate required parameters: body, access_token, endpoint_url.
+                        if ( empty( $body ) || ! is_array( $body ) || empty( $access_token ) || empty( $endpoint_url ) ) {
+                                sa_manager_log('error', 'AI Connector: log_ai_response_data called with invalid parameters. Params: ' . print_r( array(
+                                        'body' => $body,
 					'access_token' => $access_token,
 					'endpoint_url' => $endpoint_url,
 				), true ) );
@@ -363,10 +374,16 @@ if ( ! class_exists( 'Smart_Manager_Pro_AI_Connector' ) ) {
 				return array( 'valid' => false );
 			}
 
-			try {
-				$response = wp_remote_get(
-					self::$cohere_api_base_url . '/models',
-					array(
+                        try {
+                                if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                                        return array(
+                                                'valid' => false,
+                                                'error' => __( 'External HTTP requests are disabled for Smart Manager.', 'smart-manager-for-wp-e-commerce' ),
+                                        );
+                                }
+                                $response = wp_remote_get(
+                                        self::$cohere_api_base_url . '/models',
+                                        array(
 						'headers' => array(
 							'Authorization' => 'Bearer ' . $api_key,
 							'Accept'        => 'application/json',
@@ -467,12 +484,15 @@ if ( ! class_exists( 'Smart_Manager_Pro_AI_Connector' ) ) {
 		 * @return mixed           The response from the Cohere AI API.
 		 */
 		public function cohere_ai_request( $prompt = '', $api_key = '' ) {
-			if ( empty( $prompt ) || empty( $api_key ) ) {
-				return;
-			}
-			// Make API request.
-			return wp_remote_post(
-				self::$cohere_api_base_url . '/chat',
+                        if ( empty( $prompt ) || empty( $api_key ) ) {
+                                return;
+                        }
+                        if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                                return new WP_Error( 'smart_manager_http_blocked', __( 'External HTTP requests are disabled for Smart Manager.', 'smart-manager-for-wp-e-commerce' ) );
+                        }
+                        // Make API request.
+                        return wp_remote_post(
+                                self::$cohere_api_base_url . '/chat',
 				array(
 					'headers' => array(
 						'Content-Type'  => 'application/json',

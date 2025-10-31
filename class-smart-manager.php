@@ -2,6 +2,67 @@
 
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'sm_is_external_connectivity_allowed' ) ) {
+        /**
+         * Determines whether Smart Manager is allowed to perform outbound HTTP requests.
+         *
+         * @return bool
+         */
+        function sm_is_external_connectivity_allowed() {
+                $default = defined( 'SMART_MANAGER_ALLOW_EXTERNAL_REQUESTS' ) ? (bool) SMART_MANAGER_ALLOW_EXTERNAL_REQUESTS : false;
+
+                /**
+                 * Filters whether Smart Manager can connect to external services.
+                 *
+                 * Return true to explicitly allow outbound HTTP requests.
+                 */
+                return (bool) apply_filters( 'smart_manager_allow_external_requests', $default );
+        }
+}
+
+if ( ! function_exists( 'smart_manager_block_external_requests' ) ) {
+        /**
+         * Prevent Smart Manager from reaching external hosts.
+         *
+         * @param false|array|WP_Error $preempt Whether to preempt an HTTP request return.
+         * @param array                $args    HTTP request arguments.
+         * @param string               $url     The requested URL.
+         *
+         * @return false|WP_Error
+         */
+        function smart_manager_block_external_requests( $preempt, $args, $url ) {
+                if ( sm_is_external_connectivity_allowed() ) {
+                        return $preempt;
+                }
+
+                $request_host = wp_parse_url( $url, PHP_URL_HOST );
+                $site_host    = wp_parse_url( home_url(), PHP_URL_HOST );
+
+                // Allow same-site requests (e.g., Action Scheduler queue runners).
+                if ( empty( $request_host ) || ( ! empty( $site_host ) && strcasecmp( $request_host, $site_host ) === 0 ) ) {
+                        return $preempt;
+                }
+
+                $stack = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS );
+                foreach ( $stack as $frame ) {
+                        if ( empty( $frame['file'] ) ) {
+                                continue;
+                        }
+
+                        if ( false !== strpos( wp_normalize_path( $frame['file'] ), 'smart-manager' ) ) {
+                                return new WP_Error(
+                                        'smart_manager_http_blocked',
+                                        __( 'External HTTP requests are disabled for Smart Manager.', 'smart-manager-for-wp-e-commerce' )
+                                );
+                        }
+                }
+
+                return $preempt;
+        }
+}
+
+add_filter( 'pre_http_request', 'smart_manager_block_external_requests', 10, 3 );
+
 class Smart_Manager {
 
 	static $text_domain, $prefix, $sku, $plugin_file, $sm_is_woo44, $sm_is_woo40, $sm_is_woo39, $sm_is_woo36, $sm_is_woo30, $sm_is_woo22, $sm_is_woo21, $sm_is_woo79, $sm_is_wc_hpos_tables_exists = false, $sm_is_woo92;
@@ -708,16 +769,23 @@ class Smart_Manager {
 	}
 
 	//function to show the upgrade to Pro link only for Pro to Lite
-	public function show_upgrade_to_pro() {
+        public function show_upgrade_to_pro() {
 
-		if( !( !empty( $_GET['page'] ) && ( 'smart-manager' === $_GET['page'] || 'smart-manager-woo' === $_GET['page'] || 'smart-manager-wpsc' === $_GET['page'] ) ) ) {
-			return;
-		}
+                if( !( !empty( $_GET['page'] ) && ( 'smart-manager' === $_GET['page'] || 'smart-manager-woo' === $_GET['page'] || 'smart-manager-wpsc' === $_GET['page'] ) ) ) {
+                        return;
+                }
 
-		$sm_license_key = get_site_option( SM_PREFIX.'_license_key' );
+                if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                        if ( ! defined( 'SMPROTOLITE' ) ) {
+                                define( 'SMPROTOLITE', false );
+                        }
+                        return;
+                }
 
-		if ( !empty($sm_license_key) ) {
-			$storeapps_validation_url = 'https://www.storeapps.org/?wc-api=validate_serial_key&serial=' . urlencode( $sm_license_key ) . '&is_download=true&sku=' . SM_SKU . '&uuid=' . admin_url();
+                $sm_license_key = get_site_option( SM_PREFIX.'_license_key' );
+
+                if ( !empty($sm_license_key) ) {
+                        $storeapps_validation_url = 'https://www.storeapps.org/?wc-api=validate_serial_key&serial=' . urlencode( $sm_license_key ) . '&is_download=true&sku=' . SM_SKU . '&uuid=' . admin_url();
 			$resp_type = array ('headers' => array ('content-type' => 'application/text' ) );
 			$response_info = wp_remote_post( $storeapps_validation_url, $resp_type ); //return WP_Error on response failure
 
@@ -741,13 +809,17 @@ class Smart_Manager {
 		}
 	}
 
-	public function pro_activated() {
-		$is_check = get_option( SM_PREFIX . '_check_update', 'no' );
-		if ( $is_check === 'no' ) {
-		  $response = wp_remote_get( 'https://www.storeapps.org/wp-admin/admin-ajax.php?action=check_update&plugin='.SM_SKU );
-		  update_option( SM_PREFIX . '_check_update', 'yes', 'no' );
-		}
-	}
+        public function pro_activated() {
+                $is_check = get_option( SM_PREFIX . '_check_update', 'no' );
+                if ( $is_check === 'no' ) {
+                        if ( function_exists( 'sm_is_external_connectivity_allowed' ) && ! sm_is_external_connectivity_allowed() ) {
+                                update_option( SM_PREFIX . '_check_update', 'yes', 'no' );
+                                return;
+                        }
+                        $response = wp_remote_get( 'https://www.storeapps.org/wp-admin/admin-ajax.php?action=check_update&plugin=' . SM_SKU );
+                        update_option( SM_PREFIX . '_check_update', 'yes', 'no' );
+                }
+        }
 
 	function get_free_menu_position($start, $increment = 0.0001) {
 		foreach ($GLOBALS['menu'] as $key => $menu) {

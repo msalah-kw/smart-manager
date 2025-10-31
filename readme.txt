@@ -18,6 +18,11 @@ WooCommerce Advanced Bulk Edit products, orders, & posts in an Excel-like sheet 
 
 Add products, update prices, edit SKUs, change order statuses, manage coupons, edit blog posts - perform hundreds of store operations from one place, instantly.
 
+**New in this build**
+
+* Bulk update variation pricing and inventory in one action — select the variable parent and Smart Manager propagates the change to every child variation automatically.
+* Operate in a privacy-first mode out of the box. Smart Manager blocks outbound HTTP requests (ads, update checks, telemetry) unless you explicitly opt in via the `smart_manager_allow_external_requests` filter.
+
 [Smart Manager](https://www.storeapps.org/product/smart-manager/?utm_source=wprepo&utm_medium=web&utm_campaign=smwp_readme) helps you stay in control and scale with ease — whether you manage 100,000+ products or just a small shop.
 
 > 🧑 ***An Essential Plugin for WooCommerce – Smart Manager Exceeds All Expectations!**
@@ -318,6 +323,8 @@ Open Smart Manager Products dashboard, select required products, click on Bulk E
 * Fix: Database warning displayed when viewing Task Dashboards (Pro)
 * Fix: Advanced Search not applying multiple "OR" conditions correctly (Pro)
 * Update: POT file
+* Enhancement: Bulk edit actions that touch price or stock now cascade changes from variable parents to every variation automatically.
+* Enhancement: External HTTP calls from Smart Manager are blocked by default; use the `smart_manager_allow_external_requests` filter to opt in when required.
 
 = 8.72.0 (09.10.2025) =
 * New: WordPress 6.8.3 compatible
