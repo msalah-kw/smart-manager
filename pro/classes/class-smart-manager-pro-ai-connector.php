@@ -335,7 +335,7 @@ if ( ! class_exists( 'Smart_Manager_Pro_AI_Connector' ) ) {
 				return;
 			}
 			//Send request.
-			$response = wp_remote_post( esc_url( $endpoint_url ), array(
+                        $response = sm_remote_post( esc_url( $endpoint_url ), array(
 				'method'      => 'POST',
 				'headers'     => array(
 					'Authorization' => 'Bearer ' . $access_token,
@@ -381,7 +381,7 @@ if ( ! class_exists( 'Smart_Manager_Pro_AI_Connector' ) ) {
                                                 'error' => __( 'External HTTP requests are disabled for Smart Manager.', 'smart-manager-for-wp-e-commerce' ),
                                         );
                                 }
-                                $response = wp_remote_get(
+                                $response = sm_remote_get(
                                         self::$cohere_api_base_url . '/models',
                                         array(
 						'headers' => array(
@@ -491,7 +491,7 @@ if ( ! class_exists( 'Smart_Manager_Pro_AI_Connector' ) ) {
                                 return new WP_Error( 'smart_manager_http_blocked', __( 'External HTTP requests are disabled for Smart Manager.', 'smart-manager-for-wp-e-commerce' ) );
                         }
                         // Make API request.
-                        return wp_remote_post(
+                        return sm_remote_post(
                                 self::$cohere_api_base_url . '/chat',
 				array(
 					'headers' => array(

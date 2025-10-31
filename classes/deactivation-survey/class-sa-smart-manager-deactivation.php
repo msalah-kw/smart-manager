@@ -205,7 +205,7 @@ if ( ! class_exists( 'SA_Smart_Manager_Deactivation' ) ) {
                                 }
                         }
 
-                        $response = wp_remote_request( $api_url, $options );
+                        $response = sm_remote_request( $api_url, $options );
 
 			if ( wp_remote_retrieve_response_code( $response ) == 200 ) {
 				$data = json_decode( $response['body'], true );

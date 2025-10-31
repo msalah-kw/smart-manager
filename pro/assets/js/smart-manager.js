@@ -2062,6 +2062,15 @@ jQuery(document).on('smart_manager_init','#sm_editor_grid', function() {
         window.smart_manager.showNotification();
         return;
     }
+    const privacyDescription = _x('We securely log your AI interactions to improve our service. Your data is handled with strict privacy.', 'ai assistant modal privacy summary', 'smart-manager-for-wp-e-commerce');
+    const privacyCta = (window.smart_manager && typeof window.smart_manager.getExternalHelpMarkup === 'function')
+        ? window.smart_manager.getExternalHelpMarkup(
+            'https://www.storeapps.org/privacy-policy/',
+            _x('Read the Smart Manager privacy policy (external site)', 'ai assistant modal privacy button', 'smart-manager-for-wp-e-commerce'),
+            _x('Offline help: Contact your site administrator for privacy details or temporarily allow external access to review the policy.', 'ai assistant modal offline privacy note', 'smart-manager-for-wp-e-commerce')
+        )
+        : '';
+
     window.smart_manager.modal = {
         title: _x('Your Smart AI Assistant is here!','ai assistant modal title','smart-manager-for-wp-e-commerce'),
         content: `
@@ -2086,7 +2095,8 @@ jQuery(document).on('smart_manager_init','#sm_editor_grid', function() {
                     </button>
                 </div>
                 <div class="sm-ai-assistant-error text-sm pt-3"></div>
-                <p class="description mt-4"><strong>Note:</strong> ${_x('We securely log your AI interactions to improve our service. Your data is handled with strict privacy. See our <a href="https://www.storeapps.org/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> for details.','ai assistant modal privacy note','smart-manager-for-wp-e-commerce')}</p>
+                <p class="description mt-4"><strong>Note:</strong> ${privacyDescription}</p>
+                ${privacyCta}
             </div>
         </div>
         `,

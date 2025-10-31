@@ -1581,7 +1581,7 @@ if ( ! class_exists( 'StoreApps_Upgrade_4_0' ) ) {
 				),
 				'body'    => $args,
 			);
-			$response = wp_remote_post( $url, $data );
+                   $response = sm_remote_post( $url, $data );
 
 			if ( ! is_wp_error( $response ) ) {
 				$this->log( 'debug', sprintf(__( 'Received response%s. Should contain access token & its expiry.', $this->text_domain ), ( ( ! empty( $_SERVER['HTTP_REFERER'] ) ) ? __( ' from', $this->text_domain ) . ' ' . $_SERVER['HTTP_REFERER'] : '' ) ) . $this->upgrade_file_path . ' ' . __LINE__ ); // phpcs:ignore
@@ -1784,7 +1784,7 @@ if ( ! class_exists( 'StoreApps_Upgrade_4_0' ) ) {
 			);
 
 			$this->toggle_requesting();
-			$response = wp_remote_post( $url, $data );
+                   $response = sm_remote_post( $url, $data );
 
 			if ( ! is_wp_error( $response ) ) {
 				$this->log( 'debug', sprintf(__( 'Received response%s. Should contain StoreApps data.', $this->text_domain ), ( ( ! empty( $_SERVER['HTTP_REFERER'] ) ) ? __( ' from', $this->text_domain ) . ' ' . $_SERVER['HTTP_REFERER'] : '' ) ) . $this->upgrade_file_path . ' ' . __LINE__ ); // phpcs:ignore
@@ -3220,30 +3220,22 @@ if ( ! class_exists( 'StoreApps_Upgrade_4_0' ) ) {
 				return;
 			}
 
-			$social_link  = '<style type="text/css">
-								div.' . $prefix . '_social_links > iframe {
-									max-height: 1.5em;
-									vertical-align: middle;
-									padding: 5px 2px 0px 0px;
-								}
-								iframe[id^="twitter-widget"] {
-									max-width: 10.3em;
-								}
-								iframe#fb_like_' . $prefix . ' {
-									max-width: 6em;
-								}
-								span > iframe {
-									vertical-align: middle;
-								}
-							</style>';
-			$social_link .= '<a href="https://twitter.com/storeapps" class="twitter-follow-button" data-show-count="true" data-dnt="true" data-show-screen-name="false">Follow</a>';
-			$social_link .= "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>";
-			$social_link .= '<iframe id="fb_like_' . $prefix . '" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStore-Apps%2F614674921896173&width=100&layout=button_count&action=like&show_faces=false&share=false&height=21"></iframe>';
+                        $offline_mode_active = function_exists( 'sm_security_mode_enabled' ) && sm_security_mode_enabled();
 
-			return $social_link;
+                        if ( $offline_mode_active ) {
+                                return '<p class="sm-offline-help">' . esc_html__( 'Offline mode is active, so external social embeds are disabled.', 'smart-manager-for-wp-e-commerce' ) . '</p>';
+                        }
 
-		}
+                        $social_link  = '<div class="' . esc_attr( $prefix ) . '_social_links sm-social-links">';
+                        $social_link .= '<p>' . esc_html__( 'Stay connected with Smart Manager updates on our social profiles.', 'smart-manager-for-wp-e-commerce' ) . '</p>';
+                        $social_link .= '<p><a class="button button-secondary" href="' . esc_url( 'https://twitter.com/storeapps' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Follow StoreApps on X (external)', 'smart-manager-for-wp-e-commerce' ) . '</a></p>';
+                        $social_link .= '<p><a class="button button-secondary" href="' . esc_url( 'https://www.facebook.com/StoreApps' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Visit StoreApps on Facebook (external)', 'smart-manager-for-wp-e-commerce' ) . '</a></p>';
+                        $social_link .= '</div>';
 
-	}
+                        return $social_link;
+
+                }
+
+        }
 
 }

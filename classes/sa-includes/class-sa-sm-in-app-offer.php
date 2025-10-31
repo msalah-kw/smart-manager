@@ -121,9 +121,13 @@ class SA_SM_In_App_Offer {
 	 *
 	 * @return boolean
 	 */
-	public function is_show() {
+        public function is_show() {
 
-		$timezone_format = _x( 'Y-m-d H:i:s', 'timezone date format', 'smart-manager-for-wp-e-commerce' );
+                if ( function_exists( 'sm_security_mode_enabled' ) && sm_security_mode_enabled() ) {
+                        return false;
+                }
+
+                $timezone_format = _x( 'Y-m-d H:i:s', 'timezone date format', 'smart-manager-for-wp-e-commerce' );
 		$current_date    = strtotime( date_i18n( $timezone_format, false, true ) );
 		$start           = strtotime( $this->start );
 		$end             = strtotime( $this->end );
